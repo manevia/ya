@@ -1,0 +1,8 @@
+[Unit]
+Description=AquaTrack: install a new version from GitHub if there is one (tested, backed up, rolled back on failure)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/opt/aquatrack/bin/aquatrack-update

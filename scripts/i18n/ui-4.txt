@@ -1,0 +1,80 @@
+# Phrases containing brackets (field app, kiosk, public pages, reports) and role labels
+. Negative = not yet handed over, or short. ||| . Négatif = pas encore remis, ou manquant. ||| . Negativo = ainda não entregue, ou em falta.
+(as of last sync) ||| (à la dernière synchronisation) ||| (na última sincronização)
+(cash sales + card top-ups) · handed over ||| (ventes en espèces + recharges de cartes) · remis ||| (vendas em numerário + carregamentos) · entregue
+(confidence ||| (fiabilité ||| (confiança
+(password ||| (mot de passe ||| (palavra-passe
+(saves ||| (enregistre ||| (guarda
+(will be flagged) ||| (sera signalé) ||| (será marcada)
+(your meter numbers), or dial ||| (les chiffres de votre compteur), ou composez ||| (os números do seu contador), ou marque
+) — tap to fill: ||| ) — touchez pour remplir : ||| ) — toque para preencher:
+) cannot open this page. ||| ) ne peut pas ouvrir cette page. ||| ) não pode abrir esta página.
+⟳ Sync ||| ⟳ Synchroniser ||| ⟳ Sincronizar
+📍 Share my location (helps the survey) ||| 📍 Partager ma position (aide à la visite technique) ||| 📍 Partilhar a minha localização (ajuda a visita técnica)
+and the place (for example “LEAK near the market”) to the utility number. ||| et le lieu (par exemple « FUITE près du marché ») au numéro du service. ||| e o local (por exemplo «FUGA perto do mercado») para o número da entidade.
+Billed consumption by area (m³) ||| Consommation facturée par zone (m³) ||| Consumo faturado por zona (m³)
+Billed consumption by customer type (m³) ||| Consommation facturée par type de client (m³) ||| Consumo faturado por tipo de cliente (m³)
+boil or treat drinking water from the affected point(s) until further notice. ||| faites bouillir ou traitez l'eau de boisson du ou des points concernés jusqu'à nouvel ordre. ||| ferva ou trate a água de beber do(s) ponto(s) afetado(s) até novo aviso.
+Bulk supply vs billed consumption (non-revenue water indicator) ||| Production / consommation facturée (indicateur d'eau non facturée) ||| Abastecimento / consumo faturado (indicador de água não faturada)
+Burst pipe (lots of water) ||| Tuyau cassé (beaucoup d'eau) ||| Cano rebentado (muita água)
+Cash you should hold (today, this phone) ||| Espèces que vous devez avoir (aujourd'hui, ce téléphone) ||| Numerário que deve ter (hoje, este telefone)
+Collection efficiency ( ||| Taux de recouvrement ( ||| Eficiência de cobrança (
+Container size (litres) ||| Taille du récipient (litres) ||| Tamanho do recipiente (litros)
+Current register reading (m³) ||| Index actuel du cadran (m³) ||| Leitura atual do mostrador (m³)
+Customers (active / total) ||| Clients (actifs / total) ||| Clientes (ativos / total)
+Directions to stop 1 ↗ ||| Itinéraire vers l'arrêt 1 ↗ ||| Direções para a paragem 1 ↗
+Discard ||| Supprimer ||| Apagar
+Download CSV ||| Télécharger le CSV ||| Descarregar CSV
+Download reports ||| Télécharger les rapports ||| Descarregar relatórios
+Downloads the photo-reading engine (~10 MB) so it works without internet ||| Télécharge le moteur de lecture photo (~10 Mo) pour qu'il fonctionne sans internet ||| Descarrega o motor de leitura por foto (~10 MB) para funcionar sem internet
+Each report downloads as a CSV file (opens in Excel, LibreOffice or Google Sheets). Estimated and simulated values are labelled in their own columns ||| Chaque rapport se télécharge en fichier CSV (s'ouvre dans Excel, LibreOffice ou Google Sheets). Les valeurs estimées et simulées sont indiquées dans leurs propres colonnes ||| Cada relatório descarrega como ficheiro CSV (abre no Excel, LibreOffice ou Google Sheets). Os valores estimados e simulados estão indicados em colunas próprias
+Free (log volume only) ||| Gratuit (noter le volume seulement) ||| Gratuito (registar só o volume)
+Free (volume logged) ||| Gratuit (volume noté) ||| Gratuito (volume registado)
+Free chlorine (mg/L): ||| Chlore libre (mg/L) : ||| Cloro livre (mg/L):
+From ||| Du ||| De
+Go home ||| Accueil ||| Início
+Go to my home page ||| Aller à ma page d'accueil ||| Ir para a minha página inicial
+item(s) need attention ||| point(s) à traiter ||| ponto(s) a tratar
+kiosk sale(s) synchronised ||| vente(s) de kiosque synchronisée(s) ||| venda(s) de quiosque sincronizada(s)
+km vs list order) ||| km contre l'ordre de la liste) ||| km face à ordem da lista)
+Latest bill ||| Dernière facture ||| Última fatura
+Leak (dripping / small) ||| Fuite (goutte à goutte / petite) ||| Fuga (pinga / pequena)
+map ↗ ||| carte ↗ ||| mapa ↗
+new alert(s) ||| nouvelle(s) alerte(s) ||| novo(s) alerta(s)
+No account needed. Leave your phone number to get an SMS when it is fixed (optional). ||| Pas besoin de compte. Laissez votre numéro pour recevoir un SMS une fois réparé (facultatif). ||| Não precisa de conta. Deixe o seu número para receber um SMS quando estiver resolvido (opcional).
+No water-point assets. Add one under Network assets (type “Water point”). ||| Aucun point d'eau. Ajoutez-en un dans Ouvrages du réseau (type « Point d'eau »). ||| Sem pontos de água. Adicione um em Ativos da rede (tipo «Ponto de água»).
+Notices ( ||| Avis ( ||| Avisos (
+offline reading(s) synchronised ||| relevé(s) hors ligne synchronisé(s) ||| leitura(s) offline sincronizada(s)
+Outstanding by age (bill due date) ||| Impayés par ancienneté (échéance de facture) ||| Dívidas por antiguidade (vencimento da fatura)
+Phone (for SMS balance) ||| Téléphone (pour le solde par SMS) ||| Telefone (para saldo por SMS)
+Photo (optional) ||| Photo (facultatif) ||| Foto (opcional)
+Reading (m³) ||| Index (m³) ||| Leitura (m³)
+Reading completion (last 30 days to ||| Taux de relevé (30 derniers jours jusqu'au ||| Leituras feitas (últimos 30 dias até
+reading(s) synchronised ||| relevé(s) synchronisé(s) ||| leitura(s) sincronizada(s)
+Reconcile ||| Rapprocher ||| Conciliar
+reported problem(s) are being handled in this area. ||| problème(s) signalé(s) en cours de traitement dans cette zone. ||| problema(s) comunicado(s) em tratamento nesta zona.
+Reports (CSV) ||| Rapports (CSV) ||| Relatórios (CSV)
+Reverse ||| Annuler ||| Estornar
+Supplied (bulk meters) ||| Distribué (compteurs de production) ||| Fornecido (contadores de produção)
+Supplied vs billed by month (m³) ||| Distribué / facturé par mois (m³) ||| Fornecido / faturado por mês (m³)
+Synced from this device (last 7 days) ||| Synchronisés depuis cet appareil (7 derniers jours) ||| Sincronizadas a partir deste equipamento (últimos 7 dias)
+Tap meter (for volume check) ||| Compteur du robinet (contrôle des volumes) ||| Contador da torneira (controlo de volume)
+To ||| Au ||| Até
+Top up a water card (cash) ||| Recharger une carte d'eau (espèces) ||| Carregar um cartão de água (numerário)
+Waiting to sync ( ||| En attente de synchronisation ( ||| A aguardar sincronização (
+Water point (if relevant) ||| Point d'eau (le cas échéant) ||| Ponto de água (se aplicável)
+Water sold at kiosks (pay-as-you-fetch) ||| Eau vendue aux kiosques (paiement au récipient) ||| Água vendida nos quiosques (paga por recipiente)
+Your phone (optional) ||| Votre téléphone (facultatif) ||| O seu telefone (opcional)
+Your role ( ||| Votre rôle ( ||| A sua função (
+System Administrator ||| Administrateur système ||| Administrador do sistema
+Utility Manager ||| Responsable du service ||| Responsável da entidade
+Meter Reader ||| Releveur de compteurs ||| Leitor de contadores
+Cashier / Billing Officer ||| Caissier / agent de facturation ||| Caixa / técnico de faturação
+Water Point Attendant ||| Gardien de point d'eau ||| Operador de ponto de água
+Mobile money — MTN MoMo ||| Mobile money — MTN MoMo ||| Dinheiro móvel — MTN MoMo
+✔ Normal supply ||| ✔ Distribution normale ||| ✔ Abastecimento normal
+🛠 Planned maintenance ||| 🛠 Travaux prévus ||| 🛠 Manutenção prevista
+⛔ Supply interrupted ||| ⛔ Distribution interrompue ||| ⛔ Abastecimento interrompido
+⚠ Problems reported — teams informed ||| ⚠ Problèmes signalés — équipes informées ||| ⚠ Problemas comunicados — equipas informadas
+Home (household) ||| Domicile (ménage) ||| Casa (agregado familiar)
+Get piped water at home or at your business. After a free site survey you get a quote; pay a deposit and the rest can be spread over monthly instalments on your water bill. ||| Obtenez l'eau courante chez vous ou dans votre commerce. Après une visite technique gratuite, vous recevez un devis ; payez un acompte et le reste peut être étalé en mensualités sur votre facture d'eau. ||| Tenha água canalizada em casa ou no seu negócio. Após uma visita técnica gratuita recebe um orçamento; paga uma entrada e o resto pode ser dividido em prestações mensais na fatura da água.

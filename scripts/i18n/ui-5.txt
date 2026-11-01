@@ -1,0 +1,29 @@
+# Kiosk, dashboard and work-order details
+. Enter what the attendant actually handed over; any difference is recorded. ||| . Saisissez ce que le gardien a réellement remis ; tout écart est enregistré. ||| . Introduza o que o operador entregou de facto; qualquer diferença fica registada.
+💳 Water card ||| 💳 Carte d'eau ||| 💳 Cartão de água
+💵 Cash ||| 💵 Espèces ||| 💵 Numerário
+Acknowledge ||| Prendre en compte ||| Reconhecer
+Assign ||| Attribuer ||| Atribuir
+Community reports (no-login web, USSD, SMS) ||| Signalements de la population (web sans compte, USSD, SMS) ||| Comunicações da comunidade (web sem conta, USSD, SMS)
+Directions ↗ ||| Itinéraire ↗ ||| Direções ↗
+Dismissed (false alarm) ||| Écarté (fausse alerte) ||| Descartado (falso alarme)
+Kiosks and tap stands sell water by the container. Attendants record each sale (cash, water card or free), even offline; volumes are checked against the tap meter and cash against handovers. ||| Les kiosques et bornes-fontaines vendent l'eau au récipient. Les gardiens enregistrent chaque vente (espèces, carte d'eau ou gratuite), même hors ligne ; les volumes sont comparés au compteur du robinet et les espèces aux remises. ||| Os quiosques e fontanários vendem água por recipiente. Os operadores registam cada venda (numerário, cartão de água ou gratuita), mesmo offline; os volumes são comparados com o contador da torneira e o numerário com as entregas.
+Open (all active) ||| Ouvertes (toutes actives) ||| Abertos (todos ativos)
+Open meter to mark faulty/active ||| Ouvrir le compteur pour le marquer défectueux/actif ||| Abrir o contador para o marcar avariado/ativo
+Ordered to minimise travel (nearest-neighbour + 2-opt). Critical jobs may still need to go first. ||| Ordonné pour réduire les déplacements. Les travaux critiques peuvent devoir passer en premier. ||| Ordenado para reduzir as deslocações. Os trabalhos críticos podem ter de ser feitos primeiro.
+Positions plotted from recorded GPS (relative layout, no map tiles needed offline). Colour = severity, also shown in the table. ||| Positions tracées d'après le GPS enregistré (disposition relative, sans fond de carte hors ligne). Couleur = gravité, aussi indiquée dans le tableau. ||| Posições desenhadas a partir do GPS registado (disposição relativa, sem mapa offline). Cor = gravidade, também indicada na tabela.
+Resolve / dismiss ||| Résoudre / écarter ||| Resolver / descartar
+Take a clear photo of your meter. The app reads the numbers from the photo; check them and send. Staff confirm every reading before it is billed. ||| Prenez une photo nette de votre compteur. L'application lit les chiffres ; vérifiez-les et envoyez. Le personnel confirme chaque relevé avant la facturation. ||| Tire uma foto nítida do seu contador. A aplicação lê os números; verifique-os e envie. A equipa confirma cada leitura antes de faturar.
+containers ||| récipients ||| recipientes
+per ||| par ||| por
+completed ||| terminés ||| concluídos
+critical ||| critique ||| crítico
+high ||| élevée ||| alta
+medium ||| moyenne ||| média
+low ||| faible ||| baixa
+billed ||| facturés ||| faturados
+Collected ||| Encaissé ||| Cobrado
+metered accounts read ||| comptes à compteur relevés ||| contas com contador lidas
+of ||| sur ||| de
+cancelled ||| annulé ||| cancelado
+due ||| échéance ||| vence

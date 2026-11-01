@@ -1,0 +1,17 @@
+{
+  "name": "aquatrack-liberia",
+  "version": "1.0.0",
+  "description": "Smart Water Supply and Meter Management System for utilities, community water providers and WASH projects in Liberia",
+  "private": true,
+  "type": "commonjs",
+  "engines": { "node": ">=22.5.0" },
+  "scripts": {
+    "start": "node --no-warnings=ExperimentalWarning server/index.js",
+    "demo": "APP_MODE=demo node --no-warnings=ExperimentalWarning server/index.js",
+    "live": "APP_MODE=live node --no-warnings=ExperimentalWarning server/index.js",
+    "seed-demo": "node --no-warnings=ExperimentalWarning server/seed.js --reset",
+    "create-admin": "node --no-warnings=ExperimentalWarning scripts/create-admin.js",
+    "test": "node --no-warnings=ExperimentalWarning scripts/test-flows.js"
+  },
+  "license": "UNLICENSED"
+}

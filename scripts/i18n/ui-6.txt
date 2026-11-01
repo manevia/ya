@@ -1,0 +1,51 @@
+# Cash close (cashiers), run-hours and maintenance (technicians), service levels
++ Service plan ||| + Plan d'entretien ||| + Plano de manutenção
+After you submit, you cannot take more cash for this day in these currencies unless a manager reopens it. ||| Une fois envoyé, vous ne pourrez plus encaisser d'espèces ce jour-là dans ces devises, sauf si un responsable rouvre la clôture. ||| Depois de enviar, não poderá receber mais numerário neste dia nestas moedas, a menos que um responsável reabra o fecho.
+Approve ||| Approuver ||| Aprovar
+At the end of each day every cashier counts the drawer. The system compares the count with the cash receipts they recorded; a manager reviews any difference. ||| En fin de journée, chaque caissier compte sa caisse. Le système compare le comptage avec les reçus en espèces enregistrés ; un responsable examine tout écart. ||| No fim de cada dia, cada caixa conta a gaveta. O sistema compara a contagem com os recibos em numerário registados; um responsável analisa qualquer diferença.
+Available when needed ||| Disponible quand il le faut ||| Disponível quando necessário
+Basic ||| Élémentaire ||| Básico
+Basic or limited (collection time unknown) ||| Élémentaire ou limité (temps de collecte inconnu) ||| Básico ou limitado (tempo de recolha desconhecido)
+Breakdowns ||| Pannes ||| Avarias
+Cash book ||| Livre de caisse ||| Livro de caixa
+Cash close ||| Clôture de caisse ||| Fecho de caixa
+Cash close submitted for review ||| Clôture de caisse envoyée pour vérification ||| Fecho de caixa enviado para verificação
+Cash you should hold — ||| Espèces que vous devez avoir — ||| Numerário que deve ter —
+Checklist for the technician ||| Liste de contrôle pour le technicien ||| Lista de verificação para o técnico
+Count your drawer ||| Comptez votre caisse ||| Conte a sua gaveta
+Counted ||| Compté ||| Contado
+Day ||| Jour ||| Dia
+day(s) late ||| jour(s) de retard ||| dia(s) de atraso
+Due soon ||| Bientôt dû ||| Vence em breve
+Free from contamination ||| Exempte de contamination ||| Livre de contaminação
+Functional ||| Fonctionnel ||| Funcional
+Functionality ||| Fonctionnalité ||| Funcionalidade
+Hour meter ||| Compteur horaire ||| Contador de horas
+Hours on the meter ||| Heures au compteur ||| Horas no contador
+Interval ||| Intervalle ||| Intervalo
+Job ||| Travail ||| Trabalho
+Last done ||| Dernière fois ||| Última vez
+Limited ||| Limité ||| Limitado
+Maintenance & run-hours ||| Entretien et heures de marche ||| Manutenção e horas de funcionamento
+meter reset/replaced ||| compteur remis à zéro / remplacé ||| contador reposto / substituído
+My cash close ||| Ma clôture de caisse ||| O meu fecho de caixa
+My recent closes ||| Mes dernières clôtures ||| Os meus últimos fechos
+No cash recorded by you on this day. ||| Aucun encaissement en espèces de votre part ce jour-là. ||| Nenhum numerário registado por si neste dia.
+No closes yet. ||| Pas encore de clôture. ||| Ainda sem fechos.
+No hour-meter readings yet. ||| Pas encore de relevé du compteur horaire. ||| Ainda sem leituras do contador de horas.
+No service plan for this asset. ||| Aucun plan d'entretien pour cet ouvrage. ||| Sem plano de manutenção para este ativo.
+Note (required if there is a difference) ||| Note (obligatoire en cas d'écart) ||| Nota (obrigatória se houver diferença)
+Nothing to close. ||| Rien à clôturer. ||| Nada para fechar.
+Receipt / card ||| Reçu / carte ||| Recibo / cartão
+receipt(s) ||| reçu(s) ||| recibo(s)
+Receipts ||| Reçus ||| Recibos
+Rejected — recount ||| Rejeté — recompter ||| Rejeitado — voltar a contar
+reversed receipt(s) are not counted. ||| reçu(s) annulé(s) non comptés. ||| recibo(s) estornado(s) não contados.
+Run-hours ||| Heures de marche ||| Horas de funcionamento
+Safely managed ||| Gérée en toute sécurité ||| Gerida de forma segura
+Service levels (SDG 6.1) ||| Niveaux de service (ODD 6.1) ||| Níveis de serviço (ODS 6.1)
+Maintenance ||| Maintenance ||| Manutenção
+Submit close ||| Envoyer la clôture ||| Enviar fecho
+Waiting for review ||| En attente de vérification ||| A aguardar verificação
+This day is closed. ||| Cette journée est clôturée. ||| Este dia está fechado.
+Water point not working ||| Point d'eau en panne ||| Ponto de água avariado

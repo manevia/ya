@@ -1,0 +1,9 @@
+# Local data: databases, uploads, backups and keys never go to GitHub
+data/
+*.db
+*.db-wal
+*.db-shm
+secret.key
+node_modules/
+*.log
+.DS_Store

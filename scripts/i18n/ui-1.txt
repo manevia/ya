@@ -1,0 +1,380 @@
+# English ||| Français ||| Português   (screen text; one phrase per line; keep emoji and punctuation)
+— choose — ||| — choisir — ||| — escolher —
+— deposit ||| — acompte ||| — entrada
+— new water connection ||| — nouveau branchement d'eau ||| — nova ligação de água
+— please re-check the meter ||| — veuillez revérifier le compteur ||| — verifique novamente o contador
+, applied ||| , demandé ||| , pedido
+, reported ||| , signalé ||| , comunicado
+, then ||| , puis ||| , depois
+. Keep it to check progress ||| . Gardez-le pour suivre l'avancement ||| . Guarde-o para acompanhar
+. Readings you save are kept here until you sync. ||| . Les relevés enregistrés restent ici jusqu'à la synchronisation. ||| . As leituras guardadas ficam aqui até sincronizar.
+. Save anyway? It will be flagged for review. ||| . Enregistrer quand même ? Il sera signalé pour vérification. ||| . Guardar mesmo assim? Será marcada para verificação.
+. We will SMS you to arrange the site survey. Track it above with this reference. ||| . Nous vous enverrons un SMS pour organiser la visite technique. Suivez-la ci-dessus avec cette référence. ||| . Enviaremos um SMS para marcar a visita técnica. Acompanhe acima com esta referência.
+· updated ||| · mis à jour ||| · atualizado
+← Route ||| ← Tournée ||| ← Percurso
+● Flowing now ||| ● L'eau coule maintenant ||| ● A correr agora
+✓ read ||| ✓ relevé ||| ✓ lido
+💧 Water status & report a leak — no account needed ||| 💧 État de l'eau et signalement de fuite — sans compte ||| 💧 Estado da água e comunicar fugas — sem conta
+📍 Capture GPS ||| 📍 Relever la position GPS ||| 📍 Registar GPS
+📍 Share my location ||| 📍 Partager ma position ||| 📍 Partilhar a minha localização
+📷 Photo of register ||| 📷 Photo du cadran ||| 📷 Foto do mostrador
+📷 Prepare photo reading offline ||| 📷 Préparer la lecture photo hors ligne ||| 📷 Preparar leitura por foto offline
+📷 Take photo of meter ||| 📷 Photographier le compteur ||| 📷 Fotografar o contador
+🕒 Piped water times ||| 🕒 Horaires de l'eau courante ||| 🕒 Horários da água canalizada
+🧭 Plan my route ||| 🧭 Planifier ma tournée ||| 🧭 Planear o meu percurso
+a month on your water bill ||| par mois sur votre facture d'eau ||| por mês na sua fatura da água
+A photo is required by your utility. Save without photo? It will be flagged. ||| Votre service exige une photo. Enregistrer sans photo ? Le relevé sera signalé. ||| A sua entidade exige uma foto. Guardar sem foto? Será marcada.
+Accepted ||| Accepté ||| Aceite
+Account details ||| Détails du compte ||| Detalhes da conta
+Account no. ||| N° de compte ||| N.º de conta
+Acknowledged ||| Pris en compte ||| Reconhecido
+Active ||| Actif ||| Ativo
+Address ||| Adresse ||| Morada
+Adjust ||| Ajuster ||| Ajustar
+Adjustments ||| Ajustements ||| Ajustes
+Admin ||| Administration ||| Administração
+Administration ||| Administration ||| Administração
+Alerts ||| Alertes ||| Alertas
+All areas ||| Toutes les zones ||| Todas as zonas
+All data is fictional. ||| Toutes les données sont fictives. ||| Todos os dados são fictícios.
+Amount ||| Montant ||| Valor
+Amount due. Please pay at the utility office or by mobile money quoting your account number. ||| Montant dû. Veuillez payer au bureau ou par mobile money en indiquant votre numéro de compte. ||| Valor em dívida. Pague no escritório ou por dinheiro móvel indicando o seu número de conta.
+and choose “Send meter reading”. ||| et choisissez « Envoyer l'index du compteur ». ||| e escolha «Enviar leitura do contador».
+Application received ||| Demande reçue ||| Pedido recebido
+Application received! ||| Demande reçue ! ||| Pedido recebido!
+Apply for a connection ||| Demander un branchement ||| Pedir uma ligação
+Apply for a water connection ||| Demander un branchement d'eau ||| Pedir uma ligação de água
+Approved ||| Approuvé ||| Aprovado
+Area ||| Zone ||| Zona
+Assigned ||| Attribué ||| Atribuído
+At least 10 characters with letters and numbers. ||| Au moins 10 caractères, avec des lettres et des chiffres. ||| Pelo menos 10 caracteres, com letras e números.
+At risk ||| À risque ||| Em risco
+Audit log ||| Journal d'audit ||| Registo de auditoria
+Back ||| Retour ||| Voltar
+Balance ||| Solde ||| Saldo
+Bank transfer ||| Virement bancaire ||| Transferência bancária
+Behind ||| En retard ||| Atrasado
+Being checked ||| En cours de vérification ||| Em verificação
+Bill ||| Facture ||| Fatura
+Billing ||| Facturation ||| Faturação
+Bills ||| Factures ||| Faturas
+Bring in records ||| Importer des données ||| Importar registos
+Bulk ||| Gros consommateur ||| Grande consumidor
+Burst ||| Tuyau cassé ||| Cano rebentado
+Business ||| Commerce ||| Comércio
+Cancelled ||| Annulé ||| Cancelado
+Cash ||| Espèces ||| Numerário
+Change password ||| Changer le mot de passe ||| Alterar palavra-passe
+Check ||| Vérifier ||| Verificar
+Chemical ||| Produit chimique ||| Produto químico
+Chemicals ||| Produits chimiques ||| Produtos químicos
+Cheque ||| Chèque ||| Cheque
+Closed ||| Clos ||| Fechado
+Code ||| Code ||| Código
+Collections & plans ||| Recouvrement et échéanciers ||| Cobranças e planos
+Community access ||| Accès communautaire ||| Acesso comunitário
+Completed ||| Terminé ||| Concluído
+Configured unverified ||| Configuré, non vérifié ||| Configurado, não verificado
+Confirm the meter serial first ||| Confirmez d'abord le numéro du compteur ||| Confirme primeiro o número do contador
+Confirmed ||| Confirmé ||| Confirmado
+Connected ||| Branché ||| Ligado
+Corrected ||| Corrigé ||| Corrigido
+Cost recovery & KPIs ||| Recouvrement des coûts et indicateurs ||| Recuperação de custos e indicadores
+Could not get location: ||| Position introuvable : ||| Não foi possível obter a localização:
+Could not load OCR engine ||| Impossible de charger le moteur de lecture ||| Não foi possível carregar o motor de leitura
+Could not load this page. ||| Impossible de charger cette page. ||| Não foi possível carregar esta página.
+Could not read digits — adjust the box or retake the photo. ||| Chiffres illisibles — ajustez le cadre ou reprenez la photo. ||| Não foi possível ler os dígitos — ajuste a caixa ou tire outra foto.
+Could not read the photo ||| Impossible de lire la photo ||| Não foi possível ler a foto
+Critical ||| Critique ||| Crítico
+Csv import ||| Import CSV ||| Importação CSV
+Current password ||| Mot de passe actuel ||| Palavra-passe atual
+Customer feedback ||| Avis des clients ||| Opinião dos clientes
+Customer no. ||| N° client ||| N.º de cliente
+Customer self ||| Client lui-même ||| O próprio cliente
+Customers ||| Clients ||| Clientes
+Dashboard ||| Tableau de bord ||| Painel
+Date ||| Date ||| Data
+Decommissioned ||| Mis hors service ||| Desativado
+Defaulted ||| Défaillant ||| Incumprido
+Degraded ||| Dégradé ||| Degradado
+Delivered ||| Distribuée ||| Fornecida
+Demo accounts ||| Comptes de démonstration ||| Contas de demonstração
+DEMO ENVIRONMENT — all customers, readings, payments and device data are fictional. Simulated device data is labelled SIMULATED. ||| ENVIRONNEMENT DE DÉMONSTRATION — clients, relevés, paiements et données d'appareils sont fictifs. Les données simulées portent la mention SIMULÉ. ||| AMBIENTE DE DEMONSTRAÇÃO — clientes, leituras, pagamentos e dados de equipamentos são fictícios. Os dados simulados estão marcados como SIMULADO.
+Demo environment. ||| Environnement de démonstration. ||| Ambiente de demonstração.
+DEMONSTRATION — fictional utility and data. Reports you send here go into the demo system only. ||| DÉMONSTRATION — service et données fictifs. Vos signalements vont uniquement dans le système de démonstration. ||| DEMONSTRAÇÃO — entidade e dados fictícios. As comunicações enviadas aqui ficam apenas no sistema de demonstração.
+Details ||| Détails ||| Detalhes
+Device ||| Appareil ||| Equipamento
+Disabled ||| Désactivé ||| Desativado
+Discard this unsynced reading from the device? It has NOT reached the server. ||| Supprimer ce relevé non synchronisé de l'appareil ? Il n'est PAS arrivé au serveur. ||| Apagar esta leitura não sincronizada do equipamento? NÃO chegou ao servidor.
+Disconnected ||| Coupé ||| Cortado
+Dismissed ||| Écarté ||| Descartado
+Down ||| En panne ||| Avariado
+Due ||| Échéance ||| Vencimento
+e.g. dog on premises, meter box flooded, seal broken ||| ex. chien sur place, regard inondé, scellé cassé ||| ex. cão no local, caixa inundada, selo partido
+Electricity ||| Électricité ||| Eletricidade
+Electromagnetic ||| Électromagnétique ||| Eletromagnético
+Energy fuel ||| Carburant / énergie ||| Combustível / energia
+Enter the 6-digit code from your authenticator app — or one of your recovery codes. ||| Saisissez le code à 6 chiffres de votre application d'authentification — ou un de vos codes de secours. ||| Introduza o código de 6 dígitos da sua aplicação de autenticação — ou um dos seus códigos de recuperação.
+Enter the register reading ||| Saisissez l'index du cadran ||| Introduza a leitura do mostrador
+Equal ||| À parts égales ||| Partes iguais
+Error: ||| Erreur : ||| Erro:
+Estimated ||| Estimé ||| Estimado
+Everything is read this cycle — planning the full route for the next cycle ||| Tout est relevé pour ce cycle — tournée complète prévue pour le prochain cycle ||| Tudo lido neste ciclo — percurso completo para o próximo ciclo
+Extra ||| Supplémentaire ||| Extra
+Fail ||| Échec ||| Reprovado
+Failed ||| Échoué ||| Falhou
+Fair ||| Moyen ||| Razoável
+Faulty ||| Défectueux ||| Avariado
+Field kit ||| Kit de terrain ||| Kit de campo
+Field meter reading ||| Relevé des compteurs sur le terrain ||| Leitura de contadores no terreno
+Field reading ||| Relevé terrain ||| Leitura no terreno
+Finding it hard to pay in full? Text ||| Difficile de tout payer ? Envoyez ||| Difícil pagar tudo? Envie
+Fitting ||| Raccord ||| Acessório
+Fixed pct ||| Pourcentage fixe ||| Percentagem fixa
+Free ||| Gratuit ||| Gratuito
+Fri ||| ven ||| sex
+Getting location… ||| Recherche de la position… ||| A obter a localização…
+Getting your location… ||| Recherche de votre position… ||| A obter a sua localização…
+Good ||| Bon ||| Bom
+GPS capture disabled by administrator ||| Relevé GPS désactivé par l'administrateur ||| Registo GPS desativado pelo administrador
+GPS not available ||| GPS non disponible ||| GPS indisponível
+GPS unavailable: ||| GPS indisponible : ||| GPS indisponível:
+High ||| Élevée ||| Alta
+Home ||| Accueil ||| Início
+Hours ||| Heures ||| Horas
+Household ||| Ménage ||| Agregado familiar
+Household size ||| Taille du ménage ||| Tamanho do agregado
+How read ||| Mode de relevé ||| Como foi lido
+I confirm the serial on the meter matches ||| Je confirme que le numéro du compteur correspond ||| Confirmo que o número do contador corresponde
+Ignored ||| Ignoré ||| Ignorado
+In progress ||| En cours ||| Em curso
+In stock ||| En stock ||| Em stock
+Info required ||| Informations requises ||| Informação necessária
+Installing ||| Installation en cours ||| Em instalação
+Institution ||| Établissement ||| Instituição
+is LOWER than the previous ||| est INFÉRIEUR au précédent ||| é MENOR que a anterior
+Issue ||| Sortie ||| Saída
+Issued ||| Émise ||| Emitida
+Kiosk ||| Kiosque ||| Quiosque
+Kiosk sales ||| Ventes au kiosque ||| Vendas no quiosque
+Lab ||| Laboratoire ||| Laboratório
+Landmark ||| Point de repère ||| Ponto de referência
+Last ||| Dernier ||| Último
+Last reading ||| Dernier relevé ||| Última leitura
+Leak ||| Fuite ||| Fuga
+LEAK ||| FUITE ||| FUGA
+Loading AquaTrack… ||| Chargement d'AquaTrack… ||| A carregar o AquaTrack…
+Loading… ||| Chargement… ||| A carregar…
+Locating… ||| Localisation… ||| A localizar…
+Location unavailable — route planned from the first meter ||| Position indisponible — tournée planifiée depuis le premier compteur ||| Localização indisponível — percurso planeado a partir do primeiro contador
+Low ||| Faible ||| Baixa
+m³/day ||| m³/jour ||| m³/dia
+Maintenance ||| Maintenance ||| Manutenção
+Manual ||| Manuel ||| Manual
+Matched ||| Rapproché ||| Conciliado
+Measured ||| Mesuré ||| Medido
+Mechanical ||| Mécanique ||| Mecânico
+Medium ||| Moyenne ||| Média
+Menu ||| Menu ||| Menu
+Meter ||| Compteur ||| Contador
+Meter not accessible — this is an ||| Compteur inaccessible — ceci est une ||| Contador inacessível — isto é uma
+Meter not in your route. ||| Compteur hors de votre tournée. ||| Contador fora do seu percurso.
+Meter part ||| Pièce de compteur ||| Peça de contador
+Meter replacement planner ||| Planification du remplacement des compteurs ||| Planeamento da substituição de contadores
+Meter serial ||| N° de série du compteur ||| N.º de série do contador
+Meters ||| Compteurs ||| Contadores
+meters · ||| compteurs · ||| contadores ·
+Method ||| Mode ||| Método
+Missed ||| Manquée ||| Falhada
+Mobile money ||| Mobile money ||| Dinheiro móvel
+Mon ||| lun ||| seg
+Monthly ||| Mensuel ||| Mensal
+Morning briefing ||| Point du matin ||| Resumo da manhã
+My account ||| Mon compte ||| A minha conta
+My bills ||| Mes factures ||| As minhas faturas
+My payment plan ||| Mon échéancier ||| O meu plano de pagamento
+Name ||| Nom ||| Nome
+Network & service ||| Réseau et service ||| Rede e serviço
+Network assets ||| Ouvrages du réseau ||| Ativos da rede
+New connections ||| Nouveaux branchements ||| Novas ligações
+New password ||| Nouveau mot de passe ||| Nova palavra-passe
+No active meter on your account. ||| Aucun compteur actif sur votre compte. ||| Não há contador ativo na sua conta.
+No current notices. ||| Aucun avis en cours. ||| Sem avisos de momento.
+No public water points listed. ||| Aucun point d'eau public répertorié. ||| Nenhum ponto de água público registado.
+No smartphone? ||| Pas de smartphone ? ||| Sem smartphone?
+No smartphone? Dial ||| Pas de smartphone ? Composez ||| Sem smartphone? Marque
+No water ||| Pas d'eau ||| Sem água
+None ||| Aucun ||| Nenhum
+Not available ||| Non disponible ||| Indisponível
+Not available for your role ||| Non disponible pour votre rôle ||| Indisponível para a sua função
+Not yet tested ||| Pas encore testé ||| Ainda não testado
+Notes ||| Notes ||| Notas
+Nothing to sync ||| Rien à synchroniser ||| Nada para sincronizar
+Nothing yet. ||| Rien pour l'instant. ||| Nada por agora.
+OCR unavailable: ||| Lecture automatique indisponible : ||| Leitura automática indisponível:
+Offline — showing the route saved on this device ||| Hors ligne — tournée enregistrée sur cet appareil ||| Offline — a mostrar o percurso guardado neste equipamento
+Ok ||| OK ||| OK
+on any phone, or text ||| depuis n'importe quel téléphone, ou envoyez ||| em qualquer telefone, ou envie
+On hold ||| En attente ||| Em espera
+On track ||| Dans les temps ||| Em dia
+Open ||| Ouvert ||| Aberto
+Operational ||| En service ||| Operacional
+Operations ||| Exploitation ||| Operações
+or visit the office to agree an affordable payment plan. ||| ou passez au bureau pour convenir d'un échéancier abordable. ||| ou vá ao escritório para acordar um plano de pagamento acessível.
+Other ||| Autre ||| Outro
+Overdue ||| En retard ||| Em atraso
+Page not found ||| Page introuvable ||| Página não encontrada
+Paid ||| Payée ||| Paga
+Partial ||| Partielle ||| Parcial
+Partially paid ||| Payée en partie ||| Paga em parte
+Pass ||| Conforme ||| Aprovado
+Password ||| Mot de passe ||| Palavra-passe
+Password updated ||| Mot de passe mis à jour ||| Palavra-passe atualizada
+Payments ||| Paiements ||| Pagamentos
+Pending ||| En attente ||| Pendente
+People in the household ||| Personnes dans le ménage ||| Pessoas no agregado
+Period ||| Période ||| Período
+Phone ||| Téléphone ||| Telefone
+Photo reading is ready and will work offline ||| La lecture photo est prête et fonctionnera hors ligne ||| A leitura por foto está pronta e funciona offline
+Photo reads ||| La photo indique ||| A foto indica
+Photo shows ||| La photo montre ||| A foto mostra
+Pipe ||| Tuyau ||| Tubo
+PLAN ||| ECHEANCIER ||| PLANO
+Planned ||| Prévu ||| Previsto
+Please take a photo of your meter first ||| Veuillez d'abord photographier votre compteur ||| Fotografe primeiro o seu contador
+Poor ||| Mauvais ||| Mau
+Posted ||| Comptabilisé ||| Registado
+Postpaid ||| Post-payé ||| Pós-pago
+Prepaid ||| Prépayé ||| Pré-pago
+Preparing… ||| Préparation… ||| A preparar…
+Previous reading ||| Relevé précédent ||| Leitura anterior
+Price ||| Prix ||| Preço
+Print ||| Imprimer ||| Imprimir
+Print statement ||| Imprimer le relevé de compte ||| Imprimir extrato
+Problem at a water point / kiosk ||| Problème à un point d'eau / kiosque ||| Problema num ponto de água / quiosque
+Public water point ||| Point d'eau public ||| Ponto de água público
+Quality ||| Qualité ||| Qualidade
+Quote ready ||| Devis prêt ||| Orçamento pronto
+Quote: ||| Devis : ||| Orçamento:
+Quoted ||| Devis envoyé ||| Orçamentado
+R-ABC123 or C-ABC123 ||| R-ABC123 ou C-ABC123 ||| R-ABC123 ou C-ABC123
+READ 1234 ||| INDEX 1234 ||| LEITURA 1234
+Reading ||| Relevé ||| Leitura
+Reading saved on device ||| Relevé enregistré sur l'appareil ||| Leitura guardada no equipamento
+Readings ||| Relevés ||| Leituras
+Readings review ||| Vérification des relevés ||| Revisão de leituras
+Ready for implementation ||| Prêt à mettre en œuvre ||| Pronto a implementar
+Receipt ||| Reçu ||| Recibo
+Receive ||| Réceptionner ||| Receber
+Received ||| Reçu ||| Recebido
+Rejected ||| Rejeté ||| Rejeitado
+Removed ||| Retiré ||| Removido
+Repairs ||| Réparations ||| Reparações
+Replace ||| Remplacer ||| Substituir
+Replace now ||| Remplacer maintenant ||| Substituir já
+Replaced ||| Remplacé ||| Substituído
+Report a problem ||| Signaler un problème ||| Comunicar um problema
+Resolved ||| Résolu ||| Resolvido
+Return ||| Retour en stock ||| Devolução
+Reversal ||| Contre-passation ||| Estorno
+Reversed ||| Annulé (contre-passé) ||| Estornado
+Reviewed & closed ||| Examiné et clos ||| Analisado e fechado
+Route planned from your location ||| Tournée planifiée depuis votre position ||| Percurso planeado a partir da sua localização
+Route planned: ||| Tournée planifiée : ||| Percurso planeado:
+Sat ||| sam ||| sáb
+Save reading ||| Enregistrer le relevé ||| Guardar leitura
+Saved on device ||| Enregistré sur l'appareil ||| Guardado no equipamento
+Saved on this device first, then sent to the server automatically when online. ||| Enregistré d'abord sur cet appareil, puis envoyé automatiquement au serveur dès qu'il y a une connexion. ||| Guardado primeiro neste equipamento e enviado automaticamente para o servidor quando houver ligação.
+School / clinic / church ||| École / centre de santé / église ||| Escola / centro de saúde / igreja
+Search name, customer no., meter serial, address… ||| Rechercher nom, n° client, n° compteur, adresse… ||| Pesquisar nome, n.º de cliente, n.º do contador, morada…
+Security ||| Sécurité ||| Segurança
+Seen by staff ||| Vu par le personnel ||| Visto pela equipa
+Send an SMS: ||| Envoyez un SMS : ||| Envie um SMS:
+Send application ||| Envoyer la demande ||| Enviar pedido
+Send my meter reading ||| Envoyer mon index ||| Enviar a minha leitura
+Send reading ||| Envoyer l'index ||| Enviar leitura
+Send report ||| Envoyer le signalement ||| Enviar comunicação
+Sensor ||| Capteur ||| Sensor
+Sent to server ||| Envoyé au serveur ||| Enviado para o servidor
+Service notices ||| Avis de service ||| Avisos de serviço
+Show only meters not yet read this cycle ||| Afficher seulement les compteurs non relevés ce cycle ||| Mostrar apenas contadores ainda não lidos neste ciclo
+Sign in ||| Se connecter ||| Entrar
+Sign out ||| Se déconnecter ||| Sair
+Simulated ||| Simulé ||| Simulado
+Simulator ||| Simulateur ||| Simulador
+Smart Water Supply & Meter Management ||| Gestion intelligente de l'eau et des compteurs ||| Gestão inteligente da água e dos contadores
+Staff ||| Personnel ||| Pessoal
+Starting OCR… ||| Démarrage de la lecture… ||| A iniciar a leitura…
+Statement ||| Relevé de compte ||| Extrato
+Status ||| Statut ||| Estado
+still to read this cycle ||| encore à relever ce cycle ||| ainda por ler neste ciclo
+stops, about ||| arrêts, environ ||| paragens, cerca de
+Stores ||| Magasin ||| Armazém
+Street, house, community ||| Rue, maison, quartier ||| Rua, casa, bairro
+Street, landmark, near… ||| Rue, repère, près de… ||| Rua, ponto de referência, perto de…
+Submitted ||| Soumis ||| Enviado
+Sun ||| dim ||| dom
+Supply timetable ||| Horaires de distribution ||| Horário de abastecimento
+Survey booked ||| Visite prévue ||| Visita marcada
+Survey scheduled ||| Visite prévue ||| Visita marcada
+Surveyed ||| Visite faite ||| Visita feita
+Suspended ||| Suspendu ||| Suspenso
+Tariff & affordability lab ||| Laboratoire tarifs et accessibilité ||| Laboratório de tarifas e acessibilidade
+Team assigned ||| Équipe désignée ||| Equipa atribuída
+Team working on it ||| Équipe au travail ||| Equipa a trabalhar
+Test ||| Tester ||| Testar
+Text SUPPLY to get your next water time by SMS. ||| Envoyez EAU par SMS pour connaître la prochaine distribution. ||| Envie AGUA por SMS para saber o próximo horário da água.
+Thank you! ||| Merci ! ||| Obrigado!
+Thank you! Your reading was received and will be checked. ||| Merci ! Votre index a été reçu et sera vérifié. ||| Obrigado! A sua leitura foi recebida e será verificada.
+The photo reads ||| La photo indique ||| A foto indica
+The reading ||| Le relevé ||| A leitura
+This page shows service information only. It never shows customer names, accounts or bills. ||| Cette page montre uniquement des informations de service. Elle n'affiche jamais de noms, comptes ou factures de clients. ||| Esta página mostra apenas informação do serviço. Nunca mostra nomes, contas ou faturas de clientes.
+This reading uses ||| Ce relevé utilise ||| Esta leitura usa
+Thu ||| jeu ||| qui
+to read ||| à relever ||| por ler
+Tool ||| Outil ||| Ferramenta
+Track my report ||| Suivre mon signalement ||| Acompanhar a minha comunicação
+Transport ||| Transport ||| Transporte
+Tue ||| mar ||| ter
+Two-factor sign-in ||| Connexion à deux facteurs ||| Início de sessão com dois fatores
+Type ||| Type ||| Tipo
+Ultrasonic ||| Ultrasonique ||| Ultrassónico
+Unmatched ||| Non rapproché ||| Não conciliado
+Update password ||| Mettre à jour le mot de passe ||| Atualizar palavra-passe
+Usage ||| Consommation ||| Consumo
+Use ||| Utiliser ||| Usar
+Username ||| Nom d'utilisateur ||| Nome de utilizador
+Verified ||| Vérifié ||| Verificado
+Verify ||| Vérifier ||| Verificar
+Wallet ||| Carte d'eau ||| Cartão de água
+Warn ||| Attention ||| Atenção
+Water looks / smells / tastes bad ||| L'eau a un mauvais aspect / odeur / goût ||| A água tem mau aspeto / cheiro / sabor
+Water point ||| Point d'eau ||| Ponto de água
+Water points & cards ||| Points d'eau et cartes ||| Pontos de água e cartões
+Water quality ||| Qualité de l'eau ||| Qualidade da água
+Water quality advisory: ||| Alerte qualité de l'eau : ||| Aviso de qualidade da água:
+Water status — ||| État de l'eau — ||| Estado da água —
+Water status & report a problem ||| État de l'eau et signalement ||| Estado da água e comunicar problemas
+Water test FAILED — treat water ||| Test d'eau ÉCHOUÉ — traitez l'eau ||| Análise da água REPROVADA — trate a água
+Water test passed ||| Test d'eau réussi ||| Análise da água aprovada
+Water test: attention ||| Test d'eau : attention ||| Análise da água: atenção
+Water utility ||| Service des eaux ||| Entidade da água
+Water-loss intelligence ||| Analyse des pertes d'eau ||| Análise de perdas de água
+Wed ||| mer ||| qua
+Weekly ||| Hebdomadaire ||| Semanal
+Welcome, ||| Bienvenue, ||| Bem-vindo,
+What is the problem? ||| Quel est le problème ? ||| Qual é o problema?
+Where exactly? ||| Où exactement ? ||| Onde exatamente?
+Will retry sync later: ||| Nouvelle synchronisation plus tard : ||| Nova sincronização mais tarde:
+without GPS at the end ||| sans GPS à la fin ||| sem GPS no fim
+Work order ||| Ordre de travail ||| Ordem de trabalho
+Work orders ||| Ordres de travail ||| Ordens de trabalho
+You are in credit. ||| Votre compte est créditeur. ||| Tem saldo a seu favor.
+You are offline. Field readings are saved on this device and will sync when the connection returns. ||| Vous êtes hors ligne. Les relevés sont enregistrés sur cet appareil et seront synchronisés au retour de la connexion. ||| Está offline. As leituras ficam guardadas neste equipamento e serão sincronizadas quando a ligação voltar.
+You are offline. Readings stay saved on this device. ||| Vous êtes hors ligne. Les relevés restent enregistrés sur cet appareil. ||| Está offline. As leituras ficam guardadas neste equipamento.
+You must set a new password before continuing. ||| Vous devez choisir un nouveau mot de passe avant de continuer. ||| Tem de definir uma nova palavra-passe para continuar.
+Your account is settled. Thank you! ||| Votre compte est à jour. Merci ! ||| A sua conta está em dia. Obrigado!
+Your assigned area ||| Votre zone attribuée ||| A sua zona atribuída
+Your name ||| Votre nom ||| O seu nome
+Your reference is ||| Votre référence est ||| A sua referência é
+Your report number is ||| Votre numéro de signalement est ||| O número da sua comunicação é

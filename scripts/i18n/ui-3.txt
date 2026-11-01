@@ -1,0 +1,187 @@
+# Dashboard, public transparency page, work orders & alerts, bills, receipts and statements
+— billed vs collected ||| — facturé / encaissé ||| — faturado / cobrado
+— combined billed ||| — total facturé ||| — total faturado
+, collected ||| , encaissé ||| , cobrado
+, outstanding ||| , restant dû ||| , em dívida
+. Amounts stay in their own currency. ||| . Les montants restent dans leur devise. ||| . Os valores ficam na sua moeda.
+. Payments in another currency are converted at the configured exchange rate. ||| . Les paiements dans une autre devise sont convertis au taux de change configuré. ||| . Pagamentos noutra moeda são convertidos à taxa de câmbio configurada.
+· balance ||| · solde ||| · saldo
+% estimated ||| % estimées ||| % estimadas
++ New adjustment ||| + Nouvel ajustement ||| + Novo ajuste
++ New work order ||| + Nouvel ordre de travail ||| + Nova ordem de trabalho
++ Raise alert ||| + Lancer une alerte ||| + Criar alerta
++ Record payment ||| + Enregistrer un paiement ||| + Registar pagamento
+🧭 Plan today's route ||| 🧭 Planifier la tournée du jour ||| 🧭 Planear o percurso de hoje
+12 mo ||| 12 mois ||| 12 meses
+6 mo ||| 6 mois ||| 6 meses
+About these figures ||| À propos de ces chiffres ||| Sobre estes números
+Account balance now ||| Solde actuel du compte ||| Saldo atual da conta
+Account credit ||| Crédit du compte ||| Crédito da conta
+Account currency ||| Devise du compte ||| Moeda da conta
+Account statement ||| Relevé de compte ||| Extrato de conta
+Active accounts with an active meter ||| Comptes actifs avec un compteur en service ||| Contas ativas com contador ativo
+Active connections ||| Branchements actifs ||| Ligações ativas
+Active connections with meter: ||| Branchements actifs avec compteur : ||| Ligações ativas com contador:
+Active meters by reading method ||| Compteurs actifs par mode de relevé ||| Contadores ativos por método de leitura
+Adjustment ||| Ajustement ||| Ajuste
+Affected ||| Concerné ||| Afetado
+Alert checks complete: ||| Contrôles d'alertes terminés : ||| Verificação de alertas concluída:
+Alert raised ||| Alerte lancée ||| Alerta criado
+Amount received ||| Montant reçu ||| Valor recebido
+Applied to ||| Imputé à ||| Aplicado a
+Assign alert ||| Attribuer l'alerte ||| Atribuir alerta
+Assign technician ||| Attribuer un technicien ||| Atribuir técnico
+Assign to ||| Attribuer à ||| Atribuir a
+Assigned to ||| Attribué à ||| Atribuído a
+at configured rate ||| au taux configuré ||| à taxa configurada
+Basis ||| Base ||| Base
+Bill cancelled ||| Facture annulée ||| Fatura anulada
+Bill no. ||| N° de facture ||| N.º da fatura
+Bill no., customer ||| N° de facture, client ||| N.º da fatura, cliente
+Billed to customers ||| Facturé aux clients ||| Faturado aos clientes
+Billing period end ||| Fin de la période de facturation ||| Fim do período de faturação
+Billing period start ||| Début de la période de facturation ||| Início do período de faturação
+bills are based on simulated readings. ||| factures sont basées sur des relevés simulés. ||| faturas baseiam-se em leituras simuladas.
+Bills are calculated from ||| Les factures sont calculées à partir des relevés ||| As faturas são calculadas a partir de leituras
+Bills issued ||| Factures émises ||| Faturas emitidas
+bills ready, ||| factures prêtes, ||| faturas prontas,
+Bulk supply ||| Production / volume distribué ||| Abastecimento a granel
+Cancel bill ||| Annuler la facture ||| Anular fatura
+Cancelled bills stay on record. The closing reading becomes available for re-billing. ||| Les factures annulées restent enregistrées. Le relevé de clôture peut être refacturé. ||| As faturas anuladas ficam registadas. A leitura final fica disponível para nova faturação.
+Cancelled: ||| Annulées : ||| Anuladas:
+Cashier ||| Caissier ||| Caixa
+Charges ||| Frais ||| Encargos
+Checks complete: ||| Contrôles terminés : ||| Verificações concluídas:
+Closing ||| Clôture ||| Final
+Community reports ||| Signalements de la population ||| Comunicações da comunidade
+Configure rules ||| Configurer les règles ||| Configurar regras
+Connections with a working meter ||| Branchements avec un compteur en état de marche ||| Ligações com contador a funcionar
+Credit ||| Crédit ||| Crédito
+Currency tendered ||| Devise remise ||| Moeda entregue
+Current charges ||| Montant de la période ||| Encargos do período
+Customer report ||| Signalement client ||| Comunicação de cliente
+Customers & reading methods ||| Clients et modes de relevé ||| Clientes e métodos de leitura
+Data basis shows whether an alert comes from device measurements, manual readings, estimates or the demo simulator. ||| La base indique si une alerte vient de mesures d'appareils, de relevés manuels, d'estimations ou du simulateur de démonstration. ||| A base indica se um alerta vem de medições de equipamentos, leituras manuais, estimativas ou do simulador de demonstração.
+Data grade ||| Qualité des données ||| Qualidade dos dados
+Date & time received ||| Date et heure de réception ||| Data e hora de receção
+Days until due ||| Jours avant l'échéance ||| Dias até ao vencimento
+Debit ||| Débit ||| Débito
+Decision recorded ||| Décision enregistrée ||| Decisão registada
+Default from settings ||| Valeur par défaut des paramètres ||| Valor por defeito das definições
+DEMO — NOT A REAL ||| DÉMO — CECI N'EST PAS UN VRAI ||| DEMO — NÃO É UM(A) VERDADEIRO(A)
+DEMONSTRATION — every figure on this page comes from fictional demo data. ||| DÉMONSTRATION — tous les chiffres de cette page proviennent de données fictives. ||| DEMONSTRAÇÃO — todos os números desta página vêm de dados fictícios.
+Difference ||| Différence ||| Diferença
+Due date ||| Date d'échéance ||| Data de vencimento
+Each report creates an alert. When the alert is resolved or its work order completed, the reporter gets an SMS automatically. Public page: ||| Chaque signalement crée une alerte. Quand l'alerte est résolue ou l'ordre de travail terminé, la personne reçoit automatiquement un SMS. Page publique : ||| Cada comunicação cria um alerta. Quando o alerta é resolvido ou a ordem de trabalho concluída, a pessoa recebe automaticamente um SMS. Página pública:
+Field notes / work done ||| Notes de terrain / travaux effectués ||| Notas de campo / trabalho feito
+Figures are computed from fictional demo records. ||| Les chiffres sont calculés à partir de données fictives. ||| Os números são calculados a partir de registos fictícios.
+Financial sustainability & service ||| Viabilité financière et service ||| Sustentabilidade financeira e serviço
+flagged for attention ||| signalés à vérifier ||| marcadas para atenção
+From alert ||| Issu de l'alerte ||| Origem: alerta
+Generate bills ||| Générer les factures ||| Gerar faturas
+Give a reason. ||| Indiquez un motif. ||| Indique um motivo.
+Grade A: measured supply and actual readings. B: some estimated bills. C: estimated or simulated supply, or many estimated bills. ||| Qualité A : production mesurée et relevés réels. B : quelques factures estimées. C : production estimée ou simulée, ou nombreuses factures estimées. ||| Qualidade A: abastecimento medido e leituras reais. B: algumas faturas estimadas. C: abastecimento estimado ou simulado, ou muitas faturas estimadas.
+h from report to completion ||| h entre le signalement et la fin des travaux ||| h da comunicação à conclusão
+History ||| Historique ||| Histórico
+in progress · ||| en cours · ||| em curso ·
+Instructions ||| Instructions ||| Instruções
+Issue bills ||| Émettre les factures ||| Emitir faturas
+Jobs assigned to you and unassigned jobs ||| Travaux qui vous sont attribués et travaux non attribués ||| Trabalhos atribuídos a si e trabalhos por atribuir
+jobs, about ||| travaux, environ ||| trabalhos, cerca de
+Leak / problem reports ||| Signalements de fuites / problèmes ||| Comunicações de fugas / problemas
+Link not available ||| Lien non disponible ||| Ligação indisponível
+Location unavailable: route starts at the first job. ||| Position indisponible : la tournée commence au premier travail. ||| Localização indisponível: o percurso começa no primeiro trabalho.
+Loss % ||| Pertes % ||| Perdas %
+Maker–checker: adjustments are approved by a different authorised user ||| Double contrôle : les ajustements sont approuvés par un autre utilisateur habilité ||| Controlo duplo: os ajustes são aprovados por outro utilizador autorizado
+Meter coverage ||| Taux de comptage ||| Cobertura de contadores
+Meter fault / tamper ||| Défaut / fraude compteur ||| Avaria / fraude no contador
+Meters read in the last month ||| Compteurs relevés le mois dernier ||| Contadores lidos no último mês
+Missing reading ||| Relevé manquant ||| Leitura em falta
+Monthly supplied and billed volume ||| Volumes mensuels distribués et facturés ||| Volume mensal fornecido e faturado
+Never enter card numbers. For mobile money and bank payments, record the transaction reference. Each reference can be recorded only once. ||| Ne saisissez jamais de numéro de carte bancaire. Pour le mobile money et les virements, enregistrez la référence de la transaction. Chaque référence ne peut être enregistrée qu'une fois. ||| Nunca introduza números de cartão. Para dinheiro móvel e pagamentos bancários, registe a referência da transação. Cada referência só pode ser registada uma vez.
+New ||| Nouveau ||| Novo
+New adjustment ||| Nouvel ajustement ||| Novo ajuste
+New status ||| Nouveau statut ||| Novo estado
+No alerts match. Run alert checks to evaluate the latest data. ||| Aucune alerte. Lancez les contrôles pour analyser les dernières données. ||| Nenhum alerta. Execute as verificações para analisar os dados mais recentes.
+No bills in this period ||| Aucune facture sur cette période ||| Sem faturas neste período
+No change ||| Pas de changement ||| Sem alteração
+No community reports yet. ||| Pas encore de signalements de la population. ||| Ainda sem comunicações da comunidade.
+No consumption ||| Pas de consommation ||| Sem consumo
+No data yet. ||| Pas encore de données. ||| Ainda sem dados.
+no GPS ||| pas de GPS ||| sem GPS
+No outstanding bills. ||| Aucune facture impayée. ||| Sem faturas em dívida.
+No payment-card data is entered or stored in this system. ||| Aucune donnée de carte bancaire n'est saisie ni conservée dans ce système. ||| Nenhum dado de cartão de pagamento é introduzido ou guardado neste sistema.
+No work orders. ||| Aucun ordre de travail. ||| Sem ordens de trabalho.
+Non-revenue water by area ||| Eau non facturée par zone ||| Água não faturada por zona
+Not yet due ||| Pas encore échu ||| Ainda não vencido
+Official payment receipt ||| Reçu de paiement officiel ||| Recibo de pagamento oficial
+Oldest unpaid first ||| Les plus anciennes impayées d'abord ||| Mais antigas por pagar primeiro
+Only where bulk/district supply data exists ||| Uniquement là où des volumes de production existent ||| Apenas onde há dados de abastecimento
+Open alerts ||| Alertes ouvertes ||| Alertas abertos
+Open work orders ||| Ordres de travail ouverts ||| Ordens de trabalho abertas
+Opening ||| Ouverture ||| Inicial
+Opening balance ||| Solde d'ouverture ||| Saldo inicial
+Operations dashboard ||| Tableau de bord de l'exploitation ||| Painel de operações
+Outstanding balances: ||| Soldes impayés : ||| Saldos em dívida:
+Paid against this bill / outstanding on this bill ||| Payé sur cette facture / reste dû sur cette facture ||| Pago nesta fatura / em dívida nesta fatura
+Pay at the utility office or by mobile money quoting your account number. Keep your receipt. ||| Payez au bureau ou par mobile money en indiquant votre numéro de compte. Conservez votre reçu. ||| Pague no escritório ou por dinheiro móvel indicando o seu número de conta. Guarde o recibo.
+Payment method ||| Mode de paiement ||| Método de pagamento
+Payment posted — receipt ||| Paiement enregistré — reçu ||| Pagamento registado — recibo
+Payments / credits ||| Paiements / crédits ||| Pagamentos / créditos
+Payments applied ||| Paiements imputés ||| Pagamentos aplicados
+Pending approval ||| En attente d'approbation ||| A aguardar aprovação
+Post reversal ||| Enregistrer l'annulation ||| Registar estorno
+Preview bills ||| Aperçu des factures ||| Pré-visualizar faturas
+Preview: ||| Aperçu : ||| Pré-visualização:
+Print / PDF ||| Imprimer / PDF ||| Imprimir / PDF
+Print receipt ||| Imprimer le reçu ||| Imprimir recibo
+Public water points functional ||| Points d'eau publics en service ||| Pontos de água públicos a funcionar
+Quick: ||| Rapide : ||| Rápido:
+Readings awaiting review ||| Relevés à vérifier ||| Leituras por rever
+readings in this period come from the demo simulator. ||| relevés de cette période viennent du simulateur de démonstration. ||| leituras deste período vêm do simulador de demonstração.
+readings only, using the tariff in force for each customer's type, area and meter size. Review pending readings first. Always preview before issuing. ||| approuvés uniquement, avec le tarif en vigueur selon le type de client, la zone et le calibre du compteur. Vérifiez d'abord les relevés en attente. Prévisualisez toujours avant d'émettre. ||| aprovadas, com a tarifa em vigor para o tipo de cliente, zona e calibre do contador. Reveja primeiro as leituras pendentes. Pré-visualize sempre antes de emitir.
+Ready ||| Prêt ||| Pronto
+Reason / justification ||| Motif / justification ||| Motivo / justificação
+Reassign ||| Réattribuer ||| Reatribuir
+Receipt, customer, reference ||| Reçu, client, référence ||| Recibo, cliente, referência
+Received from ||| Reçu de ||| Recebido de
+Reject adjustment ||| Rejeter l'ajustement ||| Rejeitar ajuste
+Repairs & jobs completed ||| Réparations et travaux terminés ||| Reparações e trabalhos concluídos
+Report ||| Signaler ||| Comunicar
+Report a problem / raise an alert ||| Signaler un problème / lancer une alerte ||| Comunicar um problema / criar alerta
+Reports ||| Rapports ||| Relatórios
+Requires approval by a manager before it affects the balance. ||| Doit être approuvé par un responsable avant de modifier le solde. ||| Tem de ser aprovado por um responsável antes de afetar o saldo.
+Resolution: ||| Résolution : ||| Resolução:
+Resolve or dismiss alert ||| Résoudre ou écarter l'alerte ||| Resolver ou descartar alerta
+Reversal posted ||| Annulation enregistrée ||| Estorno registado
+Reverse payment ||| Annuler le paiement ||| Estornar pagamento
+Run alert checks ||| Lancer les contrôles d'alertes ||| Executar verificação de alertas
+Run alert checks now ||| Lancer les contrôles maintenant ||| Executar verificação agora
+Save update ||| Enregistrer la mise à jour ||| Guardar atualização
+Skipped ||| Ignoré ||| Ignorado
+Staff member ||| Membre du personnel ||| Membro da equipa
+Statement of account ||| Relevé de compte ||| Extrato de conta
+Status / assigned ||| Statut / attribué ||| Estado / atribuído
+Supply data source ||| Source des volumes produits ||| Origem dos dados de abastecimento
+Supply period ||| Période de production ||| Período de abastecimento
+Suspected leak ||| Fuite suspectée ||| Fuga suspeita
+Tariff ||| Tarif ||| Tarifa
+Tendered ||| Remis ||| Entregue
+This bill is ESTIMATED because no actual approved reading was available. It will be corrected automatically when the next actual reading is billed. ||| Cette facture est ESTIMÉE car aucun relevé réel approuvé n'était disponible. Elle sera corrigée automatiquement lors de la facturation du prochain relevé réel. ||| Esta fatura é ESTIMADA porque não havia leitura real aprovada. Será corrigida automaticamente quando a próxima leitura real for faturada.
+This page link is not valid or has been withdrawn by the utility. ||| Ce lien n'est pas valide ou a été retiré par le service. ||| Esta ligação não é válida ou foi retirada pela entidade.
+This work order is closed. ||| Cet ordre de travail est clos. ||| Esta ordem de trabalho está fechada.
+Today's route — ||| Tournée du jour — ||| Percurso de hoje —
+Total amount due at issue ||| Montant total dû à l'émission ||| Valor total em dívida na emissão
+Unassigned ||| Non attribué ||| Por atribuir
+Unusual consumption ||| Consommation inhabituelle ||| Consumo anormal
+Update ||| Mettre à jour ||| Atualizar
+Updated ||| Mis à jour ||| Atualizado
+Water bill / invoice ||| Facture d'eau ||| Fatura da água
+Water billed ||| Eau facturée ||| Água faturada
+Water efficiency ||| Efficacité hydraulique ||| Eficiência hídrica
+Water supplied ||| Eau distribuée ||| Água fornecida
+What did you find and do? Parts used? ||| Qu'avez-vous constaté et fait ? Pièces utilisées ? ||| O que encontrou e fez? Peças usadas?
+When completed, also resolve the linked alert ||| Une fois terminé, résoudre aussi l'alerte liée ||| Quando concluído, resolver também o alerta associado
+Work order raised ||| Ordre de travail créé ||| Ordem de trabalho criada
+Work order updated ||| Ordre de travail mis à jour ||| Ordem de trabalho atualizada
+Work type ||| Type de travaux ||| Tipo de trabalho

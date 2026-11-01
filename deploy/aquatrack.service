@@ -1,0 +1,29 @@
+[Unit]
+Description=AquaTrack water utility system
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=aquatrack
+Group=aquatrack
+EnvironmentFile=/etc/aquatrack/aquatrack.env
+WorkingDirectory=/opt/aquatrack/current
+ExecStart=/usr/bin/node --no-warnings=ExperimentalWarning server/index.js
+Restart=always
+RestartSec=3
+# Hardening: the app may only write to its data folder.
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+PrivateDevices=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+LockPersonality=true
+ReadWritePaths=/var/lib/aquatrack
+
+[Install]
+WantedBy=multi-user.target

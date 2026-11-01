@@ -1,0 +1,204 @@
+# Common controls, water points / kiosk, and frequent office words
+— balance ||| — solde ||| — saldo
+. Continue? ||| . Continuer ? ||| . Continuar?
+· card ||| · carte ||| · cartão
+· paid ||| · payé ||| · pago
+% unaccounted ||| % non justifié ||| % por justificar
++ Band ||| + Tranche ||| + Escalão
++ Issue water card ||| + Délivrer une carte d'eau ||| + Emitir cartão de água
+Access ||| Accès ||| Acesso
+Account ||| Compte ||| Conta
+Alert ||| Alerte ||| Alerta
+All ||| Tous ||| Todos
+All types ||| Tous les types ||| Todos os tipos
+Any ||| Tous ||| Qualquer
+Apply ||| Appliquer ||| Aplicar
+AquaTrack — Smart Water Supply & Meter Management ||| AquaTrack — Gestion intelligente de l'eau et des compteurs ||| AquaTrack — Gestão inteligente da água e dos contadores
+AquaTrack needs JavaScript enabled. ||| AquaTrack nécessite JavaScript. ||| O AquaTrack precisa do JavaScript ativado.
+Ask your manager to assign you to a water point. ||| Demandez à votre responsable de vous affecter à un point d'eau. ||| Peça ao seu responsável para o atribuir a um ponto de água.
+Asset ||| Ouvrage ||| Ativo
+Attendant ||| Gardien ||| Operador
+Attendants use the ||| Les gardiens utilisent l'écran ||| Os operadores usam o ecrã
+Bank transfer / deposit ||| Virement / dépôt bancaire ||| Transferência / depósito bancário
+Billed ||| Facturé ||| Faturado
+Billing mode ||| Mode de facturation ||| Modo de faturação
+Block ||| Bloquer ||| Bloquear
+By ||| Par ||| Por
+Cancel ||| Annuler ||| Cancelar
+Card ||| Carte ||| Cartão
+Card balance ||| Solde de la carte ||| Saldo do cartão
+Card history ||| Historique de la carte ||| Histórico do cartão
+Card holder ||| Titulaire de la carte ||| Titular do cartão
+Card issued: ||| Carte délivrée : ||| Cartão emitido:
+Card not found ||| Carte introuvable ||| Cartão não encontrado
+Card not found on this phone ||| Carte introuvable sur ce téléphone ||| Cartão não encontrado neste telefone
+Card number ||| Numéro de carte ||| Número do cartão
+Card number e.g. WC-GVW-0001 ||| Numéro de carte ex. WC-GVW-0001 ||| Número do cartão ex. WC-GVW-0001
+Card, name, phone ||| Carte, nom, téléphone ||| Cartão, nome, telefone
+Cash handed over − expected ||| Espèces remises − attendu ||| Numerário entregue − esperado
+Cash handovers ||| Remises d'espèces ||| Entregas de numerário
+Cash received ||| Espèces reçues ||| Numerário recebido
+Cash top-up — ||| Recharge en espèces — ||| Carregamento em numerário —
+Category ||| Catégorie ||| Categoria
+Channel ||| Canal ||| Canal
+Check file ||| Vérifier le fichier ||| Verificar ficheiro
+Close ||| Fermer ||| Fechar
+Collected ||| Encaissé ||| Cobrado
+Confirm ||| Confirmer ||| Confirmar
+Consumption ||| Consommation ||| Consumo
+Contact ||| Contact ||| Contacto
+Containers ||| Récipients ||| Recipientes
+Containers sold ||| Récipients vendus ||| Recipientes vendidos
+Country & languages ||| Pays et langues ||| País e idiomas
+Create work order ||| Créer un ordre de travail ||| Criar ordem de trabalho
+Created ||| Créé ||| Criado
+CSV file ||| Fichier CSV ||| Ficheiro CSV
+Currency ||| Devise ||| Moeda
+Customer ||| Client ||| Cliente
+Customer type ||| Type de client ||| Tipo de cliente
+Description ||| Description ||| Descrição
+Detected ||| Détecté ||| Detetado
+Edit ||| Modifier ||| Editar
+Email ||| E-mail ||| E-mail
+Enter a valid water card ||| Saisissez une carte d'eau valide ||| Introduza um cartão de água válido
+Enter an amount ||| Saisissez un montant ||| Introduza um valor
+Enter the chlorine reading ||| Saisissez la mesure de chlore ||| Introduza a medição de cloro
+ESTIMATED ||| ESTIMÉ ||| ESTIMADO
+Expected ||| Attendu ||| Esperado
+Expected cash for ||| Espèces attendues pour ||| Numerário esperado para
+Export CSV ||| Exporter en CSV ||| Exportar CSV
+FAIL recorded — manager alerted. Stop selling until re-chlorinated. ||| ÉCHEC enregistré — responsable alerté. Arrêtez la vente jusqu'à la rechloration. ||| REPROVADO registado — responsável alertado. Pare a venda até nova cloragem.
+Fictional data from the demo simulator ||| Données fictives du simulateur de démonstration ||| Dados fictícios do simulador de demonstração
+Filter ||| Filtrer ||| Filtrar
+Fixed charge per bill ||| Frais fixes par facture ||| Taxa fixa por fatura
+Flags ||| Signalements ||| Alertas
+Free water point — log each container ||| Point d'eau gratuit — notez chaque récipient ||| Ponto de água gratuito — registe cada recipiente
+From a device/sensor ||| D'un appareil / capteur ||| De um equipamento / sensor
+Handover recorded. Variance ||| Remise enregistrée. Écart ||| Entrega registada. Diferença
+Holder ||| Titulaire ||| Titular
+Import ||| Importer ||| Importar
+Import CSV ||| Importer un CSV ||| Importar CSV
+Imported ||| Importé ||| Importado
+Installed ||| Installé ||| Instalado
+Issue key ||| Générer la clé ||| Emitir chave
+Issue water card ||| Délivrer une carte d'eau ||| Emitir cartão de água
+Item ||| Article ||| Artigo
+L container ||| L par récipient ||| L por recipiente
+Last used ||| Dernière utilisation ||| Última utilização
+Latitude ||| Latitude ||| Latitude
+Location ||| Emplacement ||| Localização
+Location map ||| Carte de localisation ||| Mapa de localização
+Longitude ||| Longitude ||| Longitude
+Make / model ||| Marque / modèle ||| Marca / modelo
+Manually entered or inferred from manual readings ||| Saisi à la main ou déduit de relevés manuels ||| Introduzido à mão ou deduzido de leituras manuais
+Materials used ||| Matériel utilisé ||| Material usado
+may be too low for ||| est peut-être trop bas pour ||| pode ser demasiado baixo para
+Message ||| Message ||| Mensagem
+Minimum charge ||| Montant minimum ||| Valor mínimo
+Mobile money — ||| Mobile money — ||| Dinheiro móvel —
+Mode ||| Mode ||| Modo
+Network unavailable — check your connection ||| Réseau indisponible — vérifiez votre connexion ||| Rede indisponível — verifique a sua ligação
+New balance ||| Nouveau solde ||| Novo saldo
+No data for this period. ||| Aucune donnée pour cette période. ||| Sem dados para este período.
+No data. ||| Aucune donnée. ||| Sem dados.
+No GPS ||| Pas de GPS ||| Sem GPS
+No GPS coordinates recorded. ||| Aucune coordonnée GPS enregistrée. ||| Sem coordenadas GPS registadas.
+No handovers recorded yet. ||| Aucune remise enregistrée. ||| Ainda sem entregas registadas.
+No records found. ||| Aucun enregistrement trouvé. ||| Nenhum registo encontrado.
+No sales yet. ||| Pas encore de ventes. ||| Ainda sem vendas.
+No water point assigned ||| Aucun point d'eau attribué ||| Nenhum ponto de água atribuído
+No. ||| N° ||| N.º
+Non-revenue water ||| Eau non facturée ||| Água não faturada
+Not an actual meter reading ||| Pas un vrai relevé de compteur ||| Não é uma leitura real do contador
+Note ||| Note ||| Nota
+NRW ||| ENF ||| ANF
+Off ||| Arrêt ||| Desligado
+Office ||| Bureau ||| Escritório
+Offline — sales are saved on this phone and sent when the connection returns. Card balances shown were saved at ||| Hors ligne — les ventes sont enregistrées sur ce téléphone et envoyées au retour de la connexion. Soldes des cartes enregistrés à ||| Offline — as vendas ficam guardadas neste telefone e são enviadas quando a ligação voltar. Saldos dos cartões guardados às
+Offline — sales stay on this phone ||| Hors ligne — les ventes restent sur ce téléphone ||| Offline — as vendas ficam neste telefone
+Offline — write the result down and record it when back online ||| Hors ligne — notez le résultat et enregistrez-le une fois reconnecté ||| Offline — anote o resultado e registe-o quando voltar a ter ligação
+on phone ||| sur le téléphone ||| no telefone
+Opening hours ||| Heures d'ouverture ||| Horário de funcionamento
+Outcome ||| Résultat ||| Resultado
+Owes ||| Doit ||| Deve
+Pay per container ||| Paiement par récipient ||| Pagamento por recipiente
+Pay-as-you-fetch water points ||| Points d'eau payants au récipient ||| Pontos de água pagos por recipiente
+Please fill the required fields ||| Veuillez remplir les champs obligatoires ||| Preencha os campos obrigatórios
+Please sign in ||| Veuillez vous connecter ||| Inicie sessão
+Post payment ||| Enregistrer le paiement ||| Registar pagamento
+Price per container ||| Prix par récipient ||| Preço por recipiente
+Priority ||| Priorité ||| Prioridade
+Purpose ||| Objet ||| Finalidade
+Qty ||| Qté ||| Qtd.
+Rate ||| Taux ||| Taxa
+Reason ||| Motif ||| Motivo
+Reason for reversal ||| Motif de l'annulation ||| Motivo do estorno
+Received by ||| Reçu par ||| Recebido por
+Recent on this phone ||| Récemment sur ce téléphone ||| Recentes neste telefone
+Reconciliation ||| Rapprochement ||| Conciliação
+Record ||| Enregistrer ||| Registar
+Record cash handover ||| Enregistrer une remise d'espèces ||| Registar entrega de numerário
+Record payment ||| Enregistrer un paiement ||| Registar pagamento
+Record test ||| Enregistrer un test ||| Registar análise
+Recorded ||| Enregistré ||| Registado
+Recorded — check dosing ||| Enregistré — vérifiez le dosage ||| Registado — verifique a dosagem
+Recorded — chlorine OK ||| Enregistré — chlore correct ||| Registado — cloro correto
+Recorded: ||| Enregistré : ||| Registado:
+Ref ||| Réf. ||| Ref.
+Reference ||| Référence ||| Referência
+Reject ||| Rejeter ||| Rejeitar
+Request failed ||| La requête a échoué ||| O pedido falhou
+Result ||| Résultat ||| Resultado
+Revenue ||| Recettes ||| Receitas
+Row ||| Ligne ||| Linha
+Sales active ||| Ventes actives ||| Vendas ativas
+Sales mode ||| Mode de vente ||| Modo de venda
+sales paid in cash + card top-ups ||| ventes payées en espèces + recharges de cartes ||| vendas pagas em numerário + carregamentos de cartões
+Save ||| Enregistrer ||| Guardar
+Saved ||| Enregistré ||| Guardado
+Saved: ||| Enregistré : ||| Guardado:
+Scope ||| Portée ||| Âmbito
+screen on a phone. Create a user with the role “Water Point Attendant” in Administration › Users, then select them here. ||| sur un téléphone. Créez un utilisateur avec le rôle « Gardien de point d'eau » dans Administration › Utilisateurs, puis sélectionnez-le ici. ||| num telefone. Crie um utilizador com a função «Operador de ponto de água» em Administração › Utilizadores e selecione-o aqui.
+Search ||| Rechercher ||| Pesquisar
+Sell water ||| Vendre de l'eau ||| Vender água
+Service area ||| Zone de service ||| Zona de serviço
+Set by the utility / water committee ||| Fixé par le service / comité de l'eau ||| Definido pela entidade / comité da água
+Set up sales ||| Configurer les ventes ||| Configurar vendas
+Settings ||| Paramètres ||| Definições
+Severity ||| Gravité ||| Gravidade
+Show ||| Afficher ||| Mostrar
+SIMULATED ||| SIMULÉ ||| SIMULADO
+Size ||| Calibre ||| Calibre
+Source ||| Source ||| Origem
+Stacked bar chart ||| Histogramme empilhé ||| Gráfico de barras empilhadas
+Stage ||| Étape ||| Etapa
+Survey ||| Visite technique ||| Visita técnica
+Tap meter ||| Compteur du robinet ||| Contador da torneira
+Tap meter vs sold ||| Compteur du robinet / vendu ||| Contador da torneira / vendido
+Tax % ||| Taxe % ||| Imposto %
+Technician ||| Technicien ||| Técnico
+Test daily with your chlorine kit. Below 0.2 mg/L the water is not protected — your manager is alerted and customers are advised to treat water. ||| Testez chaque jour avec votre kit chlore. En dessous de 0,2 mg/L l'eau n'est pas protégée — votre responsable est alerté et les clients sont invités à traiter l'eau. ||| Teste todos os dias com o kit de cloro. Abaixo de 0,2 mg/L a água não está protegida — o responsável é alertado e os clientes são aconselhados a tratar a água.
+Title ||| Titre ||| Título
+Today ||| Aujourd'hui ||| Hoje
+Today on this phone ||| Aujourd'hui sur ce téléphone ||| Hoje neste telefone
+Top up ||| Recharger ||| Carregar
+Top-up ||| Recharge ||| Carregamento
+Top-up saved ||| Recharge enregistrée ||| Carregamento guardado
+Total ||| Total ||| Total
+Transactions ||| Opérations ||| Movimentos
+Unblock ||| Débloquer ||| Desbloquear
+Unknown ||| Inconnu ||| Desconhecido
+Value ||| Valeur ||| Valor
+Variance ||| Écart ||| Diferença
+Volume ||| Volume ||| Volume
+Water cards ||| Cartes d'eau ||| Cartões de água
+Water cards are prepaid wallets for households that fetch from kiosks. Top up with cash at the office/kiosk, or by mobile money using the card number as the reference. Card holders get SMS balance alerts if a phone is recorded. ||| Les cartes d'eau sont des porte-monnaie prépayés pour les ménages qui s'approvisionnent aux kiosques. Rechargez en espèces au bureau/kiosque, ou par mobile money avec le numéro de carte comme référence. Les titulaires reçoivent leur solde par SMS si un téléphone est enregistré. ||| Os cartões de água são carteiras pré-pagas para famílias que se abastecem nos quiosques. Carregue em numerário no escritório/quiosque, ou por dinheiro móvel com o número do cartão como referência. Os titulares recebem o saldo por SMS se houver telefone registado.
+Water committee ||| Comité de l'eau ||| Comité da água
+Water point sales settings — ||| Paramètres de vente du point d'eau — ||| Definições de venda do ponto de água —
+Water points ||| Points d'eau ||| Pontos de água
+Water quality check ||| Contrôle de la qualité de l'eau ||| Controlo da qualidade da água
+Water service performance ||| Performance du service de l'eau ||| Desempenho do serviço de água
+When ||| Quand ||| Quando
+Where ||| Où ||| Onde
+Why ||| Pourquoi ||| Porquê
+You are offline and this device has no saved water-point list yet. Connect once to download it. ||| Vous êtes hors ligne et cet appareil n'a pas encore de liste de points d'eau. Connectez-vous une fois pour la télécharger. ||| Está offline e este equipamento ainda não tem a lista de pontos de água. Ligue-se uma vez para a descarregar.

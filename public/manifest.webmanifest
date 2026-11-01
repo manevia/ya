@@ -1,0 +1,2 @@
+{ "name": "AquaTrack Water Management", "short_name": "AquaTrack", "start_url": "/#/", "display": "standalone",
+  "background_color": "#0f2a3d", "theme_color": "#0f2a3d", "icons": [{ "src": "/img/icon.svg", "sizes": "any", "type": "image/svg+xml" }] }
