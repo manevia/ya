@@ -44,6 +44,9 @@ async function main() {
 }
 
 async function run() {
+  const shell = await new Client().get('/');
+  ok(shell.status === 200 && shell.data.includes('<meta name="aquatrack-mode" content="demo">'),
+    'application shell declares demo mode for offline startup');
   const admin = await as('admin'), manager = await as('manager'), cashier = await as('cashier'), billing = await as('billing'), tech = await as('tech1'), reader = await as('reader1'), cust = await as('customer1');
   const today = new Date().toISOString().slice(0, 10);
   const monthStart = today.slice(0, 8) + '01';

@@ -1,6 +1,6 @@
 // Service worker: caches the application shell so the field-reading screen opens without a connection.
 // API responses are never cached here (field data is stored explicitly in IndexedDB by the app).
-const CACHE = 'aquatrack-shell-v9';
+const CACHE = 'aquatrack-shell-v10';
 const OCR_CACHE = 'aquatrack-ocr';
 const SHELL = ['/', '/index.html', '/styles.css', '/manifest.webmanifest', '/img/icon.svg', '/js/app.js', '/js/core.js', '/js/offline.js',
   '/js/views/dashboard.js', '/js/views/customers.js', '/js/views/field.js', '/js/views/readings.js', '/js/views/billing.js', '/js/views/ops.js',

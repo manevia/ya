@@ -47,7 +47,7 @@ function serveStatic(req, res) {
     if (err) return send(res, 404, 'Not found');
     const ext = path.extname(file);
     res.writeHead(200, { 'Content-Type': TYPES[ext] || 'application/octet-stream', 'Cache-Control': ext === '.html' || p === '/sw.js' ? 'no-cache' : p.startsWith('/vendor/') ? 'public, max-age=604800' : 'public, max-age=300', ...SEC });
-    res.end(buf);
+    res.end(p === '/index.html' ? buf.toString('utf8').replace('__APP_MODE__', db.MODE) : buf);
   });
 }
 

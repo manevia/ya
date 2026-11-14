@@ -218,20 +218,37 @@ function passwordView(root) {
 
 async function boot() {
   if ('serviceWorker' in navigator) navigator.serviceWorker.register('/sw.js').catch(() => {});
+  // The cached application page identifies which database to open even without a network.
+  const pageMode = $('meta[name="aquatrack-mode"]')?.content;
+  const knownMode = pageMode === 'live' || pageMode === 'demo';
+  if (knownMode) state.mode = pageMode;
   await initI18n();
   try {
-    const h = await fetch('/api/health').then(r => r.json()); state.mode = h.mode;
+    // Older cached application pages may lack the mode marker.
+    if (!knownMode) {
+      const health = await api('/api/health');
+      state.mode = health.mode;
+    }
     const me = await api('/api/auth/me', { noRedirect: true });
     Object.assign(state, { user: me.user, mode: me.mode, orgName: me.org_name, settings: me.settings, config: me.config });
     await kvSet('me', { user: me.user, mode: me.mode, orgName: me.org_name, settings: me.settings, config: me.config });
     if (me.user.language && me.user.language !== I.lang && (I.config?.languages || []).some(l => l.code === me.user.language)) return switchLanguage(me.user.language);
     api('/api/readings/flags').then(setFlags).catch(() => {});
   } catch (e) {
-    if (e.status === 0 || e instanceof TypeError) {
-      // Offline start: allow field users to keep working from the cached profile.
+    if (e.status === 401) {
+      await kvSet('me', null).catch(() => {});
+    } else if (e.status === 0 && knownMode) {
       const cached = await kvGet('me').catch(() => null);
-      if (cached && cached.user && cached.user.perms.includes('field.read')) { Object.assign(state, cached); state.offlineStart = true; if (!location.hash.startsWith('#/field')) location.hash = '#/field'; }
-      else if (cached && cached.user && cached.user.role === 'attendant') { Object.assign(state, cached); state.offlineStart = true; location.hash = '#/kiosk'; }
+      const user = cached?.user;
+      if (cached?.mode === state.mode && user && !user.must_change_password && !user.needs_2fa_setup) {
+        if (user.role === 'attendant' && user.perms.includes('wp.sell')) {
+          Object.assign(state, cached);
+          if (!/^#\/kiosk(?:\?|$)/.test(location.hash)) location.hash = '#/kiosk';
+        } else if (user.perms.includes('field.read')) {
+          Object.assign(state, cached);
+          if (!/^#\/field(?:\?|$)/.test(location.hash)) location.hash = '#/field';
+        }
+      }
     }
   }
   window.addEventListener('hashchange', router);
