@@ -397,6 +397,44 @@ CREATE TABLE IF NOT EXISTS cash_closes (
 
 CREATE TABLE IF NOT EXISTS recovery_codes (id INTEGER PRIMARY KEY, user_id INTEGER NOT NULL REFERENCES users(id), code_hash TEXT NOT NULL, used_at TEXT);
 
+-- ---- Water Safety Plan: risk register, control measures, operational monitoring, sanitary inspections, improvement plan ----
+CREATE TABLE IF NOT EXISTS wsp_hazards (
+  id INTEGER PRIMARY KEY, ref TEXT UNIQUE NOT NULL, area_id INTEGER REFERENCES service_areas(id), asset_id INTEGER REFERENCES assets(id),
+  step TEXT NOT NULL CHECK (step IN ('catchment','source','treatment','storage','distribution','collection','household','management')),
+  hazard_type TEXT NOT NULL DEFAULT 'microbial' CHECK (hazard_type IN ('microbial','chemical','physical','quantity')),
+  event TEXT NOT NULL, cause TEXT,
+  likelihood INTEGER NOT NULL CHECK (likelihood BETWEEN 1 AND 5), severity INTEGER NOT NULL CHECK (severity BETWEEN 1 AND 5),
+  res_likelihood INTEGER CHECK (res_likelihood IS NULL OR res_likelihood BETWEEN 1 AND 5), res_severity INTEGER CHECK (res_severity IS NULL OR res_severity BETWEEN 1 AND 5),
+  owner_id INTEGER REFERENCES users(id), review_due TEXT, last_reviewed_at TEXT, status TEXT NOT NULL DEFAULT 'open' CHECK (status IN ('open','closed')),
+  origin TEXT NOT NULL DEFAULT 'manual' CHECK (origin IN ('manual','library','inspection')), inspection_id INTEGER, created_by INTEGER, created_at TEXT NOT NULL DEFAULT (datetime('now')));
+CREATE INDEX IF NOT EXISTS ix_wsp_hazards_asset ON wsp_hazards(asset_id);
+CREATE TABLE IF NOT EXISTS wsp_controls (
+  id INTEGER PRIMARY KEY, hazard_id INTEGER NOT NULL REFERENCES wsp_hazards(id), description TEXT NOT NULL, parameter TEXT REFERENCES wq_parameters(code),
+  limit_low REAL, limit_high REAL, unit TEXT, frequency_days INTEGER CHECK (frequency_days IS NULL OR frequency_days > 0), corrective_action TEXT,
+  responsible_id INTEGER REFERENCES users(id), active INTEGER NOT NULL DEFAULT 1, created_at TEXT NOT NULL DEFAULT (datetime('now')));
+CREATE INDEX IF NOT EXISTS ix_wsp_controls_hazard ON wsp_controls(hazard_id);
+CREATE TABLE IF NOT EXISTS wsp_monitoring (
+  id INTEGER PRIMARY KEY, control_id INTEGER NOT NULL REFERENCES wsp_controls(id), checked_at TEXT NOT NULL, value REAL, ok INTEGER NOT NULL CHECK (ok IN (0,1)), note TEXT,
+  user_id INTEGER REFERENCES users(id), alert_id INTEGER, wq_test_id INTEGER, client_uuid TEXT UNIQUE, created_at TEXT NOT NULL DEFAULT (datetime('now')));
+CREATE INDEX IF NOT EXISTS ix_wsp_monitoring ON wsp_monitoring(control_id, checked_at);
+CREATE TABLE IF NOT EXISTS wsp_inspections (
+  id INTEGER PRIMARY KEY, asset_id INTEGER NOT NULL REFERENCES assets(id), form TEXT NOT NULL, answers_json TEXT NOT NULL, risk_count INTEGER NOT NULL, total INTEGER NOT NULL,
+  risk_level TEXT NOT NULL CHECK (risk_level IN ('low','medium','high','very_high')), inspected_at TEXT NOT NULL, user_id INTEGER REFERENCES users(id), notes TEXT, lat REAL, lng REAL,
+  client_uuid TEXT UNIQUE, created_at TEXT NOT NULL DEFAULT (datetime('now')));
+CREATE INDEX IF NOT EXISTS ix_wsp_inspections ON wsp_inspections(asset_id, inspected_at);
+CREATE TABLE IF NOT EXISTS wsp_actions (
+  id INTEGER PRIMARY KEY, hazard_id INTEGER REFERENCES wsp_hazards(id), title TEXT NOT NULL, description TEXT, owner_id INTEGER REFERENCES users(id), due_date TEXT,
+  cost REAL CHECK (cost IS NULL OR cost >= 0), currency TEXT, status TEXT NOT NULL DEFAULT 'planned' CHECK (status IN ('planned','in_progress','done','cancelled')),
+  work_order_id INTEGER REFERENCES work_orders(id), completed_at TEXT, created_by INTEGER, created_at TEXT NOT NULL DEFAULT (datetime('now')));
+CREATE TRIGGER IF NOT EXISTS trg_wsp_monitoring_no_update BEFORE UPDATE ON wsp_monitoring
+  BEGIN SELECT RAISE(ABORT, 'Monitoring records are immutable; record a new check instead'); END;
+CREATE TRIGGER IF NOT EXISTS trg_wsp_monitoring_no_delete BEFORE DELETE ON wsp_monitoring
+  BEGIN SELECT RAISE(ABORT, 'Monitoring records cannot be deleted'); END;
+CREATE TRIGGER IF NOT EXISTS trg_wsp_inspections_locked BEFORE UPDATE OF answers_json, risk_count, total, risk_level, inspected_at, asset_id ON wsp_inspections
+  BEGIN SELECT RAISE(ABORT, 'Inspection results are immutable; record a new inspection instead'); END;
+CREATE TRIGGER IF NOT EXISTS trg_wsp_inspections_no_delete BEFORE DELETE ON wsp_inspections
+  BEGIN SELECT RAISE(ABORT, 'Inspections cannot be deleted'); END;
+
 -- ---- Tamper protection (defence in depth beyond the API layer) ----
 CREATE TRIGGER IF NOT EXISTS trg_readings_no_delete BEFORE DELETE ON readings
   BEGIN SELECT RAISE(ABORT, 'Readings cannot be deleted; reject or correct them instead'); END;

@@ -1,0 +1,354 @@
+# Water Safety Plan: screens
+Water safety plan ||| Plan de sécurité de l'eau ||| Plano de segurança da água
+Find what could make the water unsafe, put a control on each risk, check the controls are working, and fix what the checks find. ||| Repérez ce qui peut rendre l'eau dangereuse, mettez une mesure de maîtrise sur chaque risque, vérifiez qu'elle fonctionne et corrigez ce que les contrôles révèlent. ||| Identifique o que pode tornar a água insegura, ponha um controlo em cada risco, verifique que os controlos funcionam e corrija o que as verificações revelarem.
+Overview ||| Vue d'ensemble ||| Visão geral
+Risk register ||| Registre des risques ||| Registo de riscos
+← Risk register ||| ← Registre des risques ||| ← Registo de riscos
+Monitoring ||| Surveillance ||| Monitorização
+Sanitary inspections ||| Inspections sanitaires ||| Inspeções sanitárias
+Improvement plan ||| Plan d'amélioration ||| Plano de melhoria
+Start your water safety plan ||| Démarrez votre plan de sécurité de l'eau ||| Comece o seu plano de segurança da água
+A water safety plan lists what could contaminate the water between the source and the home, and what you do to stop it. You can have a first version today. ||| Un plan de sécurité de l'eau recense ce qui peut contaminer l'eau entre la source et le foyer, et ce que vous faites pour l'empêcher. Vous pouvez avoir une première version aujourd'hui. ||| Um plano de segurança da água lista o que pode contaminar a água entre a origem e a casa, e o que se faz para o impedir. Pode ter uma primeira versão hoje.
+Start from a template ||| Partir d'un modèle ||| Começar com um modelo
+for your type of system, then adjust it. ||| pour votre type de système, puis adaptez-le. ||| para o seu tipo de sistema, e depois ajuste-o.
+Inspect each water point ||| Inspectez chaque point d'eau ||| Inspecione cada ponto de água
+with the short checklist on your phone. ||| avec la courte liste de contrôle sur votre téléphone. ||| com a lista de verificação curta no telemóvel.
+Record the checks ||| Enregistrez les contrôles ||| Registe as verificações
+that show each control is working. ||| qui montrent que chaque mesure fonctionne. ||| que mostram que cada controlo funciona.
+Choose a template ||| Choisir un modèle ||| Escolher um modelo
+Plan readiness ||| Avancement du plan ||| Prontidão do plano
+risks in the register ||| risques dans le registre ||| riscos no registo
+Risks still high with controls ||| Risques encore élevés malgré les mesures ||| Riscos ainda altos com controlos
+very high · ||| très élevés · ||| muito altos ·
+high · ||| élevés · ||| altos ·
+medium · ||| moyens · ||| médios ·
+Controls outside limits / checks overdue ||| Mesures hors limites / contrôles en retard ||| Controlos fora dos limites / verificações em atraso
+controls checked and working ||| mesures vérifiées et opérationnelles ||| controlos verificados e a funcionar
+Improvement actions open ||| Actions d'amélioration ouvertes ||| Ações de melhoria em aberto
+to fund ||| à financer ||| por financiar
+What to do next ||| Que faire ensuite ||| O que fazer a seguir
+Every part of the plan is up to date. ||| Toutes les parties du plan sont à jour. ||| Todas as partes do plano estão em dia.
+Before controls ||| Avant les mesures ||| Antes dos controlos
+How bad each risk would be if nothing were done. ||| La gravité de chaque risque si rien n'était fait. ||| A gravidade de cada risco se nada fosse feito.
+With controls in place ||| Avec les mesures en place ||| Com os controlos em vigor
+Risks not yet re-scored stay where they were. ||| Les risques non réévalués restent à leur place. ||| Os riscos ainda não reavaliados ficam onde estavam.
+Severity ||| Gravité ||| Gravidade
+Likelihood ||| Probabilité ||| Probabilidade
+× severity ||| × gravité ||| × gravidade
+Highest risks ||| Risques les plus élevés ||| Riscos mais altos
+Risk ||| Risque ||| Risco
+Before ||| Avant ||| Antes
+With controls ||| Avec mesures ||| Com controlos
+Controls ||| Mesures de maîtrise ||| Controlos
+Plan readiness, part by part ||| Avancement du plan, partie par partie ||| Prontidão do plano, parte a parte
+Scores: likelihood × severity (1–5 each). 1–5 low, 6–9 medium, 10–15 high, 16–25 very high. Based on the WHO water safety plan approach; confirm limits against the national drinking-water standard. ||| Scores : probabilité × gravité (1 à 5 chacun). 1–5 faible, 6–9 moyen, 10–15 élevé, 16–25 très élevé. Fondé sur l'approche OMS des plans de sécurité de l'eau ; vérifiez les limites avec la norme nationale d'eau potable. ||| Pontuações: probabilidade × gravidade (1 a 5 cada). 1–5 baixo, 6–9 médio, 10–15 alto, 16–25 muito alto. Baseado na abordagem da OMS para planos de segurança da água; confirme os limites com a norma nacional de água potável.
+Export register (CSV) ||| Exporter le registre (CSV) ||| Exportar o registo (CSV)
+Export (CSV) ||| Exporter (CSV) ||| Exportar (CSV)
+Areas with hazards identified ||| Zones dont les dangers sont identifiés ||| Zonas com perigos identificados
+High risks with a control measure ||| Risques élevés ayant une mesure de maîtrise ||| Riscos altos com medida de controlo
+Risks re-scored after controls ||| Risques réévalués après les mesures ||| Riscos reavaliados após os controlos
+Monitoring checks done on time ||| Contrôles de surveillance faits à temps ||| Verificações feitas a tempo
+Sampling points tested on schedule ||| Points de prélèvement testés à temps ||| Pontos de amostragem testados a tempo
+Sites inspected on schedule ||| Sites inspectés à temps ||| Locais inspecionados a tempo
+Improvement actions on time ||| Actions d'amélioration dans les délais ||| Ações de melhoria dentro do prazo
+Risks reviewed within the last year ||| Risques revus depuis moins d'un an ||| Riscos revistos no último ano
+Start the register for every service area — use a starter template. ||| Ouvrez le registre pour chaque zone de service — utilisez un modèle. ||| Inicie o registo para cada zona de serviço — use um modelo.
+Add a control measure to every high or very high risk. ||| Ajoutez une mesure de maîtrise à chaque risque élevé ou très élevé. ||| Adicione uma medida de controlo a cada risco alto ou muito alto.
+Score each risk again with its controls in place. ||| Réévaluez chaque risque avec ses mesures en place. ||| Reavalie cada risco com os controlos em vigor.
+Do the overdue checks and fix the controls outside their limits. ||| Faites les contrôles en retard et corrigez les mesures hors limites. ||| Faça as verificações em atraso e corrija os controlos fora dos limites.
+Test chlorine and E. coli at the points that are due. ||| Testez le chlore et E. coli aux points à échéance. ||| Teste o cloro e E. coli nos pontos em falta.
+Carry out the sanitary inspections that are due. ||| Réalisez les inspections sanitaires à échéance. ||| Faça as inspeções sanitárias em falta.
+Finish or re-plan the overdue improvement actions. ||| Terminez ou replanifiez les actions d'amélioration en retard. ||| Conclua ou replaneie as ações de melhoria em atraso.
+Review the risks whose review date has passed. ||| Revoyez les risques dont la date de revue est dépassée. ||| Reveja os riscos cuja data de revisão já passou.
+# register and one risk
++ Risk ||| + Risque ||| + Risco
++ Control ||| + Mesure ||| + Controlo
++ Action ||| + Action ||| + Ação
+In the register ||| Dans le registre ||| No registo
+Include closed ||| Inclure les clôturés ||| Incluir fechados
+Closed (no longer applies) ||| Clôturé (ne s'applique plus) ||| Fechado (já não se aplica)
+control(s) ||| mesure(s) ||| controlo(s)
+Actions ||| Actions ||| Ações
+Action ||| Action ||| Ação
+Review ||| Revue ||| Revisão
+No risks yet. Start from a template, or add the first risk. ||| Aucun risque pour l'instant. Partez d'un modèle ou ajoutez le premier risque. ||| Ainda sem riscos. Comece com um modelo ou adicione o primeiro risco.
+Not scored ||| Non évalué ||| Não avaliado
+Low ||| Faible ||| Baixo
+Medium ||| Moyen ||| Médio
+High ||| Élevé ||| Alto
+Very high ||| Très élevé ||| Muito alto
+Outside limits ||| Hors limites ||| Fora dos limites
+Check overdue ||| Contrôle en retard ||| Verificação em atraso
+Not checked yet ||| Pas encore contrôlé ||| Ainda não verificado
+Working ||| Opérationnel ||| A funcionar
+No control yet ||| Pas encore de mesure ||| Ainda sem controlo
+Not in use ||| Non utilisé ||| Não utilizado
+Catchment ||| Bassin versant ||| Bacia de captação
+Source ||| Source ||| Origem
+Treatment ||| Traitement ||| Tratamento
+Storage ||| Stockage ||| Armazenamento
+Distribution ||| Distribution ||| Distribuição
+Collection point ||| Point de puisage ||| Ponto de recolha
+Household ||| Foyer ||| Casa
+Management ||| Gestion ||| Gestão
+Germs (microbial) ||| Microbes (microbien) ||| Micróbios (microbiano)
+Chemical ||| Chimique ||| Químico
+Physical ||| Physique ||| Físico
+Not enough water ||| Manque d'eau ||| Falta de água
+1 — Rare (less than once in 5 years) ||| 1 — Rare (moins d'une fois en 5 ans) ||| 1 — Raro (menos de uma vez em 5 anos)
+2 — Unlikely (once a year) ||| 2 — Peu probable (une fois par an) ||| 2 — Improvável (uma vez por ano)
+3 — Possible (once a month) ||| 3 — Possible (une fois par mois) ||| 3 — Possível (uma vez por mês)
+4 — Likely (once a week) ||| 4 — Probable (une fois par semaine) ||| 4 — Provável (uma vez por semana)
+5 — Almost certain (daily) ||| 5 — Presque certain (chaque jour) ||| 5 — Quase certo (diariamente)
+1 — No health effect ||| 1 — Aucun effet sur la santé ||| 1 — Sem efeito na saúde
+2 — Taste, smell or colour only ||| 2 — Goût, odeur ou couleur seulement ||| 2 — Só sabor, cheiro ou cor
+3 — Mild illness, or a short loss of supply ||| 3 — Maladie bénigne ou brève coupure d'eau ||| 3 — Doença ligeira ou breve falta de água
+4 — Illness in many people ||| 4 — Maladie chez de nombreuses personnes ||| 4 — Doença em muitas pessoas
+5 — Severe illness or death ||| 5 — Maladie grave ou décès ||| 5 — Doença grave ou morte
+New risk ||| Nouveau risque ||| Novo risco
+Edit risk ||| Modifier le risque ||| Editar risco
+What could go wrong? (hazardous event) ||| Que peut-il arriver ? (événement dangereux) ||| O que pode correr mal? (evento perigoso)
+Where in the system ||| Où dans le système ||| Onde no sistema
+Type of hazard ||| Type de danger ||| Tipo de perigo
+Asset (optional) ||| Ouvrage (facultatif) ||| Ativo (opcional)
+Cause or notes ||| Cause ou remarques ||| Causa ou notas
+Risk before controls ||| Risque avant les mesures ||| Risco antes dos controlos
+Risk with controls in place (leave empty until controls exist) ||| Risque avec les mesures en place (laisser vide tant qu'il n'y a pas de mesures) ||| Risco com controlos em vigor (deixe vazio até existirem controlos)
+How likely ||| Probabilité ||| Probabilidade
+How serious ||| Gravité ||| Gravidade
+Person responsible ||| Responsable ||| Responsável
+Next review ||| Prochaine revue ||| Próxima revisão
+Risk saved ||| Risque enregistré ||| Risco guardado
+Type of system ||| Type de système ||| Tipo de sistema
+Or one asset ||| Ou un seul ouvrage ||| Ou um só ativo
+Choose an asset to log its chlorine and turbidity tests against the controls automatically. ||| Choisissez un ouvrage pour que ses tests de chlore et de turbidité soient reportés automatiquement sur les mesures. ||| Escolha um ativo para registar automaticamente os seus testes de cloro e turvação nos controlos.
+Add to the register ||| Ajouter au registre ||| Adicionar ao registo
+risk(s) added ||| risque(s) ajouté(s) ||| risco(s) adicionado(s)
+Control ||| Mesure ||| Controlo
+Mark reviewed ||| Marquer comme revu ||| Marcar como revisto
+Mark this risk as reviewed ||| Marquer ce risque comme revu ||| Marcar este risco como revisto
+Confirm that the scores and controls still describe the situation. Review every risk once a year, and after any incident or change to the system. ||| Confirmez que les scores et les mesures décrivent toujours la situation. Revoyez chaque risque une fois par an, et après tout incident ou changement du système. ||| Confirme que as pontuações e os controlos ainda descrevem a situação. Reveja cada risco uma vez por ano e após qualquer incidente ou alteração do sistema.
+Review recorded ||| Revue enregistrée ||| Revisão registada
+Score it again once the controls are working ||| Réévaluez-le quand les mesures fonctionnent ||| Reavalie quando os controlos estiverem a funcionar
+in use ||| en service ||| em uso
+Not reviewed yet ||| Pas encore revu ||| Ainda não revisto
+Last reviewed ||| Dernière revue ||| Última revisão
+Control measures ||| Mesures de maîtrise ||| Medidas de controlo
+If it fails: ||| En cas d'échec : ||| Se falhar:
+Limit ||| Limite ||| Limite
+How often ||| Fréquence ||| Frequência
+Last check ||| Dernier contrôle ||| Última verificação
+Record check ||| Enregistrer un contrôle ||| Registar verificação
+After each event ||| Après chaque événement ||| Após cada evento
+Every day ||| Chaque jour ||| Todos os dias
+Every week ||| Chaque semaine ||| Todas as semanas
+Every month ||| Chaque mois ||| Todos os meses
+due in ||| à faire dans ||| a fazer em
+day(s) ||| jour(s) ||| dia(s)
+No control measure yet. Add what keeps this risk under control and how you check it. ||| Pas encore de mesure. Ajoutez ce qui maîtrise ce risque et comment vous le vérifiez. ||| Ainda sem medida de controlo. Adicione o que mantém este risco controlado e como o verifica.
+Improvement actions ||| Actions d'amélioration ||| Ações de melhoria
+No improvement action. Add one if the controls are not enough. ||| Aucune action d'amélioration. Ajoutez-en une si les mesures ne suffisent pas. ||| Sem ação de melhoria. Adicione uma se os controlos não bastarem.
+Checks recorded ||| Contrôles enregistrés ||| Verificações registadas
+No checks recorded yet. ||| Aucun contrôle enregistré. ||| Ainda sem verificações registadas.
+New control measure ||| Nouvelle mesure de maîtrise ||| Nova medida de controlo
+Edit control measure ||| Modifier la mesure de maîtrise ||| Editar medida de controlo
+What keeps this risk under control ||| Ce qui maîtrise ce risque ||| O que mantém este risco controlado
+Fed by water-quality tests of ||| Alimentée par les tests de qualité de ||| Alimentado pelos testes de qualidade de
+Tests of this parameter at the same asset are logged here automatically. ||| Les tests de ce paramètre sur le même ouvrage sont reportés ici automatiquement. ||| Os testes deste parâmetro no mesmo ativo são registados aqui automaticamente.
+Unit ||| Unité ||| Unidade
+Lowest acceptable value ||| Valeur minimale acceptable ||| Valor mínimo aceitável
+Highest acceptable value ||| Valeur maximale acceptable ||| Valor máximo aceitável
+Check every … days ||| Contrôler tous les … jours ||| Verificar a cada … dias
+Leave empty for checks done after an event, such as a repair. ||| Laisser vide pour les contrôles faits après un événement, comme une réparation. ||| Deixe vazio para verificações feitas após um evento, como uma reparação.
+Who checks ||| Qui contrôle ||| Quem verifica
+What to do if the check fails ||| Que faire si le contrôle échoue ||| O que fazer se a verificação falhar
+Control in use ||| Mesure en service ||| Controlo em uso
+Control measure saved ||| Mesure de maîtrise enregistrée ||| Medida de controlo guardada
+Record a check ||| Enregistrer un contrôle ||| Registar uma verificação
+Measured value ||| Valeur mesurée ||| Valor medido
+Acceptable: ||| Acceptable : ||| Aceitável:
+Is the control working? ||| La mesure fonctionne-t-elle ? ||| O controlo está a funcionar?
+Yes — working ||| Oui — fonctionne ||| Sim — a funcionar
+No — not working ||| Non — ne fonctionne pas ||| Não — não funciona
+What did you see? ||| Qu'avez-vous constaté ? ||| O que viu?
+Save check ||| Enregistrer le contrôle ||| Guardar verificação
+Check recorded — control working ||| Contrôle enregistré — la mesure fonctionne ||| Verificação registada — controlo a funcionar
+Outside limits — alert raised. ||| Hors limites — alerte créée. ||| Fora dos limites — alerta criado.
+New improvement action ||| Nouvelle action d'amélioration ||| Nova ação de melhoria
+Edit improvement action ||| Modifier l'action d'amélioration ||| Editar ação de melhoria
+What will be done ||| Ce qui sera fait ||| O que será feito
+Estimated cost ||| Coût estimé ||| Custo estimado
+Action saved ||| Action enregistrée ||| Ação guardada
+Create a work order ||| Créer un ordre de travail ||| Criar uma ordem de trabalho
+Completing the work order marks this action as done. ||| Terminer l'ordre de travail marque cette action comme faite. ||| Concluir a ordem de trabalho marca esta ação como feita.
+Owner ||| Responsable ||| Responsável
+Cost ||| Coût ||| Custo
+Create ||| Créer ||| Criar
+Done ||| Fait ||| Feito
+# monitoring tab
+No control measures to check yet. Add them in the risk register. ||| Aucune mesure à contrôler. Ajoutez-les dans le registre des risques. ||| Ainda sem controlos para verificar. Adicione-os no registo de riscos.
+Chlorine, turbidity and other tests recorded under Water quality are logged here automatically when a control on the same asset uses that parameter. Checks cannot be edited or deleted once saved. ||| Les tests de chlore, de turbidité et autres saisis dans Qualité de l'eau sont reportés ici automatiquement lorsqu'une mesure sur le même ouvrage utilise ce paramètre. Les contrôles ne peuvent être ni modifiés ni supprimés. ||| Os testes de cloro, turvação e outros registados em Qualidade da água são registados aqui automaticamente quando um controlo no mesmo ativo usa esse parâmetro. As verificações não podem ser editadas nem apagadas.
+Recent checks ||| Contrôles récents ||| Verificações recentes
+# inspections tab
+Sites to inspect ||| Sites à inspecter ||| Locais a inspecionar
+Inspection due ||| Inspection à faire ||| Inspeção em falta
+High or very high priority ||| Priorité élevée ou très élevée ||| Prioridade alta ou muito alta
+Low priority ||| Priorité faible ||| Prioridade baixa
+Site ||| Site ||| Local
+Last inspection ||| Dernière inspection ||| Última inspeção
+Never inspected ||| Jamais inspecté ||| Nunca inspecionado
+Risks found ||| Risques constatés ||| Riscos encontrados
+E. coli (last 90 days) ||| E. coli (90 derniers jours) ||| E. coli (últimos 90 dias)
+No test ||| Aucun test ||| Sem teste
+Priority for action ||| Priorité d'action ||| Prioridade de ação
+Inspect ||| Inspecter ||| Inspecionar
+Inspect — ||| Inspecter — ||| Inspecionar —
+No water points, tanks or treatment units to inspect yet. ||| Aucun point d'eau, réservoir ou unité de traitement à inspecter. ||| Ainda sem pontos de água, reservatórios ou unidades de tratamento para inspecionar.
+Priority is the worse of the inspection result and the E. coli grade (A: none detected, B: 1–10, C: 11–100, D: over 100 per 100 mL). A clean test at a site with many risks is not a reason to wait: the risks show what can go wrong next. Inspection results cannot be edited once saved. ||| La priorité est le pire du résultat d'inspection et de la classe E. coli (A : non détecté, B : 1–10, C : 11–100, D : plus de 100 pour 100 mL). Un test propre sur un site à nombreux risques n'est pas une raison d'attendre : les risques montrent ce qui peut arriver. Les résultats d'inspection ne peuvent pas être modifiés. ||| A prioridade é o pior entre o resultado da inspeção e a classe de E. coli (A: não detetado, B: 1–10, C: 11–100, D: mais de 100 por 100 mL). Um teste limpo num local com muitos riscos não é motivo para esperar: os riscos mostram o que pode correr mal. Os resultados das inspeções não podem ser editados.
+Checklist ||| Liste de contrôle ||| Lista de verificação
+Walk round the site and answer every line. “Yes” means the risk is there. ||| Faites le tour du site et répondez à chaque ligne. « Oui » signifie que le risque est présent. ||| Percorra o local e responda a cada linha. «Sim» significa que o risco existe.
+Yes ||| Oui ||| Sim
+No ||| Non ||| Não
+Add each risk found to the register, with an action to fix it ||| Ajouter chaque risque constaté au registre, avec une action corrective ||| Adicionar cada risco encontrado ao registo, com uma ação para o corrigir
+Save inspection ||| Enregistrer l'inspection ||| Guardar inspeção
+risks found — ||| risques constatés — ||| riscos encontrados —
+added to the register ||| ajouté(s) au registre ||| adicionado(s) ao registo
+Fix: ||| Correction : ||| Correção:
+# improvement plan tab
+Open actions ||| Actions ouvertes ||| Ações em aberto
+With the technicians ||| Chez les techniciens ||| Com os técnicos
+Still to fund ||| Reste à financer ||| Ainda por financiar
+estimated cost of open actions ||| coût estimé des actions ouvertes ||| custo estimado das ações em aberto
+No improvement actions. They are added from a risk, or when an inspection finds a problem. ||| Aucune action d'amélioration. Elles sont ajoutées depuis un risque ou quand une inspection révèle un problème. ||| Sem ações de melhoria. São adicionadas a partir de um risco ou quando uma inspeção encontra um problema.
+# Water Safety Plan: starter templates
+Starter content for Water Safety Plans. Written for small piped schemes, boreholes and kiosks; adapt it to each system and confirm limits against the national drinking-water standard. ||| Contenu de départ pour les plans de sécurité de l'eau. Rédigé pour de petits réseaux, des forages et des kiosques ; adaptez-le à chaque système et vérifiez les limites avec la norme nationale d'eau potable. ||| Conteúdo inicial para planos de segurança da água. Escrito para pequenos sistemas canalizados, furos e quiosques; adapte-o a cada sistema e confirme os limites com a norma nacional de água potável.
+Piped scheme with chlorination ||| Réseau avec chloration ||| Sistema canalizado com cloragem
+Borehole or protected well ||| Forage ou puits protégé ||| Furo ou poço protegido
+Water kiosk or public tap ||| Kiosque à eau ou borne-fontaine ||| Quiosque de água ou fontanário
+Runoff after heavy rain carries faecal contamination into the source ||| Le ruissellement après de fortes pluies entraîne une contamination fécale dans la source ||| O escoamento após chuva forte leva contaminação fecal para a origem
+Protect the intake or wellhead and divert surface runoff ||| Protéger la prise d'eau ou la tête de puits et détourner le ruissellement ||| Proteger a captação ou a cabeça do poço e desviar o escoamento
+Repair the protection, raise the chlorine dose and test for E. coli ||| Réparer la protection, augmenter la dose de chlore et tester E. coli ||| Reparar a proteção, aumentar a dose de cloro e testar E. coli
+Chlorine dosing fails or runs out, so water is supplied without disinfection ||| Le dosage de chlore tombe en panne ou s'épuise : l'eau est distribuée sans désinfection ||| A dosagem de cloro falha ou acaba, e a água é fornecida sem desinfeção
+Daily free chlorine check at the treatment outlet ||| Contrôle quotidien du chlore libre en sortie de traitement ||| Verificação diária do cloro livre à saída do tratamento
+Restore dosing, re-chlorinate stored water and test again within 2 hours ||| Rétablir le dosage, rechlorer l'eau stockée et retester dans les 2 heures ||| Repor a dosagem, clorar de novo a água armazenada e testar outra vez em 2 horas
+High turbidity shields germs from chlorine ||| Une forte turbidité protège les microbes du chlore ||| A turvação alta protege os micróbios do cloro
+Turbidity check before chlorination ||| Contrôle de la turbidité avant chloration ||| Verificação da turvação antes da cloragem
+Settle or filter the water, raise the dose and test again ||| Décanter ou filtrer l'eau, augmenter la dose et retester ||| Decantar ou filtrar a água, aumentar a dose e testar de novo
+An open or damaged reservoir lets birds, animals or dirt in ||| Un réservoir ouvert ou abîmé laisse entrer oiseaux, animaux ou saletés ||| Um reservatório aberto ou danificado deixa entrar aves, animais ou sujidade
+Hatches locked, vents screened and the tank cleaned every year ||| Trappes verrouillées, évents grillagés et réservoir nettoyé chaque année ||| Tampas trancadas, respiros com rede e reservatório limpo todos os anos
+Close and repair the tank, then clean and disinfect it ||| Fermer et réparer le réservoir, puis le nettoyer et le désinfecter ||| Fechar e reparar o reservatório, depois limpá-lo e desinfetá-lo
+Low or intermittent pressure draws dirty water into leaking pipes ||| Une pression faible ou intermittente aspire de l'eau sale dans les conduites fuyardes ||| A pressão baixa ou intermitente aspira água suja para tubos com fugas
+Keep a chlorine residual at the far end of the network ||| Maintenir un résiduel de chlore en bout de réseau ||| Manter cloro residual no extremo da rede
+Find and repair leaks, flush the line and boost chlorine ||| Trouver et réparer les fuites, purger la conduite et renforcer le chlore ||| Encontrar e reparar fugas, purgar a conduta e reforçar o cloro
+Pipe repairs introduce contamination ||| Les réparations de conduites introduisent une contamination ||| As reparações de tubos introduzem contaminação
+Disinfect and flush the pipe after every repair, then test chlorine ||| Désinfecter et purger la conduite après chaque réparation, puis tester le chlore ||| Desinfetar e purgar o tubo após cada reparação e depois testar o cloro
+Flush again and keep the section closed until chlorine is detected ||| Purger de nouveau et garder le tronçon fermé jusqu'à détection de chlore ||| Purgar de novo e manter o troço fechado até detetar cloro
+Illegal or poorly made connections cause backflow ||| Des branchements illégaux ou mal faits provoquent des retours d'eau ||| Ligações ilegais ou mal feitas causam refluxo
+Inspect new connections and remove illegal ones ||| Inspecter les nouveaux branchements et supprimer les illégaux ||| Inspecionar as novas ligações e remover as ilegais
+Disconnect, repair properly and flush the line ||| Débrancher, réparer correctement et purger la conduite ||| Desligar, reparar corretamente e purgar a conduta
+Water is contaminated again in dirty or open containers at home ||| L'eau est recontaminée à la maison dans des récipients sales ou ouverts ||| A água volta a contaminar-se em casa em recipientes sujos ou abertos
+Safe-storage messages by SMS and at water points ||| Messages sur la conservation de l'eau par SMS et aux points d'eau ||| Mensagens sobre armazenamento seguro por SMS e nos pontos de água
+Run a hygiene session with the community ||| Organiser une séance d'hygiène avec la communauté ||| Fazer uma sessão de higiene com a comunidade
+No trained operator or spare parts when something fails ||| Pas d'opérateur formé ni de pièces de rechange en cas de panne ||| Sem operador formado nem peças sobresselentes quando algo falha
+Named standby operator and a minimum stock of critical spares ||| Opérateur suppléant désigné et stock minimal de pièces critiques ||| Operador suplente nomeado e stock mínimo de peças críticas
+Train a standby operator and order the missing spares ||| Former un opérateur suppléant et commander les pièces manquantes ||| Formar um operador suplente e encomendar as peças em falta
+Latrines or waste near the borehole contaminate the groundwater ||| Des latrines ou des déchets près du forage contaminent la nappe ||| Latrinas ou resíduos perto do furo contaminam a água subterrânea
+Keep latrines and waste away from the borehole (national minimum distance) ||| Tenir latrines et déchets à l'écart du forage (distance minimale nationale) ||| Manter latrinas e resíduos afastados do furo (distância mínima nacional)
+Remove the pollution source and test for E. coli ||| Supprimer la source de pollution et tester E. coli ||| Remover a fonte de poluição e testar E. coli
+A damaged apron or loose pump lets surface water into the borehole ||| Une dalle abîmée ou une pompe mal fixée laisse l'eau de surface entrer dans le forage ||| Uma laje danificada ou bomba solta deixa entrar água superficial no furo
+Sound apron, sealed pump base and working drainage ||| Dalle en bon état, socle de pompe étanche et drainage fonctionnel ||| Laje em bom estado, base da bomba selada e drenagem a funcionar
+Repair the apron and pump base, then disinfect the borehole ||| Réparer la dalle et le socle de la pompe, puis désinfecter le forage ||| Reparar a laje e a base da bomba e depois desinfetar o furo
+Flooding covers the wellhead ||| Une inondation recouvre la tête de puits ||| Uma cheia cobre a cabeça do poço
+Raised wellhead; disinfect the borehole after any flood ||| Tête de puits surélevée ; désinfecter le forage après toute inondation ||| Cabeça do poço elevada; desinfetar o furo após qualquer cheia
+Close the pump, disinfect and test before reopening ||| Fermer la pompe, désinfecter et tester avant de rouvrir ||| Fechar a bomba, desinfetar e testar antes de reabrir
+Dirty hands, containers or animals at the pump contaminate the water ||| Des mains ou récipients sales, ou des animaux près de la pompe, contaminent l'eau ||| Mãos ou recipientes sujos, ou animais junto à bomba, contaminam a água
+Fence, clean surroundings and caretaker rules ||| Clôture, abords propres et règles du gardien ||| Vedação, envolvente limpa e regras do zelador
+Clean the site and repair the fence ||| Nettoyer le site et réparer la clôture ||| Limpar o local e reparar a vedação
+The pump breaks down and people turn to unsafe sources ||| La pompe tombe en panne et les gens se tournent vers des sources non sûres ||| A bomba avaria e as pessoas recorrem a origens inseguras
+Preventive maintenance and spare parts for the pump ||| Entretien préventif et pièces de rechange pour la pompe ||| Manutenção preventiva e peças sobresselentes para a bomba
+Repair within 48 hours and tell users where the nearest safe point is ||| Réparer sous 48 heures et indiquer aux usagers le point sûr le plus proche ||| Reparar em 48 horas e dizer aos utilizadores onde fica o ponto seguro mais próximo
+Hoses, containers or hands contaminate water at the tap ||| Tuyaux, récipients ou mains contaminent l'eau au robinet ||| Mangueiras, recipientes ou mãos contaminam a água na torneira
+Hygiene rules for the attendant; clean the outlet every day ||| Règles d'hygiène pour le fontainier ; nettoyer la sortie chaque jour ||| Regras de higiene para o atendente; limpar a saída todos os dias
+Clean and disinfect the outlet and brief the attendant ||| Nettoyer et désinfecter la sortie et informer le fontainier ||| Limpar e desinfetar a saída e instruir o atendente
+No chlorine residual reaches the kiosk ||| Aucun résiduel de chlore n'arrive au kiosque ||| Não chega cloro residual ao quiosque
+Weekly free chlorine test at the tap ||| Test hebdomadaire du chlore libre au robinet ||| Teste semanal de cloro livre na torneira
+Check dosing upstream, flush the line and test again ||| Vérifier le dosage en amont, purger la conduite et retester ||| Verificar a dosagem a montante, purgar a conduta e testar de novo
+Standing water around the kiosk breeds mosquitoes and dirties containers ||| L'eau stagnante autour du kiosque favorise les moustiques et salit les récipients ||| A água parada à volta do quiosque cria mosquitos e suja os recipientes
+Working drainage and soakaway at the kiosk ||| Drainage et puisard fonctionnels au kiosque ||| Drenagem e poço absorvente a funcionar no quiosque
+Clear or repair the drain ||| Dégager ou réparer le drain ||| Desobstruir ou reparar o dreno
+The kiosk storage tank is not cleaned ||| Le réservoir du kiosque n'est pas nettoyé ||| O reservatório do quiosque não é limpo
+Clean and disinfect the kiosk tank every 6 months ||| Nettoyer et désinfecter le réservoir du kiosque tous les 6 mois ||| Limpar e desinfetar o reservatório do quiosque de 6 em 6 meses
+Clean and disinfect the tank now ||| Nettoyer et désinfecter le réservoir maintenant ||| Limpar e desinfetar o reservatório agora
+# Water Safety Plan: sanitary inspection checklists
+Borehole with handpump ||| Forage avec pompe manuelle ||| Furo com bomba manual
+Public tap or kiosk ||| Borne-fontaine ou kiosque ||| Fontanário ou quiosque
+Storage tank or reservoir ||| Réservoir de stockage ||| Reservatório de armazenamento
+Chlorination point ||| Point de chloration ||| Ponto de cloragem
+A latrine or sewer is within 10 m of the borehole ||| Une latrine ou un égout se trouve à moins de 10 m du forage ||| Há uma latrina ou esgoto a menos de 10 m do furo
+Move or line the latrine, or plan a new protected source ||| Déplacer ou étanchéifier la latrine, ou prévoir une nouvelle source protégée ||| Mudar ou revestir a latrina, ou planear uma nova origem protegida
+The nearest latrine is uphill of the borehole ||| La latrine la plus proche est en amont du forage ||| A latrina mais próxima fica acima do furo
+Divert surface drainage and test for E. coli more often ||| Détourner le drainage de surface et tester E. coli plus souvent ||| Desviar a drenagem superficial e testar E. coli mais vezes
+Animal waste, rubbish or another pollution source is within 10 m ||| Des déjections animales, des ordures ou une autre source de pollution se trouvent à moins de 10 m ||| Há dejetos de animais, lixo ou outra fonte de poluição a menos de 10 m
+Clear the area and fence the water point ||| Dégager la zone et clôturer le point d'eau ||| Limpar a área e vedar o ponto de água
+Stagnant water stands within 2 m of the pump ||| De l'eau stagne à moins de 2 m de la pompe ||| Há água parada a menos de 2 m da bomba
+Repair or build a drainage channel and soakaway ||| Réparer ou construire un canal de drainage et un puisard ||| Reparar ou construir um canal de drenagem e poço absorvente
+The concrete apron is less than 1 m wide all round ||| La dalle en béton fait moins de 1 m de large tout autour ||| A laje de betão tem menos de 1 m de largura a toda a volta
+Extend the apron to at least 1 m all round ||| Élargir la dalle à au moins 1 m tout autour ||| Alargar a laje para pelo menos 1 m a toda a volta
+The apron or drainage channel is cracked or broken ||| La dalle ou le canal de drainage est fissuré ou cassé ||| A laje ou o canal de drenagem está rachado ou partido
+Repair the apron and drainage channel ||| Réparer la dalle et le canal de drainage ||| Reparar a laje e o canal de drenagem
+The handpump is loose where it joins the base ||| La pompe manuelle a du jeu à sa fixation sur le socle ||| A bomba manual está solta na ligação à base
+Tighten or re-seat the pump on its base ||| Resserrer ou refixer la pompe sur son socle ||| Apertar ou reassentar a bomba na base
+The fence is missing or broken, so animals can reach the pump ||| La clôture manque ou est cassée : les animaux accèdent à la pompe ||| A vedação falta ou está partida, e os animais chegam à bomba
+Repair the fence ||| Réparer la clôture ||| Reparar a vedação
+People carry or store water in dirty or uncovered containers ||| Les gens transportent ou conservent l'eau dans des récipients sales ou non couverts ||| As pessoas transportam ou guardam água em recipientes sujos ou destapados
+Run a safe-storage session with users ||| Organiser une séance sur la conservation de l'eau avec les usagers ||| Fazer uma sessão sobre armazenamento seguro com os utilizadores
+The tap leaks or is damaged ||| Le robinet fuit ou est abîmé ||| A torneira pinga ou está danificada
+Replace the tap or its washer ||| Remplacer le robinet ou son joint ||| Substituir a torneira ou a anilha
+Water collects around the tap stand ||| L'eau s'accumule autour de la borne ||| A água acumula-se à volta do fontanário
+Repair the drainage ||| Réparer le drainage ||| Reparar a drenagem
+The area around the tap is dirty (rubbish, faeces or animals) ||| Les abords du robinet sont sales (ordures, excréments ou animaux) ||| A área à volta da torneira está suja (lixo, fezes ou animais)
+Clean the area and agree a cleaning rota ||| Nettoyer la zone et convenir d'un tour de nettoyage ||| Limpar a área e combinar uma escala de limpeza
+The supply pipe is exposed near the tap ||| La conduite d'alimentation est à nu près du robinet ||| O tubo de abastecimento está exposto junto à torneira
+Bury or sleeve the exposed pipe ||| Enterrer ou gainer la conduite à nu ||| Enterrar ou proteger o tubo exposto
+A pipe leak is visible within 10 m of the tap ||| Une fuite de conduite est visible à moins de 10 m du robinet ||| Vê-se uma fuga no tubo a menos de 10 m da torneira
+Repair the leak ||| Réparer la fuite ||| Reparar a fuga
+Supply was interrupted in the last 10 days ||| L'alimentation a été interrompue ces 10 derniers jours ||| O abastecimento foi interrompido nos últimos 10 dias
+Check supply hours and pressure for this zone ||| Vérifier les heures de desserte et la pression de cette zone ||| Verificar as horas de abastecimento e a pressão desta zona
+Hoses or containers touch the tap outlet ||| Des tuyaux ou des récipients touchent la sortie du robinet ||| Mangueiras ou recipientes tocam na saída da torneira
+Fit a raised outlet and brief the attendant ||| Poser une sortie surélevée et informer le fontainier ||| Instalar uma saída elevada e instruir o atendente
+No free chlorine was detected at this tap ||| Aucun chlore libre détecté à ce robinet ||| Não foi detetado cloro livre nesta torneira
+Check the dosing and test again ||| Vérifier le dosage et retester ||| Verificar a dosagem e testar de novo
+The inspection hatch is open, missing or cannot be locked ||| La trappe de visite est ouverte, absente ou ne ferme pas à clé ||| A tampa de inspeção está aberta, em falta ou não tranca
+Fit a lockable, overlapping cover ||| Poser un couvercle débordant et verrouillable ||| Instalar uma tampa sobreposta com fecho
+The roof is cracked or leaks ||| Le toit est fissuré ou fuit ||| A cobertura está rachada ou tem infiltrações
+Repair and seal the roof ||| Réparer et étanchéifier le toit ||| Reparar e selar a cobertura
+Vents or overflow pipes have no insect screen ||| Les évents ou trop-pleins n'ont pas de grille anti-insectes ||| Os respiros ou tubos de descarga não têm rede contra insetos
+Fit screens to vents and overflows ||| Poser des grilles sur les évents et trop-pleins ||| Instalar redes nos respiros e descargas
+Dirt, sediment or animals are visible inside the tank ||| Saletés, sédiments ou animaux visibles dans le réservoir ||| Vê-se sujidade, sedimentos ou animais dentro do reservatório
+Clean and disinfect the tank ||| Nettoyer et désinfecter le réservoir ||| Limpar e desinfetar o reservatório
+The tank has not been cleaned in the last 12 months ||| Le réservoir n'a pas été nettoyé depuis 12 mois ||| O reservatório não é limpo há 12 meses
+Schedule cleaning and disinfection ||| Programmer le nettoyage et la désinfection ||| Agendar limpeza e desinfeção
+The tank walls leak ||| Les parois du réservoir fuient ||| As paredes do reservatório têm fugas
+Repair the leaks ||| Réparer les fuites ||| Reparar as fugas
+The tank compound is not fenced or is dirty ||| L'enceinte du réservoir n'est pas clôturée ou est sale ||| O recinto do reservatório não está vedado ou está sujo
+Fence and clean the compound ||| Clôturer et nettoyer l'enceinte ||| Vedar e limpar o recinto
+The outlet draws from the very bottom, so sediment enters the supply ||| La sortie puise tout au fond : les sédiments entrent dans le réseau ||| A saída capta mesmo no fundo, e os sedimentos entram na rede
+Raise the outlet or add a scour valve ||| Relever la sortie ou ajouter une vanne de vidange ||| Elevar a saída ou adicionar uma válvula de descarga de fundo
+The chlorine stock will last less than 14 days ||| Le stock de chlore durera moins de 14 jours ||| O stock de cloro dura menos de 14 dias
+Order chlorine now ||| Commander du chlore maintenant ||| Encomendar cloro agora
+Chlorine is stored in sunlight, heat or damp ||| Le chlore est stocké au soleil, à la chaleur ou à l'humidité ||| O cloro está guardado ao sol, ao calor ou à humidade
+Move the stock to a cool, dry, shaded store ||| Déplacer le stock dans un local frais, sec et à l'ombre ||| Mudar o stock para um armazém fresco, seco e à sombra
+The doser or dosing pump is not working properly ||| Le doseur ou la pompe doseuse fonctionne mal ||| O doseador ou a bomba doseadora não funciona bem
+Repair or replace the doser ||| Réparer ou remplacer le doseur ||| Reparar ou substituir o doseador
+There is no working test kit or reagents on site ||| Pas de kit de test en état ni de réactifs sur place ||| Não há kit de teste funcional nem reagentes no local
+Supply a test kit and reagents ||| Fournir un kit de test et des réactifs ||| Fornecer um kit de teste e reagentes
+No dosing record was kept in the last 7 days ||| Aucun relevé de dosage tenu ces 7 derniers jours ||| Não houve registo de dosagem nos últimos 7 dias
+Restart the daily dosing log ||| Reprendre le relevé quotidien du dosage ||| Retomar o registo diário de dosagem
+Contact time before the first user is under 30 minutes ||| Le temps de contact avant le premier usager est inférieur à 30 minutes ||| O tempo de contacto antes do primeiro utilizador é inferior a 30 minutos
+Add contact volume or move the dosing point ||| Ajouter du volume de contact ou déplacer le point de dosage ||| Aumentar o volume de contacto ou mudar o ponto de dosagem
+The raw water is visibly cloudy ||| L'eau brute est visiblement trouble ||| A água bruta está visivelmente turva
+Add settling or filtration before chlorination ||| Ajouter une décantation ou une filtration avant la chloration ||| Adicionar decantação ou filtração antes da cloragem
+The operator has no gloves, goggles or apron ||| L'opérateur n'a ni gants, ni lunettes, ni tablier ||| O operador não tem luvas, óculos nem avental
+Provide protective equipment ||| Fournir des équipements de protection ||| Fornecer equipamento de proteção
+Every ||| Tous les ||| A cada
+overdue ||| en retard ||| em atraso

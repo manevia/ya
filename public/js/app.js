@@ -17,6 +17,7 @@ import { wpSync } from './offline.js';
 import * as wqv from './views/quality.js';
 import * as colv from './views/collections.js';
 import * as labv from './views/labs.js';
+import * as wspv from './views/wsp.js';
 import * as gr from './views/growth.js';
 import * as sv from './views/service.js';
 import * as opv from './views/operations.js';
@@ -35,7 +36,7 @@ const ROUTES = [
   ['/reports', dash.reports, 'reports.view'],
   ['/admin', adm.view, ['users.manage', 'integrations.view', 'settings.manage', 'notices.manage']], ['/admin/:tab', adm.view, ['users.manage', 'integrations.view', 'settings.manage', 'tariffs.view', 'areas.view', 'notices.manage']],
   ['/audit', adm.audit, 'audit.view'],
-  ['/channels', ch.phone, 'channels.view'], ['/momo', ch.momo, 'momo.view'], ['/water-points', wpv.view, ['wp.view', 'wp.manage']], ['/kiosk', wpv.kiosk, 'wp.sell'], ['/water-loss', wl.view, 'nrw.view'], ['/water-quality', wqv.view, ['wq.view']], ['/collections', colv.view, 'collections.view'], ['/tariff-lab', labv.tariffLab, 'tariff.lab'], ['/briefing', labv.briefing, 'briefing.view'],
+  ['/channels', ch.phone, 'channels.view'], ['/momo', ch.momo, 'momo.view'], ['/water-points', wpv.view, ['wp.view', 'wp.manage']], ['/kiosk', wpv.kiosk, 'wp.sell'], ['/water-loss', wl.view, 'nrw.view'], ['/water-quality', wqv.view, ['wq.view']], ['/water-safety', wspv.view, ['wsp.view', 'wsp.monitor', 'wsp.inspect']], ['/water-safety/h/:id', wspv.hazard, 'wsp.view'], ['/collections', colv.view, 'collections.view'], ['/tariff-lab', labv.tariffLab, 'tariff.lab'], ['/briefing', labv.briefing, 'briefing.view'],
   ['/connections', gr.connections, 'connections.view'], ['/connections/:id', gr.connection, 'connections.view'], ['/performance', gr.kpi, 'kpi.view'], ['/onboarding', gr.onboarding, 'onboarding.import'],
   ['/maintenance', opv.maintenance, 'maintenance.view'], ['/service-levels', opv.serviceLevels, 'servicelevels.view'], ['/cash', opv.cash, ['cash.close', 'cash.review']],
   ['/supply', sv.supply, 'supply.view'], ['/stores', sv.stores, ['stock.view', 'stock.issue']], ['/meter-planner', sv.meterPlanner, 'fleet.view'], ['/feedback', sv.feedbackView, 'feedback.view'],
@@ -66,6 +67,7 @@ function nav() {
     ['/channels', '☎️', 'SMS & USSD', 'channels.view'],
     ['/supply', '🕒', 'Supply timetable', 'supply.view'],
     ['/water-quality', '🧪', 'Water quality', 'wq.view'],
+    ['/water-safety', '🛡️', 'Water safety plan', () => canAny('wsp.view', 'wsp.monitor', 'wsp.inspect')],
     ['/feedback', '⭐', 'Customer feedback', 'feedback.view'],
     ['Network & service'],
     ['/alerts', '🚨', 'Alerts', 'alerts.view'],

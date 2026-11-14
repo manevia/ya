@@ -67,7 +67,9 @@ function record(ctx, b) {
       }
     }
     audit.log(ctx, 'wq.test', 'asset', asset.id, { parameter: p.code, value: b.value, result, method: b.method, advisory });
-    return { ...db.get('SELECT * FROM wq_tests WHERE id=?', ins.id), advisory };
+    const rec = db.get('SELECT * FROM wq_tests WHERE id=?', ins.id);
+    const wspChecks = require('./wsp').onWqTest(ctx, rec); // counts as operational monitoring for matching Water Safety Plan controls
+    return { ...rec, advisory, wsp_checks: wspChecks.length, wsp_breach: wspChecks.some(c => !c.ok) };
   });
 }
 

@@ -590,13 +590,62 @@ async function run() {
   r = await admin.post(`/api/integrations/${iid}/verify`, { note: 'short' }); ok(r.status === 400, 'verification requires evidence note');
   r = await admin.post(`/api/integrations/${iid}/verify`, { note: 'Compared 3 uplinks with physical register on test bench (test)' }); ok(r.status === 200, 'integration marked verified with evidence');
   r = await admin.get('/api/audit/verify'); ok(r.data.ok, `audit hash chain intact (${r.data.checked} entries)`);
+
+  // ===== Water Safety Plan =====
+  console.log('\nWater Safety Plan');
+  {
+    r = await cashier.get('/api/wsp'); ok(r.status === 403, 'cashier cannot open the water safety plan');
+    r = await manager.get('/api/wsp'); const cells = r.data.matrix_raw.flat().reduce((a, b) => a + b, 0);
+    ok(r.status === 200 && r.data.score >= 0 && r.data.score <= 100 && cells === r.data.hazards && r.data.parts.length === 8, 'overview: readiness score and a 5×5 matrix that adds up to the register', { score: r.data.score, cells, hz: r.data.hazards });
+    const lk = (await manager.get('/api/lookups')).data; const hlt = lk.areas.find(a => a.code === 'HLT');
+    const hres = (await manager.get('/api/assets')).data.find(a => a.code === 'HLT-RES-01');
+    r = await manager.post('/api/wsp/library/apply', { template: 'piped_chlorinated', area_id: hlt.id }); ok(r.status === 200 && r.data.added === 9, 'starter template adds 9 risks with controls to an area', r.data);
+    r = await manager.post('/api/wsp/library/apply', { template: 'piped_chlorinated', area_id: hlt.id }); ok(r.data.added === 0 && r.data.skipped === 9, 'applying the same template again adds nothing');
+    r = await tech.post('/api/wsp/hazards', { step: 'storage', event: 'Test', likelihood: 3, severity: 3 }); ok(r.status === 403, 'technician cannot change the risk register');
+    const hz = { asset_id: hres.id, step: 'storage', hazard_type: 'microbial', event: 'Chlorine residual lost in the Hilltop reservoir (test)', likelihood: 4, severity: 5 };
+    r = await manager.post('/api/wsp/hazards', { ...hz, res_likelihood: 5, res_severity: 5 }); ok(r.status === 400, 'risk after controls cannot exceed the risk before controls');
+    r = await manager.post('/api/wsp/hazards', { ...hz, res_likelihood: 2 }); ok(r.status === 400, 'residual risk needs both likelihood and severity');
+    r = await manager.post('/api/wsp/hazards', hz); ok(r.status === 200 && /HZ-\d{4}$/.test(r.data.ref), 'risk created with a reference', r.data); const hid = r.data.id;
+    r = await manager.get('/api/wsp/hazards/' + hid); ok(r.data.raw_score === 20 && r.data.raw_band === 'very_high' && r.data.control_state === 'no_controls' && r.data.area_id === hlt.id, 'score 4×5 = 20 (very high); area taken from the asset');
+    r = await manager.post(`/api/wsp/hazards/${hid}/controls`, { description: 'Free chlorine at the reservoir outlet (test)', parameter: 'free_chlorine', limit_low: 0.3, limit_high: 0.2, frequency_days: 7 }); ok(r.status === 400, 'control with the lower limit above the upper limit is refused');
+    r = await manager.post(`/api/wsp/hazards/${hid}/controls`, { description: 'Free chlorine at the reservoir outlet (test)', parameter: 'free_chlorine', limit_low: 0.3, limit_high: 2, unit: 'mg/L', frequency_days: 7, corrective_action: 'Boost the dose and re-test (test)' });
+    ok(r.status === 200, 'control measure with limits added'); const cid = r.data.id;
+    r = await tech.post(`/api/wsp/controls/${cid}/check`, {}); ok(r.status === 400 && /measured value/.test(r.data.error), 'a control with limits needs the measured value');
+    const cu = 'wsp-test-' + Date.now();
+    r = await tech.post(`/api/wsp/controls/${cid}/check`, { value: 0.1, client_uuid: cu }); ok(r.status === 200 && r.data.ok === false && r.data.alert_id && /Boost/.test(r.data.corrective_action), 'check outside the limits raises an alert with the corrective action', r.data); const aid = r.data.alert_id;
+    r = await tech.post(`/api/wsp/controls/${cid}/check`, { value: 0.1, client_uuid: cu }); ok(r.data.duplicate === true, 'a repeated submission (same client id) is not recorded twice');
+    r = await manager.get('/api/alerts?status=open_all'); const al = (r.data.rows || r.data).find(a => a.id === aid); ok(al && al.rule_type === 'wsp_limit' && al.severity === 'critical', 'the alert is critical because the risk is very high', al && { t: al.rule_type, s: al.severity });
+    r = await tech.post('/api/wq/tests', { asset_id: hres.id, parameter: 'free_chlorine', value: 0.6, method: 'field_kit' }); ok(r.status === 200 && r.data.wsp_checks === 1 && r.data.wsp_breach === false, 'a water-quality test at the asset is logged against the matching control', r.data);
+    r = await manager.get('/api/wsp/hazards/' + hid); const c0 = r.data.controls[0];
+    ok(c0.status.state === 'ok' && c0.status.last.wq_test_id && r.data.monitoring.length === 2, 'control is back to working, with both checks on record');
+    r = await manager.get('/api/alerts?status=all'); const al2 = (r.data.rows || r.data).find(a => a.id === aid); ok(!al2 || al2.status === 'resolved', 'the alert closes itself when the next check is within limits', al2 && al2.status);
+    r = await manager.put('/api/wsp/hazards/' + hid, { ...hz, res_likelihood: 2, res_severity: 5 }); r = await manager.get('/api/wsp/hazards/' + hid); ok(r.data.res_score === 10 && r.data.res_band === 'high', 'residual risk recorded (2×5 = 10, high)');
+    r = await manager.post(`/api/wsp/hazards/${hid}/review`, { next_review: '2027-06-30' }); ok(r.data.review_due === '2027-06-30', 'review recorded with the next review date');
+    // sanitary inspection
+    const forms = (await tech.get('/api/wsp/inspections')).data.forms; const tank = forms.find(f => f.key === 'storage_tank');
+    r = await tech.post('/api/wsp/inspections', { asset_id: hres.id, form: 'storage_tank', answers: { s1: true } }); ok(r.status === 400, 'inspection refused until every question is answered');
+    const ans = Object.fromEntries(tank.items.map((it, i) => [it.id, i < 3]));
+    r = await tech.post('/api/wsp/inspections', { asset_id: hres.id, form: 'storage_tank', answers: ans }); ok(r.status === 200 && r.data.risk_count === 3 && r.data.risk_level === 'medium' && r.data.hazards_added === 3 && r.data.actions_added === 3, 'inspection scored 3/8 (medium); each risk added to the register with an action', r.data);
+    r = await tech.post('/api/wsp/inspections', { asset_id: hres.id, form: 'storage_tank', answers: ans }); ok(r.data.hazards_added === 0 && r.data.actions_added === 0, 'a repeat inspection does not duplicate risks or actions');
+    await tech.post('/api/wq/tests', { asset_id: hres.id, parameter: 'ecoli', value: 50, method: 'lab' });
+    r = await manager.get('/api/wsp/inspections'); const site = r.data.rows.find(x => x.id === hres.id); ok(site.ecoli.grade === 'C' && site.priority === 'high' && site.due === false, 'priority is the worse of inspection (medium) and E. coli grade C (high)', site && { e: site.ecoli, p: site.priority });
+    // improvement plan
+    r = await manager.get('/api/wsp/actions'); const act = r.data.find(a => a.asset_id === hres.id && !a.work_order_id); ok(act && act.status === 'planned', 'improvement actions from the inspection are in the plan');
+    r = await manager.post(`/api/wsp/actions/${act.id}/work-order`, {}); ok(r.status === 200 && r.data.wo_number, 'action turned into a work order', r.data); const wid = r.data.id;
+    r = await manager.post(`/api/wsp/actions/${act.id}/work-order`, {}); ok(r.status === 409, 'an action cannot have two work orders');
+    await tech.post(`/api/work-orders/${wid}/update`, { status: 'completed', note: 'Cover fitted (test)' });
+    r = await manager.get('/api/wsp/actions?status=all'); ok(r.data.find(a => a.id === act.id).status === 'done', 'completing the work order completes the action');
+    r = await manager.post('/api/wsp/actions', { hazard_id: hid, title: 'Second chlorination point (test)', cost: 300, currency: 'XXX' }); ok(r.status === 400, 'action cost must be in a configured currency');
+    r = await manager.get('/api/wsp/hazards?format=csv'); ok(typeof r.data === 'string' && r.data.includes('hazardous_event') && r.data.includes('Chlorine residual lost'), 'risk register exports as CSV');
+    r = await manager.get('/api/briefing'); ok(r.data.items.some(i => /water safety|sanitary inspection/i.test(i.title)), 'morning briefing includes water safety items');
+  }
   // Direct database tamper attempts are blocked by triggers
   const { DatabaseSync } = require('node:sqlite');
   const raw = new DatabaseSync(path.join(TMP, 'demo', 'aquatrack-demo.db'));
   let blocked = 0;
-  for (const sql of ['UPDATE readings SET value = 1 WHERE id = 1', 'DELETE FROM payments WHERE id = 1', 'UPDATE payments SET amount = 1 WHERE id = 1', 'DELETE FROM audit_log WHERE id = 1', 'DELETE FROM wp_transactions WHERE id = 1', 'UPDATE wp_transactions SET amount = 0 WHERE id = 1', 'DELETE FROM momo_transactions WHERE id = 1']) { try { raw.exec(sql); } catch { blocked++; } }
+  for (const sql of ['UPDATE readings SET value = 1 WHERE id = 1', 'DELETE FROM payments WHERE id = 1', 'UPDATE payments SET amount = 1 WHERE id = 1', 'DELETE FROM audit_log WHERE id = 1', 'DELETE FROM wp_transactions WHERE id = 1', 'UPDATE wp_transactions SET amount = 0 WHERE id = 1', 'DELETE FROM momo_transactions WHERE id = 1', 'UPDATE wsp_monitoring SET ok = 1 WHERE id = 1', 'DELETE FROM wsp_inspections WHERE id = 1']) { try { raw.exec(sql); } catch { blocked++; } }
   raw.close();
-  ok(blocked === 7, 'database triggers block editing readings/payments/kiosk sales and deleting audit or mobile-money records');
+  ok(blocked === 9, 'database triggers block editing readings/payments/kiosk sales/water safety checks and deleting audit, mobile-money or inspection records');
 }
 const r2 = n => Math.round((n + Number.EPSILON) * 100) / 100;
 main().catch(e => { console.error(e); process.exit(1); });

@@ -510,6 +510,47 @@ db.tx(() => {
     ccSvc.submit(cashC, { date: d, counts: e.currencies.map((c, j) => ({ currency: c.currency, counted: Math.max(0, c.expected - (short && j === 0 ? (c.currency === 'USD' ? 2 : short) : 0)) })), note: short ? 'Counted twice and came up short — may have given wrong change (demo)' : null });
     if (i < cashDays.length - 1) for (const k of db.all('SELECT id FROM cash_closes WHERE user_id=? AND close_date=?', U.cashier, d)) ccSvc.review(mgrC, k.id, { decision: 'approved' }); });
 
+  // ================= Water Safety Plan (fictional) =================
+  const wsp = require('./services/wsp'); const techC = ctxOf(U.tech1);
+  wsp.applyTemplate(mgrC, { template: 'piped_chlorinated', area_id: RVS.id });
+  wsp.applyTemplate(mgrC, { template: 'kiosk', asset_id: AID('RVS-WP-01') });
+  wsp.applyTemplate(mgrC, { template: 'borehole', asset_id: AID('GVW-SRC-01') });
+  const HZ = ev => db.get('SELECT * FROM wsp_hazards WHERE event LIKE ? ORDER BY id LIMIT 1', ev + '%');
+  const CT = hid => db.get('SELECT * FROM wsp_controls WHERE hazard_id=? ORDER BY id LIMIT 1', hid);
+  db.run(`UPDATE wsp_controls SET created_at=?`, ago(60).slice(0, 19).replace('T', ' ')); // the plan was written two months ago
+  // tie the Riverside treatment and storage risks to their assets, so chlorine and turbidity tests there are logged automatically
+  const hDose = HZ('Chlorine dosing fails'), hTurb = HZ('High turbidity'), hRes = HZ('An open or damaged reservoir'), hPress = HZ('Low or intermittent pressure'), hSrc = HZ('Runoff after heavy rain');
+  db.run('UPDATE wsp_hazards SET asset_id=?, owner_id=? WHERE id IN (?,?)', AID('RVS-TRT-01'), U.tech1, hDose.id, hTurb.id);
+  db.run('UPDATE wsp_hazards SET asset_id=?, owner_id=? WHERE id=?', AID('RVS-RES-01'), U.tech2, hRes.id);
+  db.run('UPDATE wsp_hazards SET asset_id=?, owner_id=? WHERE id=?', AID('RVS-SRC-01'), U.manager, hSrc.id);
+  db.run(`UPDATE wsp_controls SET parameter='free_chlorine' WHERE id=?`, CT(hDose.id).id); db.run(`UPDATE wsp_controls SET parameter='turbidity' WHERE id=?`, CT(hTurb.id).id);
+  // residual risk after controls, for the risks the team has already re-scored
+  for (const [ev, l, s] of [['Chlorine dosing fails', 2, 5], ['High turbidity', 2, 4], ['An open or damaged reservoir', 2, 4], ['Low or intermittent pressure', 3, 4], ['Pipe repairs introduce', 2, 4], ['Hoses, containers or hands', 2, 3], ['No chlorine residual reaches', 2, 4], ['Latrines or waste near', 2, 5], ['A damaged apron', 2, 5]])
+    db.run('UPDATE wsp_hazards SET res_likelihood=?, res_severity=? WHERE event LIKE ?', l, s, ev + '%');
+  // operational monitoring: daily chlorine at the treatment outlet, weekly checks elsewhere; turbidity is over its limit after rain
+  for (let d = 12; d >= 1; d--) wsp.check(techC, CT(hDose.id).id, { value: Math.round((0.6 + rnd() * 0.5) * 100) / 100, checked_at: ago(d + 0.3) });
+  for (const d of [22, 15, 8]) wsp.check(techC, CT(hTurb.id).id, { value: Math.round((1.2 + rnd() * 1.5) * 10) / 10, checked_at: ago(d) });
+  wsp.check(techC, CT(hTurb.id).id, { value: 7.8, checked_at: ago(1.2), note: 'Heavy rain; raw water silty (demo)' });
+  for (const d of [50, 20]) wsp.check(techC, CT(hRes.id).id, { ok: true, checked_at: ago(d), note: 'Hatch locked, screens intact (demo)' });
+  for (const d of [20, 13, 6]) wsp.check(techC, CT(HZ('No chlorine residual reaches').id).id, { value: Math.round((0.3 + rnd() * 0.3) * 100) / 100, checked_at: ago(d) });
+  wsp.check(techC, CT(HZ('Hoses, containers or hands').id).id, { ok: true, checked_at: ago(4) });
+  wsp.check(techC, CT(HZ('The pump breaks down').id).id, { ok: true, checked_at: ago(10) });
+  // sanitary inspections from the field
+  const yesTo = (form, ids) => Object.fromEntries(wsp.library().forms.find(f => f.key === form).items.map(it => [it.id, ids.includes(it.id)]));
+  wsp.recordInspection(techC, { asset_id: AID('GVW-WP-01'), form: 'tapstand', answers: yesTo('tapstand', ['t7']), inspected_at: ago(20), notes: 'Site clean, drainage working (demo)' });
+  wsp.recordInspection(techC, { asset_id: AID('GVW-WP-02'), form: 'tapstand', answers: yesTo('tapstand', ['t1', 't2', 't3', 't4', 't6']), inspected_at: ago(5), notes: 'Tap and valve stolen; pipe exposed and site dirty (demo)' });
+  wsp.recordInspection(techC, { asset_id: AID('RVS-WP-01'), form: 'tapstand', answers: yesTo('tapstand', ['t2', 't7']), inspected_at: ago(34) });
+  wsp.recordInspection(techC, { asset_id: AID('RVS-RES-01'), form: 'storage_tank', answers: yesTo('storage_tank', ['s3']), inspected_at: ago(48) });
+  // improvement plan: costed actions, one already with the technicians, one finished
+  const a1 = wsp.saveAction(mgrC, null, { hazard_id: hDose.id, title: 'Install a standby dosing pump at the Riverside treatment unit', owner_id: U.manager, due_date: ago(-45).slice(0, 10), cost: 850, currency: 'USD' }).id;
+  wsp.saveAction(mgrC, null, { hazard_id: hSrc.id, title: 'Build a cut-off drain above the river intake', owner_id: U.tech2, due_date: ago(9).slice(0, 10), cost: 1200, currency: 'USD' });
+  wsp.saveAction(mgrC, null, { hazard_id: hRes.id, title: 'Fit insect screens to the tank vents and overflow', owner_id: U.tech2, due_date: ago(30).slice(0, 10), cost: 60, currency: 'USD', status: 'done' });
+  const fenceAct = db.get(`SELECT id FROM wsp_actions WHERE title='Repair the drainage' LIMIT 1`); if (fenceAct) wsp.actionToWorkOrder(mgrC, fenceAct.id, { assigned_to: U.tech1 });
+  void a1;
+  // today's tests at the treatment outlet and the kiosk are logged against the matching controls automatically
+  require('./services/quality').record(techC, { asset_id: AID('RVS-TRT-01'), parameter: 'free_chlorine', value: 0.8, method: 'field_kit', sampled_at: ago(0.1) });
+  require('./services/quality').record(techC, { asset_id: AID('RVS-WP-01'), parameter: 'free_chlorine', value: 0.4, method: 'field_kit', sampled_at: ago(0.1) });
+
   // A public / donor transparency link
   const ins = require('./services/insights');
   const tok = ins.newToken();

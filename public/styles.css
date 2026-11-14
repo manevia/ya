@@ -169,3 +169,20 @@ dialog .x { background: none; border: 0; font-size: 1.4rem; cursor: pointer; col
 .steps span.done { background: var(--good-bg); color: var(--good); border-color: #b9dfb9; }
 .steps span.now { background: var(--s1, #1b6fa8); color: #fff; border-color: transparent; font-weight: 650; }
 @media (max-width: 900px) { .board { grid-template-columns: repeat(6, 78vw); } }
+
+/* Water safety plan: 5×5 risk matrix, readiness list, inspection checklist */
+.rm { display: grid; grid-template-columns: 1.4rem repeat(5, minmax(0, 1fr)); gap: 3px; position: relative; padding-left: 1.3rem; max-width: 26rem; }
+.rm-y { position: absolute; left: 0; top: 40%; transform: rotate(-90deg) translateX(-50%); transform-origin: left top; font-size: .75rem; color: var(--muted); }
+.rm-x { font-size: .75rem; color: var(--muted); text-align: center; max-width: 26rem; margin-top: .2rem; }
+.rm-h { font-size: .75rem; color: var(--muted); display: flex; align-items: center; justify-content: center; }
+.rm-c { aspect-ratio: 1.6; display: flex; align-items: center; justify-content: center; border-radius: 4px; font-weight: 650; font-variant-numeric: tabular-nums; }
+.rm-c.low { background: var(--good-bg); color: var(--good); } .rm-c.medium { background: var(--warn-bg); color: var(--warn); } .rm-c.high { background: var(--serious-bg); color: var(--serious); } .rm-c.very_high { background: var(--crit-bg); color: var(--crit); }
+.rm-c.zero { opacity: .55; }
+.wsp-next { display: flex; justify-content: space-between; gap: 1rem; padding: .5rem 0; border-top: 1px solid var(--border); flex-wrap: wrap; } .wsp-next:first-of-type { border-top: 0; }
+.wsp-part { display: grid; grid-template-columns: minmax(0, 16rem) 1fr 3rem; gap: .8rem; align-items: center; padding: .3rem 0; font-size: .9rem; } .wsp-part .bar { margin: 0; } .wsp-part .num { text-align: right; }
+.si-list { border: 1px solid var(--border); border-radius: 6px; }
+.si-item { display: flex; justify-content: space-between; gap: 1rem; padding: .6rem .8rem; border-top: 1px solid var(--border); align-items: center; } .si-item:first-child { border-top: 0; }
+.si-yn { display: flex; gap: .4rem; flex-shrink: 0; } .si-yn label { display: flex; gap: .3rem; align-items: center; padding: .45rem .7rem; border: 1px solid var(--border); border-radius: 6px; cursor: pointer; min-width: 4rem; justify-content: center; }
+.si-yn label:has(input:checked) { background: var(--brand-soft); border-color: var(--brand); font-weight: 600; }
+@media (max-width: 640px) { .wsp-part { grid-template-columns: 1fr 3rem; } .wsp-part .bar { grid-column: 1 / -1; order: 3; } .si-item { flex-direction: column; align-items: stretch; } }
+.t td.act, .t th.act { position: sticky; right: 0; background: var(--surface); box-shadow: -6px 0 6px -6px rgba(16, 24, 40, .18); } .t th.act { background: var(--surface-2); }

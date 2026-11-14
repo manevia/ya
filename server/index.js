@@ -22,6 +22,7 @@ require('./modules/growth');
 require('./modules/service');
 require('./modules/i18n');
 require('./modules/operations');
+require('./modules/wsp');
 require('./services/alerts').ensureRules();
 
 const PUBLIC = path.join(__dirname, '..', 'public');
@@ -84,6 +85,7 @@ function housekeeping() {
       const r = require('./services/collections').runReminders({ actor: 'scheduler' }); console.log('  Reminders:', JSON.stringify(r));
     }
     if (db.setting('maint_auto_wo', '1') === '1' && String(db.setting('last_maint_run', '')).slice(0, 10) !== today && db.get('SELECT COUNT(*) n FROM users').n) { const r = require('./services/maintenance').runDue({}); if (r.created.length) console.log('  Maintenance work orders:', r.created.length); }
+    if (String(db.setting('last_wsp_run', '')).slice(0, 10) !== today && db.get('SELECT 1 FROM wsp_hazards LIMIT 1')) { const r = require('./services/wsp').runDaily({}); if (r.raised) console.log('  Water safety checks overdue:', r.raised); }
     const ph = db.setting('briefing_sms_phone', '');
     if (ph && db.setting('last_briefing_sms', '') !== today && new Date().getUTCHours() >= 7) {
       const labs = require('./services/labs'); require('./services/channels').send(ph, labs.briefingSms(labs.briefing()), { purpose: 'briefing' });

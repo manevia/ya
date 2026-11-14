@@ -1,0 +1,92 @@
+{
+  "note": "Starter content for Water Safety Plans. Written for small piped schemes, boreholes and kiosks; adapt it to each system and confirm limits against the national drinking-water standard.",
+  "templates": [
+    { "key": "piped_chlorinated", "title": "Piped scheme with chlorination", "hazards": [
+      { "step": "source", "type": "microbial", "l": 4, "s": 5, "event": "Runoff after heavy rain carries faecal contamination into the source",
+        "controls": [{ "description": "Protect the intake or wellhead and divert surface runoff", "freq": 30, "corrective": "Repair the protection, raise the chlorine dose and test for E. coli" }] },
+      { "step": "treatment", "type": "microbial", "l": 3, "s": 5, "event": "Chlorine dosing fails or runs out, so water is supplied without disinfection",
+        "controls": [{ "description": "Daily free chlorine check at the treatment outlet", "parameter": "free_chlorine", "low": 0.5, "high": 2, "unit": "mg/L", "freq": 1, "corrective": "Restore dosing, re-chlorinate stored water and test again within 2 hours" }] },
+      { "step": "treatment", "type": "microbial", "l": 3, "s": 4, "event": "High turbidity shields germs from chlorine",
+        "controls": [{ "description": "Turbidity check before chlorination", "parameter": "turbidity", "high": 5, "unit": "NTU", "freq": 7, "corrective": "Settle or filter the water, raise the dose and test again" }] },
+      { "step": "storage", "type": "microbial", "l": 3, "s": 4, "event": "An open or damaged reservoir lets birds, animals or dirt in",
+        "controls": [{ "description": "Hatches locked, vents screened and the tank cleaned every year", "freq": 30, "corrective": "Close and repair the tank, then clean and disinfect it" }] },
+      { "step": "distribution", "type": "microbial", "l": 4, "s": 4, "event": "Low or intermittent pressure draws dirty water into leaking pipes",
+        "controls": [{ "description": "Keep a chlorine residual at the far end of the network", "parameter": "free_chlorine", "low": 0.2, "high": 2, "unit": "mg/L", "freq": 7, "corrective": "Find and repair leaks, flush the line and boost chlorine" }] },
+      { "step": "distribution", "type": "microbial", "l": 3, "s": 4, "event": "Pipe repairs introduce contamination",
+        "controls": [{ "description": "Disinfect and flush the pipe after every repair, then test chlorine", "corrective": "Flush again and keep the section closed until chlorine is detected" }] },
+      { "step": "distribution", "type": "microbial", "l": 3, "s": 3, "event": "Illegal or poorly made connections cause backflow",
+        "controls": [{ "description": "Inspect new connections and remove illegal ones", "freq": 90, "corrective": "Disconnect, repair properly and flush the line" }] },
+      { "step": "household", "type": "microbial", "l": 4, "s": 3, "event": "Water is contaminated again in dirty or open containers at home",
+        "controls": [{ "description": "Safe-storage messages by SMS and at water points", "freq": 90, "corrective": "Run a hygiene session with the community" }] },
+      { "step": "management", "type": "quantity", "l": 3, "s": 3, "event": "No trained operator or spare parts when something fails",
+        "controls": [{ "description": "Named standby operator and a minimum stock of critical spares", "freq": 30, "corrective": "Train a standby operator and order the missing spares" }] }
+    ] },
+    { "key": "borehole", "title": "Borehole or protected well", "hazards": [
+      { "step": "source", "type": "microbial", "l": 3, "s": 5, "event": "Latrines or waste near the borehole contaminate the groundwater",
+        "controls": [{ "description": "Keep latrines and waste away from the borehole (national minimum distance)", "freq": 90, "corrective": "Remove the pollution source and test for E. coli" }] },
+      { "step": "source", "type": "microbial", "l": 3, "s": 5, "event": "A damaged apron or loose pump lets surface water into the borehole",
+        "controls": [{ "description": "Sound apron, sealed pump base and working drainage", "freq": 90, "corrective": "Repair the apron and pump base, then disinfect the borehole" }] },
+      { "step": "source", "type": "microbial", "l": 2, "s": 5, "event": "Flooding covers the wellhead",
+        "controls": [{ "description": "Raised wellhead; disinfect the borehole after any flood", "freq": 180, "corrective": "Close the pump, disinfect and test before reopening" }] },
+      { "step": "collection", "type": "microbial", "l": 4, "s": 3, "event": "Dirty hands, containers or animals at the pump contaminate the water",
+        "controls": [{ "description": "Fence, clean surroundings and caretaker rules", "freq": 30, "corrective": "Clean the site and repair the fence" }] },
+      { "step": "management", "type": "quantity", "l": 3, "s": 4, "event": "The pump breaks down and people turn to unsafe sources",
+        "controls": [{ "description": "Preventive maintenance and spare parts for the pump", "freq": 30, "corrective": "Repair within 48 hours and tell users where the nearest safe point is" }] },
+      { "step": "household", "type": "microbial", "l": 4, "s": 3, "event": "Water is contaminated again in dirty or open containers at home",
+        "controls": [{ "description": "Safe-storage messages by SMS and at water points", "freq": 90, "corrective": "Run a hygiene session with the community" }] }
+    ] },
+    { "key": "kiosk", "title": "Water kiosk or public tap", "hazards": [
+      { "step": "collection", "type": "microbial", "l": 3, "s": 3, "event": "Hoses, containers or hands contaminate water at the tap",
+        "controls": [{ "description": "Hygiene rules for the attendant; clean the outlet every day", "freq": 7, "corrective": "Clean and disinfect the outlet and brief the attendant" }] },
+      { "step": "distribution", "type": "microbial", "l": 3, "s": 4, "event": "No chlorine residual reaches the kiosk",
+        "controls": [{ "description": "Weekly free chlorine test at the tap", "parameter": "free_chlorine", "low": 0.2, "high": 2, "unit": "mg/L", "freq": 7, "corrective": "Check dosing upstream, flush the line and test again" }] },
+      { "step": "collection", "type": "microbial", "l": 3, "s": 2, "event": "Standing water around the kiosk breeds mosquitoes and dirties containers",
+        "controls": [{ "description": "Working drainage and soakaway at the kiosk", "freq": 30, "corrective": "Clear or repair the drain" }] },
+      { "step": "storage", "type": "microbial", "l": 3, "s": 4, "event": "The kiosk storage tank is not cleaned",
+        "controls": [{ "description": "Clean and disinfect the kiosk tank every 6 months", "freq": 180, "corrective": "Clean and disinfect the tank now" }] }
+    ] }
+  ],
+  "forms": [
+    { "key": "borehole_handpump", "title": "Borehole with handpump", "asset_types": ["water_point", "source"], "items": [
+      { "id": "b1", "step": "source", "s": 5, "q": "A latrine or sewer is within 10 m of the borehole", "fix": "Move or line the latrine, or plan a new protected source" },
+      { "id": "b2", "step": "source", "s": 4, "q": "The nearest latrine is uphill of the borehole", "fix": "Divert surface drainage and test for E. coli more often" },
+      { "id": "b3", "step": "source", "s": 4, "q": "Animal waste, rubbish or another pollution source is within 10 m", "fix": "Clear the area and fence the water point" },
+      { "id": "b4", "step": "collection", "s": 3, "q": "Stagnant water stands within 2 m of the pump", "fix": "Repair or build a drainage channel and soakaway" },
+      { "id": "b5", "step": "source", "s": 4, "q": "The concrete apron is less than 1 m wide all round", "fix": "Extend the apron to at least 1 m all round" },
+      { "id": "b6", "step": "source", "s": 4, "q": "The apron or drainage channel is cracked or broken", "fix": "Repair the apron and drainage channel" },
+      { "id": "b7", "step": "source", "s": 5, "q": "The handpump is loose where it joins the base", "fix": "Tighten or re-seat the pump on its base" },
+      { "id": "b8", "step": "collection", "s": 3, "q": "The fence is missing or broken, so animals can reach the pump", "fix": "Repair the fence" },
+      { "id": "b9", "step": "household", "s": 3, "q": "People carry or store water in dirty or uncovered containers", "fix": "Run a safe-storage session with users" }
+    ] },
+    { "key": "tapstand", "title": "Public tap or kiosk", "asset_types": ["water_point"], "items": [
+      { "id": "t1", "step": "collection", "s": 3, "q": "The tap leaks or is damaged", "fix": "Replace the tap or its washer" },
+      { "id": "t2", "step": "collection", "s": 3, "q": "Water collects around the tap stand", "fix": "Repair the drainage" },
+      { "id": "t3", "step": "collection", "s": 4, "q": "The area around the tap is dirty (rubbish, faeces or animals)", "fix": "Clean the area and agree a cleaning rota" },
+      { "id": "t4", "step": "distribution", "s": 3, "q": "The supply pipe is exposed near the tap", "fix": "Bury or sleeve the exposed pipe" },
+      { "id": "t5", "step": "distribution", "s": 4, "q": "A pipe leak is visible within 10 m of the tap", "fix": "Repair the leak" },
+      { "id": "t6", "step": "distribution", "s": 4, "q": "Supply was interrupted in the last 10 days", "fix": "Check supply hours and pressure for this zone" },
+      { "id": "t7", "step": "collection", "s": 3, "q": "Hoses or containers touch the tap outlet", "fix": "Fit a raised outlet and brief the attendant" },
+      { "id": "t8", "step": "distribution", "s": 5, "q": "No free chlorine was detected at this tap", "fix": "Check the dosing and test again" }
+    ] },
+    { "key": "storage_tank", "title": "Storage tank or reservoir", "asset_types": ["reservoir"], "items": [
+      { "id": "s1", "step": "storage", "s": 4, "q": "The inspection hatch is open, missing or cannot be locked", "fix": "Fit a lockable, overlapping cover" },
+      { "id": "s2", "step": "storage", "s": 4, "q": "The roof is cracked or leaks", "fix": "Repair and seal the roof" },
+      { "id": "s3", "step": "storage", "s": 3, "q": "Vents or overflow pipes have no insect screen", "fix": "Fit screens to vents and overflows" },
+      { "id": "s4", "step": "storage", "s": 5, "q": "Dirt, sediment or animals are visible inside the tank", "fix": "Clean and disinfect the tank" },
+      { "id": "s5", "step": "storage", "s": 3, "q": "The tank has not been cleaned in the last 12 months", "fix": "Schedule cleaning and disinfection" },
+      { "id": "s6", "step": "storage", "s": 3, "q": "The tank walls leak", "fix": "Repair the leaks" },
+      { "id": "s7", "step": "storage", "s": 3, "q": "The tank compound is not fenced or is dirty", "fix": "Fence and clean the compound" },
+      { "id": "s8", "step": "storage", "s": 3, "q": "The outlet draws from the very bottom, so sediment enters the supply", "fix": "Raise the outlet or add a scour valve" }
+    ] },
+    { "key": "chlorination", "title": "Chlorination point", "asset_types": ["treatment"], "items": [
+      { "id": "c1", "step": "treatment", "s": 5, "q": "The chlorine stock will last less than 14 days", "fix": "Order chlorine now" },
+      { "id": "c2", "step": "treatment", "s": 3, "q": "Chlorine is stored in sunlight, heat or damp", "fix": "Move the stock to a cool, dry, shaded store" },
+      { "id": "c3", "step": "treatment", "s": 5, "q": "The doser or dosing pump is not working properly", "fix": "Repair or replace the doser" },
+      { "id": "c4", "step": "treatment", "s": 4, "q": "There is no working test kit or reagents on site", "fix": "Supply a test kit and reagents" },
+      { "id": "c5", "step": "treatment", "s": 4, "q": "No dosing record was kept in the last 7 days", "fix": "Restart the daily dosing log" },
+      { "id": "c6", "step": "treatment", "s": 4, "q": "Contact time before the first user is under 30 minutes", "fix": "Add contact volume or move the dosing point" },
+      { "id": "c7", "step": "treatment", "s": 4, "q": "The raw water is visibly cloudy", "fix": "Add settling or filtration before chlorination" },
+      { "id": "c8", "step": "management", "s": 2, "type": "chemical", "q": "The operator has no gloves, goggles or apron", "fix": "Provide protective equipment" }
+    ] }
+  ]
+}

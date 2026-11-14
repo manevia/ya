@@ -1,5 +1,5 @@
 # Local data: databases, uploads, backups and keys never go to GitHub
-data/
+/data/
 *.db
 *.db-wal
 *.db-shm

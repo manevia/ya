@@ -105,7 +105,7 @@ route('POST', '/api/work-orders/:id/update', { anyPerm: ['workorders.update', 'w
     if (b.status === 'completed' && w.alert_id && b.resolve_alert) db.run(`UPDATE alerts SET status='resolved', resolved_at=?, resolution_note=? WHERE id=?`, new Date().toISOString(), `Resolved by ${w.wo_number}: ${b.note}`, w.alert_id);
     audit.log(ctx, 'work_order.update', 'work_order', wid, { from: w.status, ...b });
     if (b.status === 'completed' && w.alert_id && b.resolve_alert) require('../services/community').closeLoop(w.alert_id);
-    if (b.status === 'completed') require('../services/maintenance').onWorkOrderCompleted(w);
+    if (b.status === 'completed') { require('../services/maintenance').onWorkOrderCompleted(w); require('../services/wsp').onWorkOrderCompleted(w); }
     if (b.status === 'completed' && w.customer_id && ['leak', 'network', 'meter', 'connection'].includes(w.type)) { // ask the customer how it went (once per job)
       const c = db.get('SELECT id, phone, area_id FROM customers WHERE id=?', w.customer_id);
       if (c && c.phone) require('../services/feedback').request(ctx, { work_order_id: wid, alert_id: w.alert_id, customer_id: c.id, phone: c.phone, area_id: c.area_id, technician_id: b.assigned_to || w.assigned_to, wo_number: w.wo_number });
