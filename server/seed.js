@@ -551,6 +551,15 @@ db.tx(() => {
   require('./services/quality').record(techC, { asset_id: AID('RVS-TRT-01'), parameter: 'free_chlorine', value: 0.8, method: 'field_kit', sampled_at: ago(0.1) });
   require('./services/quality').record(techC, { asset_id: AID('RVS-WP-01'), parameter: 'free_chlorine', value: 0.4, method: 'field_kit', sampled_at: ago(0.1) });
 
+  // ================= Pumping energy (fictional): the Riverside diesel pump is getting thirstier as its bearings wear =================
+  const enSvc = require('./services/energy');
+  ['2026-05', '2026-06', '2026-07', '2026-08', '2026-09', '2026-10'].forEach((mo, i) => {
+    const vol = m => (db.get('SELECT SUM(volume_m3) v FROM bulk_supply WHERE area_id=? AND period_start=?', m, mo + '-01') || {}).v;
+    const vr = vol(RVS.id) || 2300, vh = vol(HLT.id) || 700; const perM3 = i === 5 ? 0.41 : 0.3 + (rnd() - 0.5) * 0.03;
+    if (vr) enSvc.add(mgrC, { asset_id: AID('RVS-PMP-01'), period_start: mo + '-01', period_end: lastDay(mo), energy_type: 'diesel', quantity: Math.round(vr * perM3), cost: Math.round(vr * perM3 * 1.25), currency: 'USD', volume_m3: vr, run_hours: Math.round(vr / (i === 5 ? 48 : 58)), notes: i === 5 ? 'Fuel use up; bearing noise (demo)' : null });
+    if (vh) enSvc.add(mgrC, { asset_id: AID('HLT-PMP-01'), period_start: mo + '-01', period_end: lastDay(mo), energy_type: 'solar', cost: 0, currency: 'USD', volume_m3: vh, notes: 'Solar array, not metered (demo)' });
+  });
+
   // A public / donor transparency link
   const ins = require('./services/insights');
   const tok = ins.newToken();

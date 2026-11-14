@@ -16,12 +16,31 @@ export async function testForm(assets, params, preset = {}, done) {
   const show = () => { const p = params.find(x => x.code === sel.value); hint.textContent = p ? p.guidance : ''; }; sel.addEventListener('change', show); show();
 }
 
+/** How much chlorine product to add to a tank: amount = volume (m³) × dose (mg/L) × 100 ÷ strength (%), in grams for powder or mL for liquid. */
+export function doseCalc() {
+  modal('Chlorine dose calculator', html`<div class="form">${formFields([
+    { name: 'volume', label: 'Water to treat (m³)', type: 'number', step: 'any', min: 0, inputmode: 'decimal', help: '1 m³ = 1,000 litres' },
+    { name: 'product', label: 'Product', type: 'select', blank: false, options: [['70', 'Chlorine powder or granules (HTH), 70%'], ['65', 'Chlorine powder or granules (HTH), 65%'], ['35', 'Bleaching powder, 35%'], ['5', 'Liquid bleach, 5%'], ['3.5', 'Liquid bleach, 3.5%'], ['x', 'Other strength…']] },
+    { name: 'strength', label: 'Strength (% available chlorine)', type: 'number', step: 'any', min: 0.1, max: 100 }, { name: 'form', label: 'Form', type: 'select', blank: false, options: [['g', 'Powder or granules (grams)'], ['ml', 'Liquid (millilitres)']] },
+    { name: 'target', label: 'Dose to add (mg/L)', type: 'number', step: 'any', min: 0, inputmode: 'decimal', help: 'Often 1–2 mg/L for clear water; more if the water is cloudy.' },
+    { name: 'current', label: 'Chlorine already in the water (mg/L)', type: 'number', step: 'any', min: 0, inputmode: 'decimal', help: 'Leave empty for a fresh tank.' }], { product: '70', strength: 70, form: 'g', target: 1 })}</div>
+    <div class="kpi" style="margin-top:.8rem"><div class="label">Add</div><div class="value" id="dose-out">—</div><div class="sub" id="dose-sub"></div></div>
+    <div class="note warn">Dissolve or dilute the product in a bucket of water first, pour it in and mix. Wait 30 minutes, then test: aim for at least 0.2 mg/L of free chlorine at the tap, and record the result. How much chlorine water uses up varies, so adjust the dose from your test results. Wear gloves and eye protection.</div>`, { noFooter: true });
+  const d = document.querySelector('dialog:last-of-type'); const f = n => d.querySelector(`[name=${n}]`);
+  const calc = () => { const v = Number(f('volume').value), p = Number(f('strength').value), dose = Math.max(0, Number(f('target').value) - (Number(f('current').value) || 0)); const unit = f('form').value;
+    const amt = v > 0 && p > 0 && dose > 0 ? v * dose * 100 / p : null;
+    d.querySelector('#dose-out').textContent = amt == null ? '—' : amt >= 1000 ? `${fmtNum(amt / 1000, 2)} ${unit === 'g' ? 'kg' : 'L'}` : `${fmtNum(amt, amt < 10 ? 1 : 0)} ${unit === 'g' ? 'g' : 'mL'}`;
+    d.querySelector('#dose-sub').textContent = amt == null ? '' : `${fmtNum(v, 1)} m³ × ${fmtNum(dose, 2)} mg/L × 100 ÷ ${fmtNum(p, 1)}%`; };
+  f('product').addEventListener('change', () => { const pv = f('product').value; if (pv !== 'x') { f('strength').value = pv; f('form').value = Number(pv) > 10 ? 'g' : 'ml'; } calc(); });
+  d.addEventListener('input', calc); d.addEventListener('change', calc);
+}
+
 export async function view(root) {
   const [d, tests, assets] = await Promise.all([api('/api/wq'), api('/api/wq/tests'), api('/api/assets').catch(() => [])]);
   const pts = assets.length ? assets.filter(a => ['water_point', 'reservoir', 'treatment', 'source'].includes(a.asset_type)) : d.points.map(p => ({ id: p.id, name: p.name, asset_type: p.asset_type }));
   const failing = d.points.filter(p => p.latest.result === 'fail');
   mount(root, html`<div class="page-head"><div><h1>Water quality</h1><small>Chlorine, E. coli, turbidity and pH at water points, reservoirs and treatment. Results appear on the public status page.</small></div>
-      <div class="actions">${can('wq.record') ? html`<button class="btn primary" data-act="new">+ Record test</button>` : ''}<a class="btn" href="/status" target="_blank" rel="noopener">Public status page ↗</a></div></div>
+      <div class="actions">${can('wq.record') ? html`<button class="btn primary" data-act="new">+ Record test</button>` : ''}<button class="btn" data-act="dose">Chlorine dose calculator</button><a class="btn" href="/status" target="_blank" rel="noopener">Public status page ↗</a></div></div>
     ${failing.length ? html`<div class="note crit"><b>${failing.length} point(s) failing:</b> ${failing.map(p => p.name).join(', ')}. Advisories are published for the affected areas until a re-test passes.</div>` : ''}
     <div class="grid g4">
       <div class="kpi"><div class="label">Points tested in last ${d.sampling_days} days</div><div class="value">${d.coverage_pct == null ? '—' : fmtNum(d.coverage_pct, 0) + '%'}</div><div class="bar"><span style="width:${raw(d.coverage_pct || 0)}%"></span></div><div class="sub">${d.points.filter(p => p.tested_recently).length} of ${d.points.length} sampling points</div></div>
@@ -39,6 +58,7 @@ export async function view(root) {
         { label: '', render: p => (can('settings.manage') ? html`<button class="btn sm" data-act="thr" data-code="${p.code}">Edit</button>` : '') }], d.parameters)}</div>`);
   const reload = () => view(root);
   bind(root, {
+    dose: () => doseCalc(),
     new: () => testForm(pts, d.parameters.filter(p => p.active), {}, reload),
     test: b => testForm(pts, d.parameters.filter(p => p.active), { asset_id: Number(b.dataset.id) }, reload),
     thr: b => { const p = d.parameters.find(x => x.code === b.dataset.code);

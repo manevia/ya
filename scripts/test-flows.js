@@ -639,13 +639,33 @@ async function run() {
     r = await manager.get('/api/wsp/hazards?format=csv'); ok(typeof r.data === 'string' && r.data.includes('hazardous_event') && r.data.includes('Chlorine residual lost'), 'risk register exports as CSV');
     r = await manager.get('/api/briefing'); ok(r.data.items.some(i => /water safety|sanitary inspection/i.test(i.title)), 'morning briefing includes water safety items');
   }
+  // ===== Pumping energy =====
+  console.log('\nPumping energy');
+  {
+    r = await manager.get('/api/energy?from=2026-05-01&to=2026-10-31'); const rv = r.data.rows.find(x => x.code === 'RVS-PMP-01');
+    ok(r.status === 200 && rv.entries.length === 6 && rv.trend.state === 'worse' && rv.trend.change_pct > 20 && r.data.summary.worse === 1, 'demo diesel pump is flagged as less efficient than its own baseline', rv && rv.trend);
+    r = await manager.get('/api/alerts?status=open_all'); ok((r.data.rows || r.data).some(a => a.rule_type === 'energy_efficiency'), 'an efficiency alert was raised for it');
+    const gv = (await manager.get('/api/assets')).data; const src = gv.find(a => a.code === 'GVW-SRC-01'), kiosk = gv.find(a => a.code === 'RVS-WP-01');
+    r = await cashier.post('/api/energy', { asset_id: src.id, period_start: '2026-09-01', period_end: '2026-09-30', energy_type: 'petrol', quantity: 40 }); ok(r.status === 403, 'cashier cannot record energy');
+    r = await tech.post('/api/energy', { asset_id: kiosk.id, period_start: '2026-09-01', period_end: '2026-09-30', energy_type: 'petrol', quantity: 40 }); ok(r.status === 400, 'energy is only recorded against pumps, sources and treatment units');
+    r = await tech.post('/api/energy', { asset_id: src.id, period_start: '2026-09-01', period_end: '2026-09-30', energy_type: 'petrol' }); ok(r.status === 400 && /litres/.test(r.data.error), 'fuel records need the litres used');
+    r = await tech.post('/api/energy', { asset_id: src.id, period_start: '2026-09-01', period_end: '2026-09-30', energy_type: 'petrol', quantity: 69, cost: 103.5, currency: 'USD', volume_m3: 690, run_hours: 115 });
+    ok(r.status === 200 && r.data.trend.state === 'no_baseline', 'technician records fuel and water pumped; no verdict until there is a baseline', r.data); const eid = r.data.id;
+    r = await tech.post('/api/energy', { asset_id: src.id, period_start: '2026-09-15', period_end: '2026-10-14', energy_type: 'petrol', quantity: 60, volume_m3: 600 }); ok(r.status === 409, 'overlapping periods for the same pump are refused');
+    r = await manager.get('/api/energy?from=2026-09-01&to=2026-09-30'); const g = r.data.rows.find(x => x.id === src.id).entries[0];
+    ok(g.per_m3 === 0.1 && g.cost_per_m3 === 0.15 && g.per_hour === 0.6 && g.m3_per_hour === 6, 'works out 0.1 L/m³, 0.15 per m³, 0.6 L/h and 6 m³/h', g && [g.per_m3, g.cost_per_m3, g.per_hour, g.m3_per_hour]);
+    r = await tech.post(`/api/energy/${eid}/void`, { reason: 'test' }); ok(r.status === 403, 'technician cannot void an energy record');
+    r = await manager.post(`/api/energy/${eid}/void`, { reason: 'Wrong meter reading (test)' }); ok(r.status === 200, 'manager voids a record with a reason');
+    r = await manager.get('/api/energy?from=2026-09-01&to=2026-09-30'); ok(r.data.rows.every(x => x.id !== src.id || !x.entries.length), 'voided records drop out of the figures');
+    r = await manager.get('/api/energy?from=2026-05-01&to=2026-10-31&format=csv'); ok(typeof r.data === 'string' && r.data.includes('cost_per_m3') && r.data.includes('RVS-PMP-01'), 'energy records export as CSV');
+  }
   // Direct database tamper attempts are blocked by triggers
   const { DatabaseSync } = require('node:sqlite');
   const raw = new DatabaseSync(path.join(TMP, 'demo', 'aquatrack-demo.db'));
   let blocked = 0;
-  for (const sql of ['UPDATE readings SET value = 1 WHERE id = 1', 'DELETE FROM payments WHERE id = 1', 'UPDATE payments SET amount = 1 WHERE id = 1', 'DELETE FROM audit_log WHERE id = 1', 'DELETE FROM wp_transactions WHERE id = 1', 'UPDATE wp_transactions SET amount = 0 WHERE id = 1', 'DELETE FROM momo_transactions WHERE id = 1', 'UPDATE wsp_monitoring SET ok = 1 WHERE id = 1', 'DELETE FROM wsp_inspections WHERE id = 1']) { try { raw.exec(sql); } catch { blocked++; } }
+  for (const sql of ['UPDATE readings SET value = 1 WHERE id = 1', 'DELETE FROM payments WHERE id = 1', 'UPDATE payments SET amount = 1 WHERE id = 1', 'DELETE FROM audit_log WHERE id = 1', 'DELETE FROM wp_transactions WHERE id = 1', 'UPDATE wp_transactions SET amount = 0 WHERE id = 1', 'DELETE FROM momo_transactions WHERE id = 1', 'UPDATE wsp_monitoring SET ok = 1 WHERE id = 1', 'DELETE FROM wsp_inspections WHERE id = 1', 'UPDATE energy_logs SET quantity = 1 WHERE id = 1', 'DELETE FROM energy_logs WHERE id = 1']) { try { raw.exec(sql); } catch { blocked++; } }
   raw.close();
-  ok(blocked === 9, 'database triggers block editing readings/payments/kiosk sales/water safety checks and deleting audit, mobile-money or inspection records');
+  ok(blocked === 11, 'database triggers block editing readings/payments/kiosk sales/water safety checks/energy records and deleting audit, mobile-money or inspection records');
 }
 const r2 = n => Math.round((n + Number.EPSILON) * 100) / 100;
 main().catch(e => { console.error(e); process.exit(1); });

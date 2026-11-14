@@ -68,6 +68,10 @@ export async function detail(root, p) {
       ${d.supply.length ? html`<h2 style="margin-top:1rem">Supply volumes</h2>${table([{ label: 'Period', render: b => `${fmtDate(b.period_start)} – ${fmtDate(b.period_end)}` }, { label: 'Volume', cls: 'num', render: b => fmtM3(b.volume_m3) }, { label: 'Source', render: b => label(b.source) }], d.supply)}` : ''}</div></div>`);
   if (canAny('maintenance.view', 'telemetry.enter') && ['pump', 'treatment', 'source', 'reservoir', 'water_point', 'other'].includes(a.asset_type)) { const c = document.createElement('div'); c.className = 'card'; root.appendChild(c); import('./operations.js').then(m => m.assetMaintenance(c, a)); }
   const reload = () => detail(root, p);
+  if (can('wsp.view')) api('/api/wsp/hazards?asset_id=' + a.id).then(hz => { if (!hz.length || !root.isConnected) return; const B = { low: 'good', medium: 'warn', high: 'serious', very_high: 'crit' };
+    root.insertAdjacentHTML('beforeend', html`<div class="card flush"><div style="padding:1rem 1rem 0"><h2>Water safety risks at this asset</h2></div>${table([{ label: 'Risk', render: h => html`<a href="#/water-safety/h/${h.id}"><b>${h.event}</b></a><br><small class="mono">${h.ref}</small>` },
+      { label: 'Before controls', render: h => html`<span class="badge ${B[h.raw_band]}">${h.raw_score}</span>` }, { label: 'With controls', render: h => (h.res_score == null ? '—' : html`<span class="badge ${B[h.res_band]}">${h.res_score}</span>`) },
+      { label: 'Open actions', cls: 'num', render: h => h.actions.filter(x => ['planned', 'in_progress'].includes(x.status)).length || '—' }], hz)}</div>`.s); }).catch(() => {});
   bind(root, {
     edit: () => assetForm(a, reload),
     status: () => modal('Update asset status', html`<div class="form">${formFields([{ name: 'status', label: 'Status', type: 'select', options: STATUSES, blank: false, default: a.status }, { name: 'maintenance_needs', label: 'Maintenance needs', type: 'textarea', full: true, default: a.maintenance_needs }])}</div>`, { onSubmit: async v => { await api('/api/assets/' + a.id, { method: 'PUT', body: v }); reload(); } }),

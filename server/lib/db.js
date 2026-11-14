@@ -435,6 +435,18 @@ CREATE TRIGGER IF NOT EXISTS trg_wsp_inspections_locked BEFORE UPDATE OF answers
 CREATE TRIGGER IF NOT EXISTS trg_wsp_inspections_no_delete BEFORE DELETE ON wsp_inspections
   BEGIN SELECT RAISE(ABORT, 'Inspections cannot be deleted'); END;
 
+-- ---- Pumping energy: fuel or electricity used against water pumped ----
+CREATE TABLE IF NOT EXISTS energy_logs (
+  id INTEGER PRIMARY KEY, asset_id INTEGER NOT NULL REFERENCES assets(id), period_start TEXT NOT NULL, period_end TEXT NOT NULL,
+  energy_type TEXT NOT NULL CHECK (energy_type IN ('diesel','petrol','grid','solar')), quantity REAL CHECK (quantity IS NULL OR quantity >= 0),
+  cost REAL CHECK (cost IS NULL OR cost >= 0), currency TEXT, volume_m3 REAL CHECK (volume_m3 IS NULL OR volume_m3 >= 0), run_hours REAL CHECK (run_hours IS NULL OR run_hours >= 0),
+  notes TEXT, entered_by INTEGER REFERENCES users(id), created_at TEXT NOT NULL DEFAULT (datetime('now')), voided_at TEXT, void_reason TEXT, voided_by INTEGER);
+CREATE INDEX IF NOT EXISTS ix_energy_asset ON energy_logs(asset_id, period_end);
+CREATE TRIGGER IF NOT EXISTS trg_energy_no_delete BEFORE DELETE ON energy_logs
+  BEGIN SELECT RAISE(ABORT, 'Energy records cannot be deleted; void them with a reason instead'); END;
+CREATE TRIGGER IF NOT EXISTS trg_energy_locked BEFORE UPDATE OF asset_id, period_start, period_end, energy_type, quantity, cost, currency, volume_m3, run_hours ON energy_logs
+  BEGIN SELECT RAISE(ABORT, 'Energy records are immutable; void the record and enter it again'); END;
+
 -- ---- Tamper protection (defence in depth beyond the API layer) ----
 CREATE TRIGGER IF NOT EXISTS trg_readings_no_delete BEFORE DELETE ON readings
   BEGIN SELECT RAISE(ABORT, 'Readings cannot be deleted; reject or correct them instead'); END;
@@ -468,7 +480,7 @@ const DEFAULT_SETTINGS = {
   report_conversion_currency: 'USD',
   sms_notifications: '1', momo_mtn_merchant: '', momo_orange_merchant: '', ussd_code: '*000#',
   unbilled_authorized_pct: '1', meter_under_registration_pct: '3', unauthorized_consumption_pct: '1', ocr_mismatch_tolerance: '0.5',
-  reminder_days_before_due: '3', reminder_days_overdue: '7', plan_default_after_days: '30', auto_reminders: '1', wq_sampling_days: '7',
+  reminder_days_before_due: '3', reminder_days_overdue: '7', plan_default_after_days: '30', auto_reminders: '1', wq_sampling_days: '7', energy_alert_pct: '20', wsp_inspection_days: '180',
   affordability_threshold_pct: '5', median_household_income_LRD: '', median_household_income_USD: '', avg_household_size: '5', lifeline_lpcd: '20',
   briefing_sms_phone: '', public_status_enabled: '1',
   connection_base_fee: '', connection_pipe_cost_per_m: '', connection_meter_cost: '', connection_max_instalments: '12', require_2fa_roles: '',

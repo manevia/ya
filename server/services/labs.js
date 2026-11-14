@@ -61,6 +61,7 @@ function briefing() {
   const pub = db.get(`SELECT COUNT(*) n FROM public_reports WHERE created_at >= datetime('now','-1 day')`).n;
   if (pub) add('high', `${pub} community report(s) in the last 24 h`, 'From the public status page, USSD or SMS', '#/alerts?status=open_all');
   for (const w of require('./wsp').briefingItems()) add(w.severity, w.title, w.detail, w.link);
+  for (const w of require('./energy').briefingItems()) add(w.severity, w.title, w.detail, w.link);
   const late = db.all(`SELECT wo_number, title FROM work_orders WHERE status NOT IN ('completed','cancelled') AND due_date < ?`, t);
   if (late.length) add('high', `${late.length} overdue work order(s)`, late.slice(0, 3).map(w => `${w.wo_number} ${w.title}`).join(' · '), '#/work-orders?status=active');
   const wp = require('./waterpoints'); const yest = new Date(Date.now() - 7 * 86400e3).toISOString().slice(0, 10);

@@ -1,5 +1,5 @@
 // Preventive maintenance & functionality, service levels (SDG 6.1 / JMP ladder), cashier end-of-day close.
-import { api, html, raw, mount, $, $$, state, qs, can, money, fmtDT, fmtDate, fmtNum, label, badge, table, modal, formFields, toast, bind, confirmBox, today, download } from '../core.js';
+import { api, html, raw, mount, $, $$, state, qs, can, money, fmtDT, fmtDate, fmtNum, label, badge, table, modal, formFields, toast, bind, confirmBox, today, download, currencies } from '../core.js';
 import { ensureLookups } from './dashboard.js';
 
 const STATE = { overdue: ['overdue', 'Overdue'], due_soon: ['pending', 'Due soon'], ok: ['good', 'OK'], unknown: ['outline', 'Needs data'] };
@@ -8,11 +8,11 @@ const STATE = { overdue: ['overdue', 'Overdue'], due_soon: ['pending', 'Due soon
 export async function maintenance(root, _p, q) {
   const tab = q.tab || 'plans';
   mount(root, html`<div class="page-head"><div><h1>Maintenance</h1><small>Preventive service for pumps, generators, chlorinators and tanks — by days or run-hours, whichever comes first — and how much of the time each asset actually works.</small></div>
-    <div class="actions">${can('maintenance.manage') && tab === 'plans' ? html`<button class="btn primary" data-act="new">+ Service plan</button> <button class="btn" data-act="run">Create due work orders now</button>` : ''}</div></div>
-    <div class="tabs">${[['plans', 'Service plans'], ['functionality', 'Functionality']].map(([k, l]) => html`<a href="#/maintenance?tab=${k}" class="${k === tab ? 'active' : ''}">${l}</a>`)}</div><div id="mt"></div>`);
-  bind(root, { new: () => planForm(null, () => maintenance(root, _p, q)),
+    <div class="actions">${can('maintenance.manage') && tab === 'plans' ? html`<button class="btn primary" data-act="new">+ Service plan</button> <button class="btn" data-act="run">Create due work orders now</button>` : ''}${tab === 'energy' && (can('telemetry.enter') || can('maintenance.manage')) ? html`<button class="btn primary" data-act="enew">+ Energy record</button>` : ''}</div></div>
+    <div class="tabs">${[['plans', 'Service plans'], ['functionality', 'Functionality'], ['energy', 'Energy & fuel']].map(([k, l]) => html`<a href="#/maintenance?tab=${k}" class="${k === tab ? 'active' : ''}">${l}</a>`)}</div><div id="mt"></div>`);
+  bind(root, { new: () => planForm(null, () => maintenance(root, _p, q)), enew: () => energyForm(null, () => maintenance(root, _p, q)),
     run: async () => { const r = await api('/api/maintenance/run', { body: {} }); toast(r.created.length ? `${r.created.length} work order(s) created: ${r.created.map(c => c.wo_number).join(', ')}` : 'Nothing new is due', r.created.length ? 'ok' : ''); maintenance(root, _p, q); } });
-  return tab === 'functionality' ? functionality($('#mt', root), q) : plansTab($('#mt', root), root, _p, q);
+  return tab === 'energy' ? energy($('#mt', root), q, () => maintenance(root, _p, q)) : tab === 'functionality' ? functionality($('#mt', root), q) : plansTab($('#mt', root), root, _p, q);
 }
 async function planForm(p, done, assetId) {
   const assets = await api('/api/assets');
@@ -72,6 +72,48 @@ export async function assetMaintenance(el, a, reload) {
   const f = $('#rhf', el);
   if (f) f.addEventListener('submit', async e => { e.preventDefault(); try { const r = await api(`/api/assets/${a.id}/run-hours`, { body: { reading: Number(f.reading.value), reset: f.reset.checked, note: f.note.value || null } }); toast(`Recorded${r.rate_per_day ? ` — about ${r.rate_per_day} h/day` : ''}`, 'ok'); assetMaintenance(el, a, reload); } catch (err) { toast(err.message, 'err'); } });
   bind(el, { mplan: () => planForm(null, () => assetMaintenance(el, a, reload), a.id) });
+}
+
+// ---- Energy & fuel ----
+const ETYPE = [['diesel', 'Diesel (litres)'], ['petrol', 'Petrol (litres)'], ['grid', 'Grid electricity (kWh)'], ['solar', 'Solar (kWh, if metered)']];
+const TREND = { worse: ['crit', 'Less efficient'], better: ['good', 'More efficient'], steady: ['good', 'Steady'], no_baseline: ['outline', 'Building a baseline'], no_data: ['outline', 'Nothing to compare yet'] };
+async function energyForm(row, done) {
+  const assets = (await api('/api/assets')).filter(a => ['pump', 'source', 'treatment'].includes(a.asset_type) && a.status !== 'decommissioned');
+  const last = row && row.entries.length ? row.entries[row.entries.length - 1] : null;
+  const start = last ? new Date(Date.parse(last.period_end) + 86400e3).toISOString().slice(0, 10) : new Date(Date.now() - 29 * 86400e3).toISOString().slice(0, 10);
+  modal('Record energy used', html`<div class="note">Enter what the pump used and the water it pumped over the same days. One record a month is enough.</div><div class="form">${formFields([
+    { name: 'asset_id', label: 'Pump', type: 'select', required: true, options: assets.map(a => [a.id, a.name]) }, { name: 'energy_type', label: 'Energy', type: 'select', required: true, blank: false, options: ETYPE },
+    { name: 'period_start', label: 'From', type: 'date', required: true }, { name: 'period_end', label: 'To', type: 'date', required: true },
+    { name: 'quantity', label: 'Fuel or electricity used', type: 'number', step: 'any', min: 0, inputmode: 'decimal', help: 'Litres or kWh. Solar can be left empty.' }, { name: 'volume_m3', label: 'Water pumped (m³)', type: 'number', step: 'any', min: 0, inputmode: 'decimal', help: 'From the pump or district meter.' },
+    { name: 'cost', label: 'Cost', type: 'number', step: 'any', min: 0 }, { name: 'currency', label: 'Currency', type: 'select', blank: false, options: currencies() },
+    { name: 'run_hours', label: 'Hours run', type: 'number', step: 'any', min: 0, help: 'Leave empty to take it from the hour-meter readings.' }, { name: 'notes', label: 'Notes' }],
+  { asset_id: row ? row.id : '', energy_type: last ? last.energy_type : 'diesel', period_start: start <= today() ? start : today(), period_end: today(), currency: last && last.currency })}</div>`,
+  { wide: true, onSubmit: async v => { const r = await api('/api/energy', { body: v });
+    toast(r.trend.state === 'worse' ? `Saved — ${r.trend.change_pct}% more per m³ than usual. An alert was raised.` : 'Energy record saved', r.trend.state === 'worse' ? 'err' : 'ok'); done(); } });
+}
+async function energy(el, q, reload) {
+  const L = await ensureLookups(); const d = await api('/api/energy' + qs({ from: q.from, to: q.to, area_id: q.area_id })); const s = d.summary; const canAdd = can('telemetry.enter') || can('maintenance.manage');
+  const all = d.rows.flatMap(r => r.entries.map(e => ({ ...e, pump: r.name }))).sort((a, b) => (a.period_end < b.period_end ? 1 : -1));
+  mount(el, html`<form class="filters" id="ef"><input type="hidden" name="tab" value="energy"><label>From<input type="date" name="from" value="${d.from}"></label><label>To<input type="date" name="to" value="${d.to}"></label>
+      <label>Area<select name="area_id"><option value="">All</option>${L.areas.map(a => html`<option value="${a.id}"${String(a.id) === q.area_id ? raw(' selected') : ''}>${a.name}</option>`)}</select></label><button class="btn primary">Show</button>
+      <button type="button" class="btn" data-act="csv">Export CSV</button></form>
+    <div class="grid g4" style="margin-bottom:1rem"><div class="kpi"><div class="label">Energy cost in period</div><div class="value" style="font-size:1.25rem">${s.cost.length ? s.cost.map(c => money(c.amount, c.currency)).join(' + ') : '—'}</div></div>
+      <div class="kpi"><div class="label">Water pumped</div><div class="value">${fmtNum(s.volume_m3, 0)} m³</div></div>
+      <div class="kpi"><div class="label">Pumps using more than usual</div><div class="value ${s.worse ? 'crit-t' : ''}">${s.worse}</div><div class="sub">alert at +${d.alert_pct}% per m³</div></div>
+      <div class="kpi"><div class="label">Pumps with no record</div><div class="value">${s.no_data}</div><div class="sub">in this period</div></div></div>
+    <div class="card flush">${table([{ label: 'Pump', render: r => html`<a href="#/network/${r.id}"><b>${r.name}</b></a>${r.status !== 'operational' ? html` ${badge(r.status)}` : ''}<br><small class="muted">${r.area_name || '—'}</small>` },
+      { label: 'Used', cls: 'num', render: r => (r.quantity ? `${fmtNum(r.quantity, 0)} ${r.unit}` : r.types.includes('solar') ? 'Solar' : '—') }, { label: 'Water pumped', cls: 'num', render: r => (r.volume_m3 ? `${fmtNum(r.volume_m3, 0)} m³` : '—') },
+      { label: 'Per m³', cls: 'num', render: r => (r.per_m3 == null ? '—' : `${fmtNum(r.per_m3, 2)} ${r.unit}`) }, { label: 'Cost per m³', cls: 'num', render: r => (r.cost_per_m3 == null ? '—' : money(r.cost_per_m3, r.cost_currency)) },
+      { label: 'Latest against usual', render: r => html`<span class="badge ${TREND[r.trend.state][0]}">${TREND[r.trend.state][1]}</span>${r.trend.change_pct != null ? html`<br><small>${fmtNum(r.trend.latest, 2)} ${r.trend.unit}/m³ · usual ${fmtNum(r.trend.baseline, 2)} (${r.trend.change_pct > 0 ? '+' : ''}${fmtNum(r.trend.change_pct, 0)}%)</small>` : ''}${r.trend.output_change_pct != null && r.trend.output_change_pct <= -10 ? html`<br><small class="crit-t">Output per hour ${fmtNum(r.trend.output_change_pct, 0)}%</small>` : ''}` },
+      { label: '', cls: 'act', render: r => (canAdd ? html`<button class="btn sm" data-act="rec" data-id="${r.id}">+ Record</button>` : '') }], d.rows, { empty: 'No pumps in the asset register yet.' })}</div>
+    <p class="muted" style="font-size:.85rem">Each pump is compared with its own earlier records on the same energy (at least three). More fuel or electricity for the same water usually means wear, a blockage, a leak on the rising main or a falling water level.</p>
+    <div class="card flush"><div style="padding:1rem 1rem 0"><h2>Records</h2></div>${table([{ label: 'Period', render: e => html`${fmtDate(e.period_start)} – ${fmtDate(e.period_end)}` }, { label: 'Pump', key: 'pump' }, { label: 'Used', cls: 'num', render: e => (e.quantity ? `${fmtNum(e.quantity, 0)} ${e.unit}` : label(e.energy_type)) },
+      { label: 'Water', cls: 'num', render: e => (e.volume_m3 ? `${fmtNum(e.volume_m3, 0)} m³` : '—') }, { label: 'Per m³', cls: 'num', render: e => (e.per_m3 == null ? '—' : `${fmtNum(e.per_m3, 2)} ${e.unit}`) }, { label: 'Cost', cls: 'num', render: e => (e.cost == null ? '—' : money(e.cost, e.currency)) },
+      { label: 'Cost per m³', cls: 'num', render: e => (e.cost_per_m3 == null ? '—' : money(e.cost_per_m3, e.currency)) }, { label: 'Hours', cls: 'num', render: e => (e.run_hours ? fmtNum(e.run_hours, 0) : '—') }, { label: 'Per hour', cls: 'num', render: e => (e.per_hour == null ? '—' : `${fmtNum(e.per_hour, 1)} ${e.unit}`) },
+      { label: 'm³ per hour', cls: 'num', render: e => (e.m3_per_hour == null ? '—' : fmtNum(e.m3_per_hour, 1)) }, { label: '', render: e => (can('maintenance.manage') ? html`<button class="btn sm" data-act="void" data-id="${e.id}">Void</button>` : '') }], all, { empty: 'No energy records in this period.' })}</div>`);
+  $('#ef', el).addEventListener('submit', e => { e.preventDefault(); location.hash = '#/maintenance' + qs(Object.fromEntries(new FormData(e.target))); });
+  bind(el, { csv: () => download('/api/energy' + qs({ from: d.from, to: d.to, area_id: q.area_id, format: 'csv' })), rec: b => energyForm(d.rows.find(r => r.id === Number(b.dataset.id)), reload),
+    void: async b => { const r = await confirmBox('Void this energy record?', 'The record stays in the audit trail but is left out of every calculation.', { ok: 'Void', danger: true, reason: true }); if (!r) return; await api(`/api/energy/${b.dataset.id}/void`, { body: { reason: r.reason || r } }); toast('Record voided', 'ok'); reload(); } });
 }
 
 // ======================= Service levels =======================

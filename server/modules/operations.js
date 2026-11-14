@@ -8,6 +8,7 @@ const tz = require('../lib/tz');
 const mt = require('../services/maintenance');
 const sl = require('../services/servicelevels');
 const cc = require('../services/cashclose');
+const en = require('../services/energy');
 
 const dateRange = (q, days = 90) => { const to = /^\d{4}-\d{2}-\d{2}$/.test(q.to || '') ? q.to : tz.localDate(); const from = /^\d{4}-\d{2}-\d{2}$/.test(q.from || '') ? q.from : new Date(Date.parse(to) - (days - 1) * 86400e3).toISOString().slice(0, 10); return { from, to }; };
 const demoTag = () => (db.MODE === 'demo' ? '_DEMO' : '');
@@ -52,3 +53,16 @@ route('GET', '/api/cash/book', { perm: 'cash.review' }, ctx => {
 });
 route('GET', '/api/cash/expected/:userId/:date', { perm: 'cash.review' }, ctx => { if (!/^\d{4}-\d{2}-\d{2}$/.test(ctx.params.date)) throw new HttpError(400, 'Bad date'); return cc.expected(id(ctx.params.userId), ctx.params.date); });
 route('POST', '/api/cash/closes/:id/review', { perm: 'cash.review' }, ctx => cc.review(ctx, id(ctx.params.id), validate(ctx.body, { decision: { type: 'enum', values: ['approved', 'rejected'], required: true }, note: { type: 'text', max: 1000 } })));
+
+// ================= Pumping energy =================
+route('GET', '/api/energy', { anyPerm: ['maintenance.view', 'assets.view'] }, ctx => {
+  const r = en.report({ ...dateRange(ctx.query, 180), area_id: ctx.query.area_id ? Number(ctx.query.area_id) : null });
+  if (ctx.query.format === 'csv') return csvResponse(`pumping_energy_${r.from}_${r.to}${demoTag()}.csv`, csv.stringify(r.rows.flatMap(x => x.entries.map(e => ({ code: x.code, pump: x.name, area: x.area_name, from: e.period_start, to: e.period_end, energy: e.energy_type, used: e.quantity, unit: e.unit,
+    cost: e.cost, currency: e.currency, water_m3: e.volume_m3, run_hours: e.run_hours, per_m3: e.per_m3, cost_per_m3: e.cost_per_m3, per_hour: e.per_hour, m3_per_hour: e.m3_per_hour }))), ['code', 'pump', 'area', 'from', 'to', 'energy', 'used', 'unit', 'cost', 'currency', 'water_m3', 'run_hours', 'per_m3', 'cost_per_m3', 'per_hour', 'm3_per_hour'],
+  [`# Pumping energy ${r.from} to ${r.to}`, db.MODE === 'demo' ? '# DEMO — fictional data' : '# LIVE DATA']));
+  return r;
+});
+route('POST', '/api/energy', { anyPerm: ['telemetry.enter', 'maintenance.manage'] }, ctx => en.add(ctx, validate(ctx.body, { asset_id: { type: 'integer', required: true }, period_start: { type: 'date', required: true }, period_end: { type: 'date', required: true },
+  energy_type: { type: 'enum', values: Object.keys(en.UNIT), required: true }, quantity: { type: 'number', minVal: 0, maxVal: 1e7 }, cost: { type: 'number', minVal: 0, maxVal: 1e12 }, currency: { type: 'currency' },
+  volume_m3: { type: 'number', minVal: 0, maxVal: 1e9 }, run_hours: { type: 'number', minVal: 0, maxVal: 2400 }, notes: { type: 'string', max: 300 } })));
+route('POST', '/api/energy/:id/void', { perm: 'maintenance.manage' }, ctx => en.voidEntry(ctx, id(ctx.params.id), validate(ctx.body, { reason: { type: 'string', required: true, max: 300 } }).reason));

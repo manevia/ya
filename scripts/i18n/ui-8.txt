@@ -1,0 +1,66 @@
+# Pumping energy, chlorine dose calculator, water safety on the asset page
+Energy & fuel ||| Énergie et carburant ||| Energia e combustível
++ Energy record ||| + Relevé d'énergie ||| + Registo de energia
++ Record ||| + Relevé ||| + Registo
+Record energy used ||| Enregistrer l'énergie consommée ||| Registar a energia usada
+Enter what the pump used and the water it pumped over the same days. One record a month is enough. ||| Saisissez ce que la pompe a consommé et l'eau pompée sur les mêmes jours. Un relevé par mois suffit. ||| Introduza o que a bomba consumiu e a água bombeada nos mesmos dias. Um registo por mês chega.
+Pump ||| Pompe ||| Bomba
+Energy ||| Énergie ||| Energia
+Diesel (litres) ||| Gazole (litres) ||| Gasóleo (litros)
+Petrol (litres) ||| Essence (litres) ||| Gasolina (litros)
+Grid electricity (kWh) ||| Électricité du réseau (kWh) ||| Eletricidade da rede (kWh)
+Solar (kWh, if metered) ||| Solaire (kWh, si mesuré) ||| Solar (kWh, se medido)
+Solar ||| Solaire ||| Solar
+Fuel or electricity used ||| Carburant ou électricité consommés ||| Combustível ou eletricidade usados
+Litres or kWh. Solar can be left empty. ||| Litres ou kWh. Laisser vide pour le solaire. ||| Litros ou kWh. Pode ficar vazio para solar.
+Water pumped (m³) ||| Eau pompée (m³) ||| Água bombeada (m³)
+From the pump or district meter. ||| D'après le compteur de la pompe ou du secteur. ||| Do contador da bomba ou do setor.
+Hours run ||| Heures de marche ||| Horas de funcionamento
+Leave empty to take it from the hour-meter readings. ||| Laisser vide pour reprendre les relevés du compteur horaire. ||| Deixe vazio para usar as leituras do conta-horas.
+Energy record saved ||| Relevé d'énergie enregistré ||| Registo de energia guardado
+Energy cost in period ||| Coût de l'énergie sur la période ||| Custo da energia no período
+Water pumped ||| Eau pompée ||| Água bombeada
+Pumps using more than usual ||| Pompes consommant plus que d'habitude ||| Bombas a consumir mais do que o habitual
+alert at + ||| alerte à + ||| alerta a +
+Pumps with no record ||| Pompes sans relevé ||| Bombas sem registo
+in this period ||| sur cette période ||| neste período
+Used ||| Consommé ||| Consumido
+Per m³ ||| Par m³ ||| Por m³
+Cost per m³ ||| Coût par m³ ||| Custo por m³
+Latest against usual ||| Dernier relevé comparé à l'habituel ||| Último face ao habitual
+Less efficient ||| Moins efficace ||| Menos eficiente
+More efficient ||| Plus efficace ||| Mais eficiente
+Steady ||| Stable ||| Estável
+Building a baseline ||| Référence en cours ||| A criar referência
+Nothing to compare yet ||| Rien à comparer pour l'instant ||| Ainda nada para comparar
+Output per hour ||| Débit horaire ||| Caudal por hora
+No pumps in the asset register yet. ||| Aucune pompe dans le registre des ouvrages. ||| Ainda sem bombas no registo de ativos.
+Each pump is compared with its own earlier records on the same energy (at least three). More fuel or electricity for the same water usually means wear, a blockage, a leak on the rising main or a falling water level. ||| Chaque pompe est comparée à ses propres relevés antérieurs pour la même énergie (au moins trois). Plus de carburant ou d'électricité pour la même eau signifie en général une usure, un colmatage, une fuite sur le refoulement ou une baisse du niveau d'eau. ||| Cada bomba é comparada com os seus próprios registos anteriores na mesma energia (pelo menos três). Mais combustível ou eletricidade para a mesma água significa em geral desgaste, entupimento, fuga na conduta elevatória ou descida do nível da água.
+Records ||| Relevés ||| Registos
+Water ||| Eau ||| Água
+Per hour ||| Par heure ||| Por hora
+No energy records in this period. ||| Aucun relevé d'énergie sur cette période. ||| Sem registos de energia neste período.
+Void ||| Annuler ||| Anular
+Void this energy record? ||| Annuler ce relevé d'énergie ? ||| Anular este registo de energia?
+The record stays in the audit trail but is left out of every calculation. ||| Le relevé reste dans le journal d'audit mais n'entre plus dans aucun calcul. ||| O registo fica no registo de auditoria mas sai de todos os cálculos.
+Record voided ||| Relevé annulé ||| Registo anulado
+Chlorine dose calculator ||| Calculateur de dose de chlore ||| Calculadora de dose de cloro
+Water to treat (m³) ||| Eau à traiter (m³) ||| Água a tratar (m³)
+Product ||| Produit ||| Produto
+Chlorine powder or granules (HTH), 70% ||| Chlore en poudre ou granulés (HTH), 70 % ||| Cloro em pó ou granulado (HTH), 70%
+Chlorine powder or granules (HTH), 65% ||| Chlore en poudre ou granulés (HTH), 65 % ||| Cloro em pó ou granulado (HTH), 65%
+Bleaching powder, 35% ||| Chlorure de chaux, 35 % ||| Cal clorada, 35%
+Liquid bleach, 5% ||| Eau de Javel, 5 % ||| Lixívia, 5%
+Liquid bleach, 3.5% ||| Eau de Javel, 3,5 % ||| Lixívia, 3,5%
+Other strength… ||| Autre concentration… ||| Outra concentração…
+Strength (% available chlorine) ||| Concentration (% de chlore actif) ||| Concentração (% de cloro ativo)
+Form ||| Forme ||| Forma
+Powder or granules (grams) ||| Poudre ou granulés (grammes) ||| Pó ou granulado (gramas)
+Liquid (millilitres) ||| Liquide (millilitres) ||| Líquido (mililitros)
+Dose to add (mg/L) ||| Dose à ajouter (mg/L) ||| Dose a adicionar (mg/L)
+Often 1–2 mg/L for clear water; more if the water is cloudy. ||| Souvent 1 à 2 mg/L pour une eau claire ; davantage si l'eau est trouble. ||| Muitas vezes 1–2 mg/L para água limpa; mais se a água estiver turva.
+Chlorine already in the water (mg/L) ||| Chlore déjà présent dans l'eau (mg/L) ||| Cloro já presente na água (mg/L)
+Leave empty for a fresh tank. ||| Laisser vide pour un réservoir neuf. ||| Deixe vazio para um reservatório novo.
+Add ||| Ajouter ||| Adicionar
+Dissolve or dilute the product in a bucket of water first, pour it in and mix. Wait 30 minutes, then test: aim for at least 0.2 mg/L of free chlorine at the tap, and record the result. How much chlorine water uses up varies, so adjust the dose from your test results. Wear gloves and eye protection. ||| Dissolvez ou diluez d'abord le produit dans un seau d'eau, versez et mélangez. Attendez 30 minutes puis testez : visez au moins 0,2 mg/L de chlore libre au robinet et enregistrez le résultat. La quantité de chlore consommée par l'eau varie : ajustez la dose selon vos tests. Portez des gants et des lunettes. ||| Dissolva ou dilua primeiro o produto num balde de água, deite e misture. Espere 30 minutos e teste: procure pelo menos 0,2 mg/L de cloro livre na torneira e registe o resultado. A quantidade de cloro que a água consome varia; ajuste a dose pelos seus testes. Use luvas e proteção ocular.
+Water safety risks at this asset ||| Risques sanitaires de cet ouvrage ||| Riscos de segurança da água neste ativo
